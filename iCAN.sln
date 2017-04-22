@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iCAN", "iCAN\iCAN.csproj", "{064610A4-49E9-427B-9889-C0F77A03489C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{064610A4-49E9-427B-9889-C0F77A03489C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{064610A4-49E9-427B-9889-C0F77A03489C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{064610A4-49E9-427B-9889-C0F77A03489C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{064610A4-49E9-427B-9889-C0F77A03489C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
