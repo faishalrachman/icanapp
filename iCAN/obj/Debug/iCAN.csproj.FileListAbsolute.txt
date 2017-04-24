@@ -24,7 +24,6 @@ E:\Dani Project\ikanku\icanapp\iCAN\bin\Debug\MySql.Data.xml
 E:\Dani Project\ikanku\icanapp\iCAN\obj\Debug\iCAN.csprojResolveAssemblyReference.cache
 E:\Dani Project\ikanku\icanapp\iCAN\obj\Debug\App.g.cs
 E:\Dani Project\ikanku\icanapp\iCAN\obj\Debug\iCAN_MarkupCompile.cache
-E:\Dani Project\ikanku\icanapp\iCAN\obj\Debug\iCAN_MarkupCompile.lref
 E:\Dani Project\ikanku\icanapp\iCAN\obj\Debug\iCAN.g.resources
 E:\Dani Project\ikanku\icanapp\iCAN\obj\Debug\iCAN.Properties.Resources.resources
 E:\Dani Project\ikanku\icanapp\iCAN\obj\Debug\iCAN.csproj.GenerateResource.Cache
@@ -42,3 +41,32 @@ E:\Dani Project\ikanku\icanapp\iCAN\bin\Debug\MahApps.Metro.pdb
 E:\Dani Project\ikanku\icanapp\iCAN\bin\Debug\MahApps.Metro.xml
 E:\Dani Project\ikanku\icanapp\iCAN\obj\Debug\App.baml
 E:\Dani Project\ikanku\icanapp\iCAN\obj\Debug\GUI\Dashboard.baml
+E:\Dani Project\ikanku\icanapp\iCAN\obj\Debug\iCAN.GUI.ucDashboard.resources
+E:\Dani Project\ikanku\icanapp\iCAN\obj\Debug\iCAN.GUI.Guru.DashboardGuru.resources
+E:\Dani Project\ikanku\icanapp\iCAN\obj\Debug\iCAN.GUI.Guru.MainDashboardGuru.resources
+E:\Dani Project\ikanku\icanapp\iCAN\obj\Debug\iCAN.GUI.ucProfilSiswa.resources
+E:\Dani Project\ikanku\icanapp\iCAN\obj\Debug\iCAN.GUI.frmLogin.resources
+E:\Dani Project\ikanku\icanapp\iCAN\obj\Debug\iCAN.GUI.MainDashboardSiswa.resources
+D:\Project\Tubes\PBO\icanapp\iCAN\bin\Debug\iCAN.exe.config
+D:\Project\Tubes\PBO\icanapp\iCAN\obj\Debug\iCAN.exe
+D:\Project\Tubes\PBO\icanapp\iCAN\obj\Debug\iCAN.pdb
+D:\Project\Tubes\PBO\icanapp\iCAN\obj\Debug\iCAN.csprojResolveAssemblyReference.cache
+D:\Project\Tubes\PBO\icanapp\iCAN\obj\Debug\App.baml
+D:\Project\Tubes\PBO\icanapp\iCAN\obj\Debug\App.g.cs
+D:\Project\Tubes\PBO\icanapp\iCAN\obj\Debug\iCAN_MarkupCompile.cache
+D:\Project\Tubes\PBO\icanapp\iCAN\obj\Debug\iCAN.g.resources
+D:\Project\Tubes\PBO\icanapp\iCAN\obj\Debug\iCAN.GUI.Guru.DashboardGuru.resources
+D:\Project\Tubes\PBO\icanapp\iCAN\obj\Debug\iCAN.GUI.Guru.MainDashboardGuru.resources
+D:\Project\Tubes\PBO\icanapp\iCAN\obj\Debug\iCAN.GUI.frmLogin.resources
+D:\Project\Tubes\PBO\icanapp\iCAN\obj\Debug\iCAN.Properties.Resources.resources
+D:\Project\Tubes\PBO\icanapp\iCAN\obj\Debug\iCAN.csproj.GenerateResource.Cache
+D:\Project\Tubes\PBO\icanapp\iCAN\bin\Debug\iCAN.exe
+D:\Project\Tubes\PBO\icanapp\iCAN\bin\Debug\iCAN.pdb
+D:\Project\Tubes\PBO\icanapp\iCAN\bin\Debug\MahApps.Metro.dll
+D:\Project\Tubes\PBO\icanapp\iCAN\bin\Debug\MetroFramework.Design.dll
+D:\Project\Tubes\PBO\icanapp\iCAN\bin\Debug\MetroFramework.dll
+D:\Project\Tubes\PBO\icanapp\iCAN\bin\Debug\MetroFramework.Fonts.dll
+D:\Project\Tubes\PBO\icanapp\iCAN\bin\Debug\System.Windows.Interactivity.dll
+D:\Project\Tubes\PBO\icanapp\iCAN\bin\Debug\MahApps.Metro.pdb
+D:\Project\Tubes\PBO\icanapp\iCAN\bin\Debug\MahApps.Metro.xml
+D:\Project\Tubes\PBO\icanapp\iCAN\bin\Debug\MySql.Data.xml

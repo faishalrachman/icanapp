@@ -8,18 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace iCAN.GUI
+namespace iCAN.GUI.Guru
 {
-    public partial class DashboardSiswa : MetroFramework.Controls.MetroUserControl
+    public partial class DashboardGuru : UserControl
     {
-        public DashboardSiswa()
+        public DashboardGuru()
         {
             InitializeComponent();
         }
-
-        private void metroTile1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

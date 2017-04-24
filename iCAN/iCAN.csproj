@@ -8,11 +8,12 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>iCAN</RootNamespace>
     <AssemblyName>iCAN</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -72,31 +73,32 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="CLASS\Admin.cs" />
-    <Compile Include="CLASS\Ekskul.cs" />
-    <Compile Include="CLASS\Jadwal.cs" />
-    <Compile Include="CLASS\Kelas.cs" />
-    <Compile Include="CLASS\Mapel.cs" />
-    <Compile Include="CLASS\News.cs" />
-    <Compile Include="CLASS\Nilai.cs" />
-    <Compile Include="CLASS\Siswa.cs" />
-    <Compile Include="CLASS\Database.cs" />
-    <Page Include="GUI\Dashboard.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="GUI\MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
+    <Compile Include="CLASS\M_Admin.cs" />
+    <Compile Include="CLASS\M_Ekskul.cs" />
+    <Compile Include="CLASS\M_Jadwal.cs" />
+    <Compile Include="CLASS\M_Kelas.cs" />
+    <Compile Include="CLASS\M_Mapel.cs" />
+    <Compile Include="CLASS\M_News.cs" />
+    <Compile Include="CLASS\M_Nilai.cs" />
+    <Compile Include="CLASS\M_Siswa.cs" />
+    <Compile Include="CLASS\M_Database.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="CLASS\Guru.cs" />
-    <Compile Include="CLASS\User.cs" />
-    <Compile Include="GUI\Dashboard.xaml.cs">
-      <DependentUpon>Dashboard.xaml</DependentUpon>
+    <Compile Include="CLASS\M_Guru.cs" />
+    <Compile Include="CLASS\M_User.cs" />
+    <Compile Include="GUI\Guru\DashboardGuru.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Guru\DashboardGuru.Designer.cs">
+      <DependentUpon>DashboardGuru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Guru\MainDashboardGuru.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Guru\MainDashboardGuru.Designer.cs">
+      <DependentUpon>MainDashboardGuru.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Login.cs">
       <SubType>Form</SubType>
@@ -104,36 +106,8 @@
     <Compile Include="GUI\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\MainDashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\MainDashboard.Designer.cs">
-      <DependentUpon>MainDashboard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GUI\DashboardSiswa.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\DashboardSiswa.Designer.cs">
-      <DependentUpon>DashboardSiswa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\ucProfilSiswa.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\ucProfilSiswa.Designer.cs">
-      <DependentUpon>ucProfilSiswa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\ucTemanKelas.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\ucTemanKelas.Designer.cs">
-      <DependentUpon>ucTemanKelas.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -147,17 +121,14 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="GUI\DashboardSiswa.resx">
-      <DependentUpon>DashboardSiswa.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Guru\DashboardGuru.resx">
+      <DependentUpon>DashboardGuru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Guru\MainDashboardGuru.resx">
+      <DependentUpon>MainDashboardGuru.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\MainDashboard.resx">
-      <DependentUpon>MainDashboard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ucProfilSiswa.resx">
-      <DependentUpon>ucProfilSiswa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -172,6 +143,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GUI\Admin\" />
+    <Folder Include="GUI\Siswa\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
