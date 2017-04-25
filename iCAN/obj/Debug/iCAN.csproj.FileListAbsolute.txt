@@ -70,3 +70,29 @@ D:\Project\Tubes\PBO\icanapp\iCAN\bin\Debug\System.Windows.Interactivity.dll
 D:\Project\Tubes\PBO\icanapp\iCAN\bin\Debug\MahApps.Metro.pdb
 D:\Project\Tubes\PBO\icanapp\iCAN\bin\Debug\MahApps.Metro.xml
 D:\Project\Tubes\PBO\icanapp\iCAN\bin\Debug\MySql.Data.xml
+E:\Dani Project\Icanku\icanapp\iCAN\bin\Debug\iCAN.exe.config
+E:\Dani Project\Icanku\icanapp\iCAN\bin\Debug\iCAN.exe
+E:\Dani Project\Icanku\icanapp\iCAN\bin\Debug\iCAN.pdb
+E:\Dani Project\Icanku\icanapp\iCAN\bin\Debug\MahApps.Metro.dll
+E:\Dani Project\Icanku\icanapp\iCAN\bin\Debug\MetroFramework.Design.dll
+E:\Dani Project\Icanku\icanapp\iCAN\bin\Debug\MetroFramework.dll
+E:\Dani Project\Icanku\icanapp\iCAN\bin\Debug\MetroFramework.Fonts.dll
+E:\Dani Project\Icanku\icanapp\iCAN\bin\Debug\MySql.Data.dll
+E:\Dani Project\Icanku\icanapp\iCAN\bin\Debug\System.Windows.Interactivity.dll
+E:\Dani Project\Icanku\icanapp\iCAN\bin\Debug\MahApps.Metro.pdb
+E:\Dani Project\Icanku\icanapp\iCAN\bin\Debug\MahApps.Metro.xml
+E:\Dani Project\Icanku\icanapp\iCAN\bin\Debug\MySql.Data.xml
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.csprojResolveAssemblyReference.cache
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\App.baml
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\App.g.cs
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN_MarkupCompile.cache
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.g.resources
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.Guru.DashboardGuru.resources
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.Guru.MainDashboardGuru.resources
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.frmLogin.resources
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.Properties.Resources.resources
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.csproj.GenerateResource.Cache
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.exe
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.pdb
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.MainSplash.resources
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.SpashScreen.resources
