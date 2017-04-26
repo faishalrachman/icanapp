@@ -1,6 +1,6 @@
 ﻿namespace iCAN.GUI
 {
-    partial class MainSplash
+    partial class frmSplash
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,12 @@
         {
             this.SuspendLayout();
             // 
-            // MainSplash
+            // frmSplash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(754, 499);
-            this.Name = "MainSplash";
-            this.Text = "Form1";
+            this.Name = "frmSplash";
             this.ResumeLayout(false);
 
         }

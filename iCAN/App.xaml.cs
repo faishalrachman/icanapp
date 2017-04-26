@@ -1,4 +1,5 @@
 ﻿using iCAN.GUI;
+using iCAN.GUI.Admin;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -18,7 +19,8 @@ namespace iCAN
         {
             base.OnStartup(e);
             var form = new frmLogin();
-            form.ShowDialog();
+            form.Show();
+
         }
     }
 }

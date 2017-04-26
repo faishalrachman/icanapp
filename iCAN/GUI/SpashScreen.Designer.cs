@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SpashScreen));
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.metroProgressBar1 = new MetroFramework.Controls.MetroProgressBar();
             this.Loading = new MetroFramework.Controls.MetroLabel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // metroPanel1
@@ -56,6 +58,7 @@
             this.metroProgressBar1.ProgressBarStyle = System.Windows.Forms.ProgressBarStyle.Marquee;
             this.metroProgressBar1.Size = new System.Drawing.Size(287, 23);
             this.metroProgressBar1.TabIndex = 1;
+            this.metroProgressBar1.Click += new System.EventHandler(this.metroProgressBar1_Click);
             // 
             // Loading
             // 
@@ -66,6 +69,12 @@
             this.Loading.TabIndex = 2;
             this.Loading.Text = "Loading...";
             this.Loading.Click += new System.EventHandler(this.metroLabel1_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 2;
+            this.timer1.Tick += new System.EventHandler(this.timer_tik);
             // 
             // SpashScreen
             // 
@@ -86,5 +95,6 @@
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private MetroFramework.Controls.MetroProgressBar metroProgressBar1;
         private MetroFramework.Controls.MetroLabel Loading;
+        private System.Windows.Forms.Timer timer1;
     }
 }

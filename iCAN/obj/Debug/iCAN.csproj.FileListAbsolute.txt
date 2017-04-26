@@ -94,5 +94,12 @@ E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.Properties.Resources.resource
 E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.csproj.GenerateResource.Cache
 E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.exe
 E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.pdb
-E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.MainSplash.resources
 E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.SpashScreen.resources
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.MainDashboardAdmin.resources
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.Siswa.MainDashboardSiswa.resources
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.frmSplash.resources
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.frmKelolaUser.resources
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.frmEditAdmin.resources
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.frmTambahAdmin.resources
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.frmKelolaSiswa.resources
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.frmTambahSiswa.resources
