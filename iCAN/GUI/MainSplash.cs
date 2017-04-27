@@ -11,17 +11,20 @@ using System.Windows.Forms;
 
 namespace iCAN.GUI
 {
-    public partial class MainSplash : MetroFramework.Forms.MetroForm
+    public partial class frmSplash : MetroFramework.Forms.MetroForm
     {
-        public MainSplash()
+        public frmSplash()
         {
             Thread t = new Thread(new ThreadStart(Loading));
             t.Start();
             
             InitializeComponent();
-            for (int i = 0; i <= 1000; i++)
+            for (int i = 0; i <= 100; i++)
                 Thread.Sleep(10);
+            var Form = new frmLogin();
+            Form.Show();
             t.Abort();
+            this.Hide();
         }
         void Loading()
         {

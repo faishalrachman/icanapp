@@ -36,6 +36,20 @@ namespace iCAN
                 reader = commandDatabase.ExecuteReader();
                 return reader;
         }
+        public bool TestConnection()
+        {
+            
+            try
+            {
+                databaseConnection.Open();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            return false;
+        }
 
     }
 }

@@ -69,7 +69,6 @@ D:\Project\Tubes\PBO\icanapp\iCAN\bin\Debug\MetroFramework.Fonts.dll
 D:\Project\Tubes\PBO\icanapp\iCAN\bin\Debug\System.Windows.Interactivity.dll
 D:\Project\Tubes\PBO\icanapp\iCAN\bin\Debug\MahApps.Metro.pdb
 D:\Project\Tubes\PBO\icanapp\iCAN\bin\Debug\MahApps.Metro.xml
-D:\Project\Tubes\PBO\icanapp\iCAN\bin\Debug\MySql.Data.xml
 E:\Dani Project\Icanku\icanapp\iCAN\bin\Debug\iCAN.exe.config
 E:\Dani Project\Icanku\icanapp\iCAN\bin\Debug\iCAN.exe
 E:\Dani Project\Icanku\icanapp\iCAN\bin\Debug\iCAN.pdb
@@ -96,3 +95,5 @@ E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.exe
 E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.pdb
 E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.MainSplash.resources
 E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.SpashScreen.resources
+D:\Project\Tubes\PBO\icanapp\iCAN\obj\Debug\iCAN.GUI.SpashScreen.resources
+D:\Project\Tubes\PBO\icanapp\iCAN\obj\Debug\iCAN.GUI.frmSplash.resources
