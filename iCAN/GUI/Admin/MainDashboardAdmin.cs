@@ -32,6 +32,10 @@ namespace iCAN.GUI.Admin
 
         private void metroTile1_Click(object sender, EventArgs e)
         {
+            var form = new frmKelolaSiswa();
+            Hide();
+            form.ShowDialog();
+            Show();
         }
 
         private void metroTile5_Click(object sender, EventArgs e)

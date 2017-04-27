@@ -29,13 +29,14 @@ namespace iCAN.CLASS
             Database db = new Database();
             string query = "SELECT * FROM user where username = '" + username + "'";
             db.reader = db.callQuery(query);
-            
+
             if (db.reader.Read())
             {
-                    IdUser = db.reader.GetInt32(0);
-                    Nama = db.reader.GetString(3);
-                    Role = db.reader.GetString(4);
-                    return true;
+                IdUser = db.reader.GetInt32(0);
+                Nama = db.reader.GetString(3);
+                Role = db.reader.GetString(4);
+                db.databaseConnection.Close();
+                return true;
             }
             else
             {
@@ -43,6 +44,6 @@ namespace iCAN.CLASS
             }
             return false;
         }
-        
+
     }
 }

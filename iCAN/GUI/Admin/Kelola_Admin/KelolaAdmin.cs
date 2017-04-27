@@ -71,8 +71,8 @@ namespace iCAN.GUI.Admin
             DialogResult dialogResult = MessageBox.Show("Apakah anda yakin akan menghapus admin ini?", "PERINGATAN", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                int i = db.CallnonQuery("DELETE FROM user WHERE id = " + Selected);
-                if (i > 0)
+                bool i = db.CallnonQuery("DELETE FROM user WHERE id = " + Selected);
+                if (i)
                 {
                     MessageBox.Show("Success");
                 }

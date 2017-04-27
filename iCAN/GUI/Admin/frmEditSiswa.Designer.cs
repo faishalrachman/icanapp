@@ -1,6 +1,6 @@
 ﻿namespace iCAN.GUI.Admin
 {
-    partial class frmTambahSiswa
+    partial class frmEditSiswa
     {
         /// <summary>
         /// Required designer variable.
@@ -50,7 +50,7 @@
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
-            this.cbKelas = new MetroFramework.Controls.MetroComboBox();
+            this.cbKelas = new MetroFramework.Controls.MetroTextBox();
             this.SuspendLayout();
             // 
             // metroButton1
@@ -59,7 +59,7 @@
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(414, 23);
             this.metroButton1.TabIndex = 0;
-            this.metroButton1.Text = "Tambah";
+            this.metroButton1.Text = "Edit";
             this.metroButton1.UseSelectable = true;
             this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
@@ -95,6 +95,7 @@
             this.txUsername.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txUsername.CustomButton.UseSelectable = true;
             this.txUsername.CustomButton.Visible = false;
+            this.txUsername.Enabled = false;
             this.txUsername.Lines = new string[0];
             this.txUsername.Location = new System.Drawing.Point(28, 96);
             this.txUsername.MaxLength = 32767;
@@ -399,15 +400,36 @@
             // 
             // cbKelas
             // 
-            this.cbKelas.FormattingEnabled = true;
-            this.cbKelas.ItemHeight = 23;
-            this.cbKelas.Location = new System.Drawing.Point(274, 194);
+            // 
+            // 
+            // 
+            this.cbKelas.CustomButton.Image = null;
+            this.cbKelas.CustomButton.Location = new System.Drawing.Point(161, 1);
+            this.cbKelas.CustomButton.Name = "";
+            this.cbKelas.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.cbKelas.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.cbKelas.CustomButton.TabIndex = 1;
+            this.cbKelas.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.cbKelas.CustomButton.UseSelectable = true;
+            this.cbKelas.CustomButton.Visible = false;
+            this.cbKelas.Enabled = false;
+            this.cbKelas.Lines = new string[0];
+            this.cbKelas.Location = new System.Drawing.Point(273, 195);
+            this.cbKelas.MaxLength = 32767;
             this.cbKelas.Name = "cbKelas";
-            this.cbKelas.Size = new System.Drawing.Size(182, 29);
+            this.cbKelas.PasswordChar = '\0';
+            this.cbKelas.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.cbKelas.SelectedText = "";
+            this.cbKelas.SelectionLength = 0;
+            this.cbKelas.SelectionStart = 0;
+            this.cbKelas.ShortcutsEnabled = true;
+            this.cbKelas.Size = new System.Drawing.Size(183, 23);
             this.cbKelas.TabIndex = 27;
             this.cbKelas.UseSelectable = true;
+            this.cbKelas.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.cbKelas.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // frmTambahSiswa
+            // frmEditSiswa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -437,10 +459,10 @@
             this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.metroButton1);
             this.MaximizeBox = false;
-            this.Name = "frmTambahSiswa";
+            this.Name = "frmEditSiswa";
             this.Resizable = false;
-            this.Text = "Tambah Siswa";
-            this.Load += new System.EventHandler(this.frmTambahSiswa_Load);
+            this.Text = "Edit Siswa";
+            this.Load += new System.EventHandler(this.frmEditSiswa_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -470,6 +492,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel8;
         private MetroFramework.Controls.MetroLabel metroLabel9;
         private MetroFramework.Controls.MetroLabel metroLabel10;
-        private MetroFramework.Controls.MetroComboBox cbKelas;
+        private MetroFramework.Controls.MetroTextBox cbKelas;
     }
 }

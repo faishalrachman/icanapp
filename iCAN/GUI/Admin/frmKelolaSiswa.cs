@@ -15,30 +15,33 @@ namespace iCAN.GUI.Admin
         private int Selected;
         public frmKelolaSiswa()
         {
-         
+
             InitializeComponent();
             FetchUser();
         }
         void FetchUser()
         {
             tb_user.Clear();
-            tb_user.Columns.Add("ID User", 100);
-            tb_user.Columns.Add("User Name", 100);
-            tb_user.Columns.Add("Nama", 200);
+            tb_user.Columns.Add("ID User", 50);
+            tb_user.Columns.Add("NIS", 100);
+            tb_user.Columns.Add("Nama", 100);
+            tb_user.Columns.Add("Kelas", 100);
             Database db = new Database();
-            db.reader = db.callQuery("SELECT * FROM user where role='admin'");
+            db.reader = db.callQuery("SELECT * FROM v_siswa");
             while (db.reader.Read())
             {
-                ListViewItem item = new ListViewItem(db.reader.GetString(0));//id_user
-                item.SubItems.Add(db.reader.GetString(1));//username
-                item.SubItems.Add(db.reader.GetString(3));//nama
+                ListViewItem item = new ListViewItem(db.reader.GetString(1));//id_user
+                item.SubItems.Add(db.reader.GetString(0));//nis
+                item.SubItems.Add(db.reader.GetString(2));//nama
+                item.SubItems.Add(db.reader.GetString(4));//kelas
                 tb_user.Items.Add(item);
             }
+            db.databaseConnection.Close();
         }
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            var form = new frmTambahAdmin(Selected);
+            var form = new frmTambahSiswa();
             form.ShowDialog();
             FetchUser();
         }
@@ -48,6 +51,7 @@ namespace iCAN.GUI.Admin
             if (tb_user.SelectedIndices.Count > 0)
             {
                 Selected = Convert.ToInt32(tb_user.SelectedItems[0].SubItems[0].Text);
+                MessageBox.Show(Selected.ToString());
                 metroButton2.Enabled = true;
                 metroButton3.Enabled = true;
             }
@@ -60,7 +64,7 @@ namespace iCAN.GUI.Admin
 
         private void metroButton2_Click(object sender, EventArgs e)
         {
-            var form = new frmEditAdmin(Selected);
+            var form = new frmEditSiswa(Selected);
             form.ShowDialog();
             FetchUser();
         }
@@ -68,18 +72,16 @@ namespace iCAN.GUI.Admin
         private void metroButton3_Click(object sender, EventArgs e)
         {
             Database db = new Database();
-            DialogResult dialogResult = MessageBox.Show("Apakah anda yakin akan menghapus admin ini?", "PERINGATAN", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Apakah anda yakin akan menghapus siswa ini?", "PERINGATAN", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                int i = db.CallnonQuery("DELETE FROM user WHERE id = " + Selected);
-                if (i > 0)
+                bool i = db.CallnonQuery("DELETE FROM user WHERE id = " + Selected);
+                if (i)
                 {
-                    MessageBox.Show("Success");
+                    i = db.CallnonQuery("DELETE FROM siswa WHERE id_user = " + Selected);
+                    if (i)
+                        MessageBox.Show("Success");
                 }
-            }
-            else if (dialogResult == DialogResult.No)
-            {
-                //do something else
             }
             FetchUser();
 

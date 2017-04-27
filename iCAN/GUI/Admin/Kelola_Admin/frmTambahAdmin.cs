@@ -40,8 +40,8 @@ namespace iCAN.GUI.Admin
                 string nama = txNama.Text;
                 string query = "INSERT INTO user(username,password,nama, role) VALUES('" + username + "','" + password + "','" + nama + "','admin');";
                 Database db = new Database();
-                int i = db.CallnonQuery(query);
-                if (i > 0)
+                bool i = db.CallnonQuery(query);
+                if (i)
                 {
                     MessageBox.Show("Success");
                 }

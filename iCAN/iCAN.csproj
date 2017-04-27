@@ -94,6 +94,12 @@
     <Compile Include="GUI\Admin\frmKelolaSiswa.Designer.cs">
       <DependentUpon>frmKelolaSiswa.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Admin\frmEditSiswa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\frmEditSiswa.Designer.cs">
+      <DependentUpon>frmEditSiswa.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Admin\frmTambahSiswa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +183,9 @@
     </Compile>
     <EmbeddedResource Include="GUI\Admin\frmKelolaSiswa.resx">
       <DependentUpon>frmKelolaSiswa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\frmEditSiswa.resx">
+      <DependentUpon>frmEditSiswa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\frmTambahSiswa.resx">
       <DependentUpon>frmTambahSiswa.cs</DependentUpon>

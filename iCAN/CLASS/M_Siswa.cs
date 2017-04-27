@@ -9,6 +9,12 @@ namespace iCAN.CLASS
     class M_Siswa : M_User
     {
         private String NIS;
+        bool jenis_kelamin;
+        int idKelas;
+        String tempat_lahir;
+        String tanggal_lahir;
+        String agama;
+        String alamat;
 
         public String NIS1
         {
@@ -29,6 +35,30 @@ namespace iCAN.CLASS
         {
             this.NIS = NIS;
         }
+        public M_Siswa(int idUser) : base()
+        {
+            Database db = new Database();
+            db.reader = db.callQuery("SELECT * FROM v_siswa where id_user = "+idUser);
+            if (db.reader.Read())
+            {
+                NIS1 = db.reader.GetString(0);
+                IdUser = Convert.ToInt32(db.reader.GetString(1));
+                Nama = db.reader.GetString(2);
+                if (db.reader.GetString(3) == "1")
+                    jenis_kelamin = true;
+                else
+                    jenis_kelamin = false;
+                tempat_lahir = db.reader.GetString(5);
+                tanggal_lahir = db.reader.GetString(6);
+                agama = db.reader.GetString(7);
+                alamat = db.reader.GetString(8);
+                db.databaseConnection.Close();
+            }
+        }
+        public M_Siswa() : base()
+        {
+
+        }
 
         public void SetNIS(String NIS)
         {
@@ -39,6 +69,7 @@ namespace iCAN.CLASS
         {
             return this.NIS1;
         }
+        
 
     }
 }

@@ -30,7 +30,6 @@ namespace iCAN.GUI.Admin
 
         private void frmEditAdmin_Load(object sender, EventArgs e)
         {
-
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -47,10 +46,9 @@ namespace iCAN.GUI.Admin
                 Query += ", password = '" + txPassword.Text + "'";
             }
                 Query += " WHERE id = " + idUser + "; ";
-            int i =  db.CallnonQuery(Query);
-            if (i > 0)
-            {
-                MessageBox.Show("Success");
+            bool i =  db.CallnonQuery(Query);
+            if (i){
+                Close();
             }
         }
     }

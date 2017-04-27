@@ -46,7 +46,7 @@ namespace iCAN
                 return reader;
             }
         }
-        public int CallnonQuery(string query)
+        public bool CallnonQuery(string query)
         {
             try
             {
@@ -55,15 +55,23 @@ namespace iCAN
                 commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
                 reader = commandDatabase.ExecuteNonQuery();
-                return reader;
+                if (reader > 0)
+                {
+                    databaseConnection.Close();
+                    return true;
+                }
+                else
+                    return false;
 
             }
             catch (Exception)
             {
-
-                MessageBox.Show("Cant connect to database");
-                return 0;
+                return false;
             }
+        }
+        public void Closedb()
+        {
+            databaseConnection.Close();
         }
 
     }
