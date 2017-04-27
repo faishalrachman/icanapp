@@ -29,26 +29,51 @@ namespace iCAN
         }
         public MySqlDataReader callQuery(string query)
         {
+            try
+            {
                 MySqlDataReader reader;
+                databaseConnection.Close();
                 databaseConnection.Open();
                 commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
                 reader = commandDatabase.ExecuteReader();
                 return reader;
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Cant connect to database");
+                return reader;
+            }
         }
-        public bool TestConnection()
+        public bool CallnonQuery(string query)
         {
-            
             try
             {
+                int reader;
+                databaseConnection.Close();
                 databaseConnection.Open();
-                return true;
+                commandDatabase = new MySqlCommand(query, databaseConnection);
+                commandDatabase.CommandTimeout = 60;
+                reader = commandDatabase.ExecuteNonQuery();
+                if (reader > 0)
+                {
+                    databaseConnection.Close();
+                    return true;
+                }
+                else
+                    return false;
+
             }
             catch (Exception)
             {
                 return false;
             }
-            return false;
+        }
+        public void Closedb()
+        {
+            databaseConnection.Close();
         }
 
     }

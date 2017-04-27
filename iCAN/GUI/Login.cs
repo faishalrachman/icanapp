@@ -10,12 +10,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Win32;
+using iCAN.GUI.Admin;
 
 namespace iCAN.GUI
 {
     public partial class frmLogin : MetroFramework.Forms.MetroForm
     {
         MainDashboardGuru guru;
+        MainDashboardAdmin admin;
         RegistryKey reg;
 
 
@@ -37,7 +39,7 @@ namespace iCAN.GUI
 
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (guru == null)
+            if (guru == null && admin == null)
             {
                 Environment.Exit(0);
             }
@@ -67,6 +69,10 @@ namespace iCAN.GUI
                     case "guru":
                         guru = new MainDashboardGuru();
                         guru.Show();
+                        break;
+                    case "admin":
+                        admin = new MainDashboardAdmin(user.IdUser);
+                        admin.Show();
                         break;
                     default:
                         break;

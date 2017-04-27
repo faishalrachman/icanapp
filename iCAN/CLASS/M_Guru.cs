@@ -12,18 +12,13 @@ namespace iCAN.CLASS
         private String NIP;
         
 
-        public M_Guru(int IdUser, String nama, String password, String NIP) : base(IdUser, nama)
+        public M_Guru(int IdUser, String nama, String password, String NIP) : base(IdUser)
         {
 
             Database db = new Database();
             db.callQuery("SELECT NIP FROM guru where id_user = " + IdUser);
             this.NIP = NIP;
         }
-        public M_Guru(M_User user, String NIP) : base(user.IdUser,user.Nama)
-        {
-            SetNIP(NIP);
-        }
-
 
         public void SetNIP(String NIP)
         {

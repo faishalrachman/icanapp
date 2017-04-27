@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace iCAN.GUI.Siswa
 {
-    public partial class MainDashboardSiswa : Form
+    public partial class MainDashboardSiswa : MetroFramework.Forms.MetroForm
     {
         public MainDashboardSiswa()
         {

@@ -88,6 +88,54 @@
     </Compile>
     <Compile Include="CLASS\M_Guru.cs" />
     <Compile Include="CLASS\M_User.cs" />
+    <Compile Include="GUI\Admin\frmKelolaBerita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\frmKelolaBerita.Designer.cs">
+      <DependentUpon>frmKelolaBerita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\Kelola_Siswa\frmKelolaSiswa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\Kelola_Siswa\frmKelolaSiswa.Designer.cs">
+      <DependentUpon>frmKelolaSiswa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\Kelola_Siswa\frmEditSiswa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\Kelola_Siswa\frmEditSiswa.Designer.cs">
+      <DependentUpon>frmEditSiswa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\Kelola_Siswa\frmTambahSiswa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\Kelola_Siswa\frmTambahSiswa.Designer.cs">
+      <DependentUpon>frmTambahSiswa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\Kelola_Admin\frmEditAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\Kelola_Admin\frmEditAdmin.Designer.cs">
+      <DependentUpon>frmEditAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\Kelola_Admin\frmTambahAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\Kelola_Admin\frmTambahAdmin.Designer.cs">
+      <DependentUpon>frmTambahAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\Kelola_Admin\KelolaAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\Kelola_Admin\KelolaAdmin.Designer.cs">
+      <DependentUpon>KelolaAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\MainDashboardAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\MainDashboardAdmin.Designer.cs">
+      <DependentUpon>MainDashboardAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\MainSplash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +162,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI\Siswa\MainDashboardSiswa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Siswa\MainDashboardSiswa.Designer.cs">
+      <DependentUpon>MainDashboardSiswa.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\SpashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +187,30 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="GUI\Admin\frmKelolaBerita.resx">
+      <DependentUpon>frmKelolaBerita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\Kelola_Siswa\frmKelolaSiswa.resx">
+      <DependentUpon>frmKelolaSiswa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\Kelola_Siswa\frmEditSiswa.resx">
+      <DependentUpon>frmEditSiswa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\Kelola_Siswa\frmTambahSiswa.resx">
+      <DependentUpon>frmTambahSiswa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\Kelola_Admin\frmEditAdmin.resx">
+      <DependentUpon>frmEditAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\Kelola_Admin\frmTambahAdmin.resx">
+      <DependentUpon>frmTambahAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\Kelola_Admin\KelolaAdmin.resx">
+      <DependentUpon>KelolaAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\MainDashboardAdmin.resx">
+      <DependentUpon>MainDashboardAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Guru\DashboardGuru.resx">
       <DependentUpon>DashboardGuru.cs</DependentUpon>
     </EmbeddedResource>
@@ -144,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\MainSplash.resx">
       <DependentUpon>MainSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Siswa\MainDashboardSiswa.resx">
+      <DependentUpon>MainDashboardSiswa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\SpashScreen.resx">
       <DependentUpon>SpashScreen.cs</DependentUpon>
@@ -161,10 +242,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="GUI\Admin\" />
-    <Folder Include="GUI\Siswa\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

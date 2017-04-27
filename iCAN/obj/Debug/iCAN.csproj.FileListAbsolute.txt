@@ -93,7 +93,27 @@ E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.Properties.Resources.resource
 E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.csproj.GenerateResource.Cache
 E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.exe
 E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.pdb
-E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.MainSplash.resources
 E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.SpashScreen.resources
+<<<<<<< HEAD
 D:\Project\Tubes\PBO\icanapp\iCAN\obj\Debug\iCAN.GUI.SpashScreen.resources
 D:\Project\Tubes\PBO\icanapp\iCAN\obj\Debug\iCAN.GUI.frmSplash.resources
+=======
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.MainDashboardAdmin.resources
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.Siswa.MainDashboardSiswa.resources
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.frmSplash.resources
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.frmKelolaUser.resources
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.frmEditAdmin.resources
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.frmTambahAdmin.resources
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.frmKelolaSiswa.resources
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.frmTambahSiswa.resources
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.frmEditSiswa.resources
+>>>>>>> 026603dc9cf0a4df36d85687b8f9ce84295190ff
+D:\Project\Tubes\PBO\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.frmKelolaSiswa.resources
+D:\Project\Tubes\PBO\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.frmEditSiswa.resources
+D:\Project\Tubes\PBO\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.frmTambahSiswa.resources
+D:\Project\Tubes\PBO\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.frmEditAdmin.resources
+D:\Project\Tubes\PBO\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.frmTambahAdmin.resources
+D:\Project\Tubes\PBO\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.frmKelolaUser.resources
+D:\Project\Tubes\PBO\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.MainDashboardAdmin.resources
+D:\Project\Tubes\PBO\icanapp\iCAN\obj\Debug\iCAN.GUI.Siswa.MainDashboardSiswa.resources
+D:\Project\Tubes\PBO\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.frmKelolaBerita.resources

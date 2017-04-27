@@ -19,12 +19,13 @@ namespace iCAN.GUI
             t.Start();
             
             InitializeComponent();
-            for (int i = 0; i <= 100; i++)
+            for (int i = 0; i <= 300; i++)
                 Thread.Sleep(10);
             var Form = new frmLogin();
             Form.Show();
             t.Abort();
             this.Hide();
+
         }
         void Loading()
         {

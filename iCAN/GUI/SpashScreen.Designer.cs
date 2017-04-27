@@ -59,6 +59,7 @@
             this.metroProgressBar1.ProgressBarStyle = System.Windows.Forms.ProgressBarStyle.Marquee;
             this.metroProgressBar1.Size = new System.Drawing.Size(287, 23);
             this.metroProgressBar1.TabIndex = 1;
+            this.metroProgressBar1.Click += new System.EventHandler(this.metroProgressBar1_Click);
             // 
             // Loading
             // 
@@ -87,6 +88,11 @@
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 2;
+            this.timer1.Tick += new System.EventHandler(this.timer_tik);
             // 
             // SpashScreen
             // 

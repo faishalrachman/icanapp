@@ -45,5 +45,26 @@ namespace iCAN.GUI
         private void timer1_Tick_1(object sender, EventArgs e)
         {
         }
+
+        private void metroProgressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer_tik(object sender, EventArgs e)
+        {
+            int i = 0;
+            if (i < 5)
+            {
+                i++;
+            }
+            else
+            {
+                timer1.Enabled = false;
+                var form = new frmLogin();
+                form.Show();
+                Close();
+            }
+        }
     }
 }

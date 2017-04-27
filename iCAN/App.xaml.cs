@@ -1,4 +1,5 @@
 ﻿using iCAN.GUI;
+using iCAN.GUI.Admin;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -17,7 +18,7 @@ namespace iCAN
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-            var form = new frmSplash();
+            var form = new frmLogin();
             form.Show();
         }
     }
