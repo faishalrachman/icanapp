@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 27, 2017 at 09:11 AM
+-- Generation Time: Apr 28, 2017 at 07:13 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.6.24
 
@@ -29,8 +29,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `berita` (
   `id_berita` int(11) NOT NULL,
   `judul` text NOT NULL,
-  `isi` text NOT NULL,
-  `status` tinyint(1) NOT NULL
+  `isi` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -42,15 +41,17 @@ CREATE TABLE `berita` (
 CREATE TABLE `guru` (
   `id_guru` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
-  `NIP` varchar(20) NOT NULL
+  `NIP` varchar(20) NOT NULL,
+  `alamat` text NOT NULL,
+  `no_hp` varchar(13) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `guru`
 --
 
-INSERT INTO `guru` (`id_guru`, `id_user`, `NIP`) VALUES
-(1, 2, '10000145554121');
+INSERT INTO `guru` (`id_guru`, `id_user`, `NIP`, `alamat`, `no_hp`) VALUES
+(1, 2, '10000145554121', '', '');
 
 -- --------------------------------------------------------
 
@@ -133,7 +134,8 @@ CREATE TABLE `siswa` (
 --
 
 INSERT INTO `siswa` (`NIS`, `id_user`, `jenis_kelamin`, `id_kelas`, `tempat_lahir`, `tanggal_lahir`, `agama`, `alamat`) VALUES
-(1310003, 12, 0, 1, 'Bandoeng', '04/04/2016 00.00.00', 'Katholik', 'Jakartau');
+(1310003, 12, 1, 1, 'Bandoeng', '22/08/1997 00.00.00', 'Islam', 'Dimana aja deh gajadi di bandung'),
+(1310004, 14, 0, 3, 'Jayapura', '17/08/1945 00.00.00', 'Islam', 'Firdaus');
 
 -- --------------------------------------------------------
 
@@ -154,10 +156,12 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `nama`, `role`) VALUES
-(1, 'admin', '123456', 'Ipat Ganteng Banget', 'admin'),
+(1, 'admin', '123456', 'Faishal Rachman', 'admin'),
 (2, 'ipat', '123456', 'Faishal Rachman', 'guru'),
-(6, 'admin2', '123456', 'Dani ga ganteng2 amat', 'admin'),
-(12, 'ipat2', 'ipatlagi', 'ipatkok', 'siswa');
+(6, 'admin2', '123456', 'Dani Agung Prasetiyo', 'admin'),
+(12, 'ipat2', 'ipatlagi', 'ipatkok', 'siswa'),
+(13, 'admin3', '123', 'upil', 'admin'),
+(14, 'sarahfl', '123456', 'Sarah Fauzi Bowo', 'siswa');
 
 -- --------------------------------------------------------
 
@@ -262,7 +266,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `berita`
 --
 ALTER TABLE `berita`
-  MODIFY `id_berita` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_berita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `guru`
 --
@@ -287,12 +291,12 @@ ALTER TABLE `ruangan`
 -- AUTO_INCREMENT for table `siswa`
 --
 ALTER TABLE `siswa`
-  MODIFY `NIS` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1310004;
+  MODIFY `NIS` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1310005;
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

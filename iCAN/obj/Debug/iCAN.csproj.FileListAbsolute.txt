@@ -157,3 +157,12 @@ E:\Dani\icanapp\iCAN\obj\Debug\iCAN.GUI.Guru.GuruBerita.resources
 E:\Dani\icanapp\iCAN\obj\Debug\iCAN.GUI.Guru.DaftarGuru.resources
 E:\Dani\icanapp\iCAN\obj\Debug\iCAN.GUI.Guru.NilaiGuru.resources
 E:\Dani\icanapp\iCAN\obj\Debug\iCAN.GUI.Guru.ProfilGuru.resources
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.Guru.Absensi.resources
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.Guru.GuruBerita.resources
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.Guru.DaftarGuru.resources
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.Guru.NilaiGuru.resources
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.Guru.ProfilGuru.resources
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.frmKelolaGuru.resources
+>>>>>>> 2a28c4ca9013ee2b4066628c26afd78014e9a12a
+E:\Dani\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.frmEditGuru.resources
+E:\Dani\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.frmKelolaGuru.resources

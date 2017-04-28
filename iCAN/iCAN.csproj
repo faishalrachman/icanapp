@@ -91,6 +91,18 @@
     </Compile>
     <Compile Include="CLASS\M_Guru.cs" />
     <Compile Include="CLASS\M_User.cs" />
+    <Compile Include="GUI\Admin\Kelola_Guru\frmEditGuru.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\Kelola_Guru\frmEditGuru.Designer.cs">
+      <DependentUpon>frmEditGuru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\Kelola_Guru\frmKelolaGuru.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\Kelola_Guru\frmKelolaGuru.Designer.cs">
+      <DependentUpon>frmKelolaGuru.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Admin\Kelola_Berita\frmKelolaBerita.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +226,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="GUI\Admin\Kelola_Guru\frmEditGuru.resx">
+      <DependentUpon>frmEditGuru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\Kelola_Guru\frmKelolaGuru.resx">
+      <DependentUpon>frmKelolaGuru.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\Kelola_Berita\frmKelolaBerita.resx">
       <DependentUpon>frmKelolaBerita.cs</DependentUpon>
     </EmbeddedResource>

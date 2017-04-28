@@ -18,7 +18,7 @@ namespace iCAN
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-            var form = new frmLogin();
+            var form = new frmKelolaGuru();
             form.Show();
         }
     }
