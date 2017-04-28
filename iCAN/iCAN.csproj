@@ -145,11 +145,11 @@
     <Compile Include="GUI\Guru\Absensi.Designer.cs">
       <DependentUpon>Absensi.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Guru\Berita.cs">
+    <Compile Include="GUI\Guru\BeritaGuru.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Guru\Berita.Designer.cs">
-      <DependentUpon>Berita.cs</DependentUpon>
+    <Compile Include="GUI\Guru\BeritaGuru.Designer.cs">
+      <DependentUpon>BeritaGuru.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Guru\DaftarGuru.cs">
       <SubType>Form</SubType>
@@ -241,8 +241,8 @@
     <EmbeddedResource Include="GUI\Guru\Absensi.resx">
       <DependentUpon>Absensi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Guru\Berita.resx">
-      <DependentUpon>Berita.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Guru\BeritaGuru.resx">
+      <DependentUpon>BeritaGuru.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Guru\DaftarGuru.resx">
       <DependentUpon>DaftarGuru.cs</DependentUpon>
