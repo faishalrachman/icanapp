@@ -54,7 +54,10 @@ namespace iCAN.GUI.Admin
 
         private void metroTile6_Click(object sender, EventArgs e)
         {
-
+            var form = new frmKelolaBerita();
+            Hide();
+            form.ShowDialog();
+            Show();
         }
     }
 }

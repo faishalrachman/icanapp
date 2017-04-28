@@ -73,8 +73,14 @@ namespace iCAN
         }
         public void Closedb()
         {
+            
             databaseConnection.Close();
         }
+        public String escapeString(String s)
+        {
+            return MySqlHelper.EscapeString(s);
+        }
+        
 
     }
 }

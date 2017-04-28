@@ -15,14 +15,15 @@ namespace iCAN.GUI.Admin
     {
         M_Berita berita;
         List<M_Berita> l_berita;
-        private int Selected;
         public frmKelolaBerita()
         {
             InitializeComponent();
             FetchNews();
-            }
+        }
         void FetchNews()
         {
+            txIsi.Text = "";
+            txInputJudul.Text = "";
             l_berita = new List<M_Berita>();
             Database db = new Database();
             cbOpsiJudul.Items.Clear();
@@ -55,19 +56,9 @@ namespace iCAN.GUI.Admin
 
         private void metroButton2_Click(object sender, EventArgs e)
         {
-            var form = new frmEditSiswa(Selected);
-            form.ShowDialog();
-            FetchNews();
+
         }
 
-        private void metroButton3_Click(object sender, EventArgs e)
-        {
-            //DialogResult dialogResult = MessageBox.Show("Apakah anda yakin akan menghapus berita ini?", "PERINGATAN", MessageBoxButtons.YesNo);
-            //if (dialogResult == DialogResult.Yes)
-            //{
-            //    siswa.deleteSiswafromDB();
-            //}
-        }
 
         private void metroButton4_Click(object sender, EventArgs e)
         {
@@ -77,13 +68,60 @@ namespace iCAN.GUI.Admin
         private void cbOpsiJudul_SelectedIndexChanged(object sender, EventArgs e)
         {
             txIsi.Text = l_berita.ElementAt(cbOpsiJudul.SelectedIndex).isi;
+            berita = l_berita.ElementAt(cbOpsiJudul.SelectedIndex);
         }
 
         private void metroButton2_Click_1(object sender, EventArgs e)
         {
             cbOpsiJudul.Visible = false;
             txInputJudul.Visible = true;
+            btDelete.Enabled = false;
+            btBatal.Enabled = true;
+            FetchNews();
+            berita = null;
+        }
+
+        private void metroButton5_Click(object sender, EventArgs e)
+        {
+            string judul = txInputJudul.Text;
+            string isi = txIsi.Text;
+
+            if (berita != null)
+            {
+                berita.isi = isi;
+                berita.saveBeritatoDB();
+            }
+            else
+            {
+                berita = new M_Berita(judul, isi);
+            }
             txIsi.Text = "";
+            btDelete.Enabled = true;
+            btBatal.Enabled = false;
+            txInputJudul.Visible = false;
+            cbOpsiJudul.Visible = true;
+            FetchNews();
+        }
+
+        private void metroButton1_Click_1(object sender, EventArgs e)
+        {
+
+            DialogResult dialogResult = MessageBox.Show("Apakah anda yakin akan menghapus berita ini?", "PERINGATAN", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                berita = l_berita.ElementAt(cbOpsiJudul.SelectedIndex);
+                berita.deleteBeritafromDB();
+            }
+
+            FetchNews();
+        }
+
+        private void btBatal_Click(object sender, EventArgs e)
+        {
+            cbOpsiJudul.Visible = true;
+            txInputJudul.Visible = false;
+            txIsi.Text = "";
+
         }
     }
 }

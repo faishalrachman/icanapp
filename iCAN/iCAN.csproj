@@ -91,10 +91,10 @@
     </Compile>
     <Compile Include="CLASS\M_Guru.cs" />
     <Compile Include="CLASS\M_User.cs" />
-    <Compile Include="GUI\Admin\frmKelolaBerita.cs">
+    <Compile Include="GUI\Admin\Kelola_Berita\frmKelolaBerita.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Admin\frmKelolaBerita.Designer.cs">
+    <Compile Include="GUI\Admin\Kelola_Berita\frmKelolaBerita.Designer.cs">
       <DependentUpon>frmKelolaBerita.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Admin\Kelola_Siswa\frmKelolaSiswa.cs">
@@ -190,7 +190,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="GUI\Admin\frmKelolaBerita.resx">
+    <EmbeddedResource Include="GUI\Admin\Kelola_Berita\frmKelolaBerita.resx">
       <DependentUpon>frmKelolaBerita.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\Kelola_Siswa\frmKelolaSiswa.resx">

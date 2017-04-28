@@ -12,12 +12,15 @@ namespace iCAN.CLASS
         private String NIP;
         
 
-        public M_Guru(int IdUser, String nama, String password, String NIP) : base(IdUser)
+        public M_Guru(int IdUser) : base(IdUser)
         {
-
+            
             Database db = new Database();
-            db.callQuery("SELECT NIP FROM guru where id_user = " + IdUser);
-            this.NIP = NIP;
+            db.reader = db.callQuery("SELECT NIP FROM guru where id_user = " + IdUser);
+            if (db.reader.Read())
+            {
+                NIP = db.reader.GetString(0);
+            }
         }
 
         public void SetNIP(String NIP)

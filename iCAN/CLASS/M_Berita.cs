@@ -8,10 +8,9 @@ namespace iCAN.CLASS
 {
     class M_Berita
     {
-        public int idNews;
+        public int idNews = -1;
         public String judul;
         public String isi;
-        public int status;
         private Database db;
 
         public M_Berita(int idNews, String judul, String isi)
@@ -19,6 +18,12 @@ namespace iCAN.CLASS
             this.idNews = idNews;
             this.judul = judul;
             this.isi = isi;
+        }
+        public M_Berita(String judul, String isi)
+        {
+            this.judul = judul;
+            this.isi = isi;
+            addBeritatoDB();
         }
         public M_Berita(int idNews)
         {
@@ -28,7 +33,6 @@ namespace iCAN.CLASS
             {
                 judul = db.reader.GetString(1);
                 isi = db.reader.GetString(2);
-                status = Convert.ToInt32(db.reader.GetString(3));
             }
         }
 
@@ -50,6 +54,27 @@ namespace iCAN.CLASS
         public String getIsi()
         {
             return isi;
+        }
+        public bool addBeritatoDB()
+        {
+            Database db = new Database();
+            string query = "INSERT INTO berita(judul,isi) VALUES('" + judul + "','" + isi + "')";
+            bool i = db.CallnonQuery(query);
+            return i;
+        }
+        public bool saveBeritatoDB()
+        {
+            Database db = new Database();
+            string query = "UPDATE berita SET judul = '" + judul + "', isi = '" + isi + "' where id_berita = "+idNews;
+            bool i = db.CallnonQuery(query);
+            return i;
+        }
+        public bool deleteBeritafromDB()
+        {
+            Database db = new Database();
+            string query = "DELETE FROM berita where id_berita = " + idNews;
+            bool i = db.CallnonQuery(query);
+            return i;
         }
     }
 }

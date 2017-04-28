@@ -32,10 +32,10 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.txInputJudul = new MetroFramework.Controls.MetroTextBox();
             this.txIsi = new MetroFramework.Controls.MetroTextBox();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.btTambahBerita = new MetroFramework.Controls.MetroButton();
             this.metroButton5 = new MetroFramework.Controls.MetroButton();
-            this.metroButton6 = new MetroFramework.Controls.MetroButton();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.btBatal = new MetroFramework.Controls.MetroButton();
+            this.btDelete = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // cbOpsiJudul
@@ -106,10 +106,7 @@
             this.txIsi.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txIsi.CustomButton.UseSelectable = true;
             this.txIsi.CustomButton.Visible = false;
-            this.txIsi.Lines = new string[] {
-        "kucingk",
-        "kucing",
-        "kucing"};
+            this.txIsi.Lines = new string[0];
             this.txIsi.Location = new System.Drawing.Point(24, 137);
             this.txIsi.MaxLength = 32767;
             this.txIsi.Multiline = true;
@@ -122,20 +119,19 @@
             this.txIsi.ShortcutsEnabled = true;
             this.txIsi.Size = new System.Drawing.Size(438, 402);
             this.txIsi.TabIndex = 5;
-            this.txIsi.Text = "kucingk\r\nkucing\r\nkucing";
             this.txIsi.UseSelectable = true;
             this.txIsi.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txIsi.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroButton2
+            // btTambahBerita
             // 
-            this.metroButton2.Location = new System.Drawing.Point(47, 550);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(75, 23);
-            this.metroButton2.TabIndex = 6;
-            this.metroButton2.Text = "Add";
-            this.metroButton2.UseSelectable = true;
-            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click_1);
+            this.btTambahBerita.Location = new System.Drawing.Point(47, 550);
+            this.btTambahBerita.Name = "btTambahBerita";
+            this.btTambahBerita.Size = new System.Drawing.Size(75, 23);
+            this.btTambahBerita.TabIndex = 6;
+            this.btTambahBerita.Text = "Add";
+            this.btTambahBerita.UseSelectable = true;
+            this.btTambahBerita.Click += new System.EventHandler(this.metroButton2_Click_1);
             // 
             // metroButton5
             // 
@@ -145,34 +141,37 @@
             this.metroButton5.TabIndex = 3;
             this.metroButton5.Text = "Save";
             this.metroButton5.UseSelectable = true;
+            this.metroButton5.Click += new System.EventHandler(this.metroButton5_Click);
             // 
-            // metroButton6
+            // btBatal
             // 
-            this.metroButton6.Enabled = false;
-            this.metroButton6.Location = new System.Drawing.Point(204, 589);
-            this.metroButton6.Name = "metroButton6";
-            this.metroButton6.Size = new System.Drawing.Size(75, 23);
-            this.metroButton6.TabIndex = 7;
-            this.metroButton6.Text = "Cancel";
-            this.metroButton6.UseSelectable = true;
+            this.btBatal.Enabled = false;
+            this.btBatal.Location = new System.Drawing.Point(204, 589);
+            this.btBatal.Name = "btBatal";
+            this.btBatal.Size = new System.Drawing.Size(75, 23);
+            this.btBatal.TabIndex = 7;
+            this.btBatal.Text = "Cancel";
+            this.btBatal.UseSelectable = true;
+            this.btBatal.Click += new System.EventHandler(this.btBatal_Click);
             // 
-            // metroButton1
+            // btDelete
             // 
-            this.metroButton1.Location = new System.Drawing.Point(354, 550);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(75, 23);
-            this.metroButton1.TabIndex = 7;
-            this.metroButton1.Text = "Delete";
-            this.metroButton1.UseSelectable = true;
+            this.btDelete.Location = new System.Drawing.Point(354, 550);
+            this.btDelete.Name = "btDelete";
+            this.btDelete.Size = new System.Drawing.Size(75, 23);
+            this.btDelete.TabIndex = 7;
+            this.btDelete.Text = "Delete";
+            this.btDelete.UseSelectable = true;
+            this.btDelete.Click += new System.EventHandler(this.metroButton1_Click_1);
             // 
             // frmKelolaBerita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(486, 624);
-            this.Controls.Add(this.metroButton1);
-            this.Controls.Add(this.metroButton6);
-            this.Controls.Add(this.metroButton2);
+            this.Controls.Add(this.btDelete);
+            this.Controls.Add(this.btBatal);
+            this.Controls.Add(this.btTambahBerita);
             this.Controls.Add(this.metroButton5);
             this.Controls.Add(this.txIsi);
             this.Controls.Add(this.metroLabel1);
@@ -193,9 +192,9 @@
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroTextBox txInputJudul;
         private MetroFramework.Controls.MetroTextBox txIsi;
-        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroButton btTambahBerita;
         private MetroFramework.Controls.MetroButton metroButton5;
-        private MetroFramework.Controls.MetroButton metroButton6;
-        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton btBatal;
+        private MetroFramework.Controls.MetroButton btDelete;
     }
 }
