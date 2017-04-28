@@ -24,6 +24,7 @@ namespace iCAN.GUI.Guru
         private void MainDashboardGuru_Load(object sender, EventArgs e)
         {
 
+
             
         }
 
@@ -35,6 +36,30 @@ namespace iCAN.GUI.Guru
         private void metroTile2_Click(object sender, EventArgs e)
         {
              
+        }
+
+        private void mAbsensi_Click(object sender, EventArgs e)
+        {
+            var form = new Absensi();
+            Hide();
+            form.ShowDialog();
+            Show();
+        }
+
+        private void mNilai_Click(object sender, EventArgs e)
+        {
+            var form = new NilaiGuru();
+            Hide();
+            form.ShowDialog();
+            Show();
+        }
+
+        private void mDaftarGuru_Click(object sender, EventArgs e)
+        {
+            var form = new DaftarGuru();
+            Hide();
+            form.ShowDialog();
+            Show();
         }
     }
 }
