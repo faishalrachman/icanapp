@@ -139,23 +139,47 @@
     <Compile Include="GUI\Admin\MainDashboardAdmin.Designer.cs">
       <DependentUpon>MainDashboardAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Guru\Absensi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Guru\Absensi.Designer.cs">
+      <DependentUpon>Absensi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Guru\Berita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Guru\Berita.Designer.cs">
+      <DependentUpon>Berita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Guru\DaftarGuru.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Guru\DaftarGuru.Designer.cs">
+      <DependentUpon>DaftarGuru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Guru\MainDashboardGuru.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Guru\MainDashboardGuru.designer.cs">
+      <DependentUpon>MainDashboardGuru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Guru\NilaiGuru.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Guru\NilaiGuru.Designer.cs">
+      <DependentUpon>NilaiGuru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Guru\ProfilGuru.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Guru\ProfilGuru.Designer.cs">
+      <DependentUpon>ProfilGuru.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\MainSplash.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\MainSplash.Designer.cs">
       <DependentUpon>MainSplash.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Guru\DashboardGuru.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\Guru\DashboardGuru.Designer.cs">
-      <DependentUpon>DashboardGuru.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Guru\MainDashboardGuru.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Guru\MainDashboardGuru.Designer.cs">
-      <DependentUpon>MainDashboardGuru.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Login.cs">
       <SubType>Form</SubType>
@@ -214,11 +238,23 @@
     <EmbeddedResource Include="GUI\Admin\MainDashboardAdmin.resx">
       <DependentUpon>MainDashboardAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Guru\DashboardGuru.resx">
-      <DependentUpon>DashboardGuru.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Guru\Absensi.resx">
+      <DependentUpon>Absensi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Guru\Berita.resx">
+      <DependentUpon>Berita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Guru\DaftarGuru.resx">
+      <DependentUpon>DaftarGuru.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Guru\MainDashboardGuru.resx">
       <DependentUpon>MainDashboardGuru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Guru\NilaiGuru.resx">
+      <DependentUpon>NilaiGuru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Guru\ProfilGuru.resx">
+      <DependentUpon>ProfilGuru.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

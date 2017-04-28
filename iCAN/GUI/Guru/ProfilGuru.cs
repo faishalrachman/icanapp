@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace iCAN.GUI.Guru
 {
-    public partial class DashboardGuru : UserControl
+    public partial class ProfilGuru : MetroFramework.Forms.MetroForm
     {
-        public DashboardGuru()
+        public ProfilGuru()
         {
             InitializeComponent();
         }
-        
     }
 }

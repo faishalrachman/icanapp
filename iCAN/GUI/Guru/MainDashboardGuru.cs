@@ -23,12 +23,18 @@ namespace iCAN.GUI.Guru
 
         private void MainDashboardGuru_Load(object sender, EventArgs e)
         {
+
             
         }
 
         private void MainDashboardGuru_FormClosed(object sender, FormClosedEventArgs e)
         {
             Environment.Exit(1);
+        }
+
+        private void metroTile2_Click(object sender, EventArgs e)
+        {
+             
         }
     }
 }
