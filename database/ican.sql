@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 28, 2017 at 07:13 PM
+-- Generation Time: Apr 28, 2017 at 10:19 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.6.24
 
@@ -51,7 +51,7 @@ CREATE TABLE `guru` (
 --
 
 INSERT INTO `guru` (`id_guru`, `id_user`, `NIP`, `alamat`, `no_hp`) VALUES
-(1, 2, '10000145554121', '', '');
+(4, 17, '22', '13', '13');
 
 -- --------------------------------------------------------
 
@@ -93,6 +93,34 @@ INSERT INTO `kelas` (`id_kelas`, `id_guru`, `nama_kelas`) VALUES
 (1, 1, 'X IPA 1'),
 (2, 1, 'X IPA 2'),
 (3, 1, 'X IPA 3');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mapel`
+--
+
+CREATE TABLE `mapel` (
+  `id_mapel` int(11) NOT NULL,
+  `nama_mapel` text NOT NULL,
+  `id_guru` int(11) NOT NULL,
+  `id_kelas` int(11) NOT NULL,
+  `id_jadwal` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `nilai`
+--
+
+CREATE TABLE `nilai` (
+  `id_nilai` int(11) NOT NULL,
+  `id_mapel` int(11) NOT NULL,
+  `NIS` int(11) NOT NULL,
+  `nama_nilai` text NOT NULL,
+  `skor` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -161,7 +189,10 @@ INSERT INTO `user` (`id`, `username`, `password`, `nama`, `role`) VALUES
 (6, 'admin2', '123456', 'Dani Agung Prasetiyo', 'admin'),
 (12, 'ipat2', 'ipatlagi', 'ipatkok', 'siswa'),
 (13, 'admin3', '123', 'upil', 'admin'),
-(14, 'sarahfl', '123456', 'Sarah Fauzi Bowo', 'siswa');
+(14, 'sarahfl', '123456', 'Sarah Fauzi Bowo', 'siswa'),
+(15, '123', '', '123', 'guru'),
+(16, 'dws', 'dwsganteng', 'Dodi Wisaksono Sugiharto', 'guru'),
+(17, '22', '2', '1313', 'guru');
 
 -- --------------------------------------------------------
 
@@ -173,6 +204,22 @@ CREATE TABLE `v_guru` (
 ,`id_user` int(11)
 ,`NIP` varchar(20)
 ,`nama` text
+,`alamat` text
+,`no_hp` varchar(13)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `v_nilai`
+--
+CREATE TABLE `v_nilai` (
+`id_nilai` int(11)
+,`NIS` int(11)
+,`Nama` text
+,`nama_mapel` text
+,`nama_nilai` text
+,`skor` double
 );
 
 -- --------------------------------------------------------
@@ -199,7 +246,16 @@ CREATE TABLE `v_siswa` (
 --
 DROP TABLE IF EXISTS `v_guru`;
 
-CREATE ALGORITHM=MERGE DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `v_guru`  AS  select `g`.`id_guru` AS `id_guru`,`g`.`id_user` AS `id_user`,`g`.`NIP` AS `NIP`,`u`.`nama` AS `nama` from (`guru` `g` join `user` `u`) where (`g`.`id_user` = `u`.`id`) WITH CASCADED CHECK OPTION ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `v_guru`  AS  select `g`.`id_guru` AS `id_guru`,`g`.`id_user` AS `id_user`,`g`.`NIP` AS `NIP`,`u`.`nama` AS `nama`,`g`.`alamat` AS `alamat`,`g`.`no_hp` AS `no_hp` from (`guru` `g` join `user` `u`) where (`g`.`id_user` = `u`.`id`) ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `v_nilai`
+--
+DROP TABLE IF EXISTS `v_nilai`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `v_nilai`  AS  select `n`.`id_nilai` AS `id_nilai`,`n`.`NIS` AS `NIS`,`u`.`nama` AS `Nama`,`mapel`.`nama_mapel` AS `nama_mapel`,`n`.`nama_nilai` AS `nama_nilai`,`n`.`skor` AS `skor` from (((`nilai` `n` join `mapel` on((`n`.`id_mapel` = `mapel`.`id_mapel`))) join `siswa` `s` on((`n`.`NIS` = `s`.`NIS`))) join `user` `u` on((`u`.`id` = `s`.`id_user`))) ;
 
 -- --------------------------------------------------------
 
@@ -240,6 +296,18 @@ ALTER TABLE `kelas`
   ADD PRIMARY KEY (`id_kelas`);
 
 --
+-- Indexes for table `mapel`
+--
+ALTER TABLE `mapel`
+  ADD PRIMARY KEY (`id_mapel`);
+
+--
+-- Indexes for table `nilai`
+--
+ALTER TABLE `nilai`
+  ADD PRIMARY KEY (`id_nilai`);
+
+--
 -- Indexes for table `ruangan`
 --
 ALTER TABLE `ruangan`
@@ -266,12 +334,12 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `berita`
 --
 ALTER TABLE `berita`
-  MODIFY `id_berita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_berita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `guru`
 --
 ALTER TABLE `guru`
-  MODIFY `id_guru` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_guru` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `jadwal`
 --
@@ -282,6 +350,16 @@ ALTER TABLE `jadwal`
 --
 ALTER TABLE `kelas`
   MODIFY `id_kelas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `mapel`
+--
+ALTER TABLE `mapel`
+  MODIFY `id_mapel` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `nilai`
+--
+ALTER TABLE `nilai`
+  MODIFY `id_nilai` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `ruangan`
 --
@@ -296,7 +374,7 @@ ALTER TABLE `siswa`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
