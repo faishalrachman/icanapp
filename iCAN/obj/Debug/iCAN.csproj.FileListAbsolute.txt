@@ -117,3 +117,4 @@ D:\Project\Tubes\PBO\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.frmKelolaUser.resourc
 D:\Project\Tubes\PBO\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.MainDashboardAdmin.resources
 D:\Project\Tubes\PBO\icanapp\iCAN\obj\Debug\iCAN.GUI.Siswa.MainDashboardSiswa.resources
 D:\Project\Tubes\PBO\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.frmKelolaBerita.resources
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.frmKelolaBerita.resources

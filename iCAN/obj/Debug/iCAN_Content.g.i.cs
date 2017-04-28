@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("gui/dashboardsiswa.cs")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/kelola-berita-dashboard.jpg")]
 
 

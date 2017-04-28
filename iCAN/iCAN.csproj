@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="MahApps.Metro, Version=1.5.0.23, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL">
       <HintPath>..\packages\MahApps.Metro.1.5.0\lib\net45\MahApps.Metro.dll</HintPath>
@@ -78,7 +81,7 @@
     <Compile Include="CLASS\M_Jadwal.cs" />
     <Compile Include="CLASS\M_Kelas.cs" />
     <Compile Include="CLASS\M_Mapel.cs" />
-    <Compile Include="CLASS\M_News.cs" />
+    <Compile Include="CLASS\M_Berita.cs" />
     <Compile Include="CLASS\M_Nilai.cs" />
     <Compile Include="CLASS\M_Siswa.cs" />
     <Compile Include="CLASS\M_Database.cs" />
@@ -242,6 +245,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="favicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kelola-Siswa-Dashboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kelola-Berita-Dashboard.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -86,7 +86,7 @@ namespace iCAN.CLASS
                 Nama = null;
                 jenis_kelamin = 0;
                 nama_kelas = null;
-                this.tempat_lahir = null;
+                tempat_lahir = null;
                 tanggal_lahir = null;
                 agama = null;
                 alamat = null;

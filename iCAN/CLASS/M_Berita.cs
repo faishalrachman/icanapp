@@ -6,17 +6,30 @@ using System.Threading.Tasks;
 
 namespace iCAN.CLASS
 {
-    class M_News
+    class M_Berita
     {
         public int idNews;
         public String judul;
         public String isi;
+        public int status;
+        private Database db;
 
-        public M_News(int idNews, String judul, String isi)
+        public M_Berita(int idNews, String judul, String isi)
         {
             this.idNews = idNews;
             this.judul = judul;
             this.isi = isi;
+        }
+        public M_Berita(int idNews)
+        {
+            db = new Database();
+            db.reader = db.callQuery("SELECT * from berita where id_berita = "+idNews);
+            if (db.reader.Read())
+            {
+                judul = db.reader.GetString(1);
+                isi = db.reader.GetString(2);
+                status = Convert.ToInt32(db.reader.GetString(3));
+            }
         }
 
         public void setJudul(String judul)
@@ -26,17 +39,17 @@ namespace iCAN.CLASS
 
         public String getJudul()
         {
-            return this.judul;
+            return judul;
         }
 
         public void setIsi(String Isi)
         {
-            this.isi = isi;
+            isi = isi;
         }
 
         public String getIsi()
         {
-            return this.isi;
+            return isi;
         }
     }
 }
