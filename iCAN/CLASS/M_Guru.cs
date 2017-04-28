@@ -18,11 +18,11 @@ namespace iCAN.CLASS
         public string No_hp { get { return no_hp; } set { no_hp = value; } }
         public string IdGuru { get { return idGuru; } set { idGuru = value; } }
 
-        public M_Guru(int IdUser) : base(IdUser)
+        public M_Guru(int idUser) : base(idUser)
         {
-            
+
             Database db = new Database();
-            db.reader = db.callQuery("SELECT * from v_guru where id_user =" + IdUser);
+            db.reader = db.callQuery("SELECT * from v_guru where id_user =" + idUser);
             if (db.reader.Read())
             {
                 myNIP = db.reader.GetString(2);
@@ -30,7 +30,7 @@ namespace iCAN.CLASS
                 No_hp = db.reader.GetString(5);
             }
         }
-        public M_Guru(int idUser, String idGuru ,string nip, string nama, string alamat, string no_hp)
+        public M_Guru(int idUser, String idGuru, string nip, string nama, string alamat, string no_hp)
         {
             IdUser = idUser;
             IdGuru = idGuru;
@@ -39,6 +39,7 @@ namespace iCAN.CLASS
             Alamat = alamat;
             No_hp = no_hp;
         }
+        public M_Guru() { }
 
         public void SetNIP(String NIP)
         {
@@ -50,7 +51,33 @@ namespace iCAN.CLASS
             return this.myNIP;
         }
 
-        
+        public bool deleteGurufromDB()
+        {
+            Database db = new Database();
+            bool i = db.CallnonQuery("DELETE FROM guru where id_user =" + IdUser);
+            idGuru = "";
+            NIP = "";
+            alamat = "";
+            no_hp = "";
+            return i;
+        }
+        public bool saveGurutoDB()
+        {
+            saveUsertoDB();
+            Database db = new Database();
+            bool i = db.CallnonQuery("UPDATE guru SET alamat = '" + Alamat + "', no_hp = '" + No_hp + "' where id_user = "+IdUser);
+            return i;
+        }
+
+        public bool addGurutoDB()
+        {
+            Role = "guru";
+            addUsertoDB();
+            Database db = new Database();
+            string query = "INSERT INTO guru(id_user,NIP,alamat,no_hp) VALUES('" + IdUser + "','" + myNIP + "','" + Alamat + "','" + No_hp + "')";
+            bool i = db.CallnonQuery(query);
+            return i;
+        }
 
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace iCAN.GUI.Admin
 {
-    partial class frmEditGuru
+    partial class frmTambahGuru
     {
         /// <summary>
         /// Required designer variable.
@@ -51,7 +51,7 @@
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(426, 23);
             this.metroButton1.TabIndex = 0;
-            this.metroButton1.Text = "Edit";
+            this.metroButton1.Text = "Tambah";
             this.metroButton1.UseSelectable = true;
             this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
@@ -87,7 +87,6 @@
             this.txUsername.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txUsername.CustomButton.UseSelectable = true;
             this.txUsername.CustomButton.Visible = false;
-            this.txUsername.Enabled = false;
             this.txUsername.Lines = new string[0];
             this.txUsername.Location = new System.Drawing.Point(28, 96);
             this.txUsername.MaxLength = 32767;
@@ -247,7 +246,6 @@
             this.txNIP.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txNIP.CustomButton.UseSelectable = true;
             this.txNIP.CustomButton.Visible = false;
-            this.txNIP.Enabled = false;
             this.txNIP.Lines = new string[0];
             this.txNIP.Location = new System.Drawing.Point(273, 96);
             this.txNIP.MaxLength = 32767;
@@ -313,7 +311,7 @@
             this.txNoHP.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txNoHP.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // frmEditGuru
+            // frmTambahGuru
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -335,10 +333,10 @@
             this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.metroButton1);
             this.MaximizeBox = false;
-            this.Name = "frmEditGuru";
+            this.Name = "frmTambahGuru";
             this.Resizable = false;
-            this.Text = "Edit Guru";
-            this.Load += new System.EventHandler(this.frmEditGuru_Load);
+            this.Text = "Tambah Guru";
+            this.Load += new System.EventHandler(this.frmTambahGuru_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -15,18 +15,14 @@ namespace iCAN.GUI.Admin
     {
 
         private int Selected;
-        M_Guru guru;
-        List<M_Guru> l_guru;
         public frmKelolaGuru()
         {
 
             InitializeComponent();
-            l_guru = new List<M_Guru>();
             FetchUser();
         }
         void FetchUser()
         {
-            l_guru.Clear();
             tb_user.Clear();
             tb_user.Columns.Add("ID User", 100);
             tb_user.Columns.Add("ID Guru", 100);
@@ -50,8 +46,6 @@ namespace iCAN.GUI.Admin
                 item.SubItems.Add(db.reader.GetString(3));//nama
                 item.SubItems.Add(db.reader.GetString(4));//Alamat
                 item.SubItems.Add(db.reader.GetString(5));//No_hp
-                guru = new M_Guru(id_user, id_guru, nip, nama, alamat, no_hp);
-                l_guru.Add(guru);
                 tb_user.Items.Add(item);
             }
             db.databaseConnection.Close();
@@ -59,8 +53,8 @@ namespace iCAN.GUI.Admin
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            //var form = new frmTambahSiswa();
-            //form.ShowDialog();
+            var form = new frmTambahGuru();
+            form.ShowDialog();
             FetchUser();
         }
 
@@ -81,19 +75,21 @@ namespace iCAN.GUI.Admin
 
         private void metroButton2_Click(object sender, EventArgs e)
         {
-            var form = new frmEditSiswa(Selected);
+            var form = new frmEditGuru(Selected);
             form.ShowDialog();
             FetchUser();
         }
 
         private void metroButton3_Click(object sender, EventArgs e)
         {
-            //siswa = new M_Siswa(Selected);
-            //DialogResult dialogResult = MessageBox.Show("Apakah anda yakin akan menghapus siswa ini?", "PERINGATAN", MessageBoxButtons.YesNo);
-            //if (dialogResult == DialogResult.Yes)
-            //{
-            //    siswa.deleteSiswafromDB();
-            //}
+
+            M_Guru guru = new M_Guru(Selected);
+            
+            DialogResult dialogResult = MessageBox.Show("Apakah anda yakin akan menghapus guru ini?", "PERINGATAN", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                guru.deleteGurufromDB();
+            }
             FetchUser();
         }
 

@@ -36,6 +36,7 @@ namespace iCAN.CLASS
             if (db.reader.Read())
             {
                 //1 admin 123456 Faishal Rachman admin
+                IdUser = idUser;
                 Nama = db.reader.GetString(3);
                 Role = db.reader.GetString(4);
                 username = db.reader.GetString(1);
@@ -99,6 +100,21 @@ namespace iCAN.CLASS
         {
             Database db = new Database();
             bool i = db.CallnonQuery("UPDATE user SET password = '"+password+"', nama = '"+nama+"', role = '"+role+"' where id = "+idUser);
+            return i;
+        }
+        public bool addUsertoDB()
+        {
+            Database db = new Database();
+            string query = "INSERT INTO user (username,password,nama,role) VALUES ('" + Username + "','" + Password + "','" + Nama + "','" + Role + "')";
+            bool i = db.CallnonQuery(query);
+            if (i)
+            {
+                db.reader = db.callQuery("SELECT id from user where username='" + Username + "'");
+                if (db.reader.Read())
+                {
+                    IdUser = Convert.ToInt32(db.reader.GetString(0));
+                }
+            }
             return i;
         }
     }

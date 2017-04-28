@@ -11,22 +11,18 @@ using System.Windows.Forms;
 
 namespace iCAN.GUI.Admin
 {
-    public partial class frmEditGuru : MetroFramework.Forms.MetroForm
+    public partial class frmTambahGuru : MetroFramework.Forms.MetroForm
     {
         M_Guru guru;
-        public frmEditGuru(int idUser)
+        public frmTambahGuru()
         {
             InitializeComponent();
-            guru = new M_Guru(idUser);
+            guru = new M_Guru();
         }
 
-        private void frmEditGuru_Load(object sender, EventArgs e)
+        private void frmTambahGuru_Load(object sender, EventArgs e)
         {
-            txNama.Text = guru.Nama;
-            txAlamat.Text = guru.Alamat;
-            txNIP.Text = guru.myNIP;
-            txUsername.Text = guru.Username;
-            txNoHP.Text = guru.No_hp;            
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -48,12 +44,11 @@ namespace iCAN.GUI.Admin
                 guru.Nama = txNama.Text;
                 guru.myNIP = txNIP.Text;
                 guru.Username = txUsername.Text;
-                if (txPassword.Text != "")
-                    guru.Password = txPassword.Text;
+                guru.Password = txPassword.Text;
                 guru.No_hp = txNoHP.Text;
-                if (guru.saveGurutoDB())
+                if (guru.addGurutoDB())
                 {
-                    MessageBox.Show("Guru " + guru.Nama + " berhasil diubah");
+                    MessageBox.Show("Guru " + guru.Nama + " berhasil di Inputkan");
                     Close();
                 }
                 else

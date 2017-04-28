@@ -59,5 +59,13 @@ namespace iCAN.GUI.Admin
             form.ShowDialog();
             Show();
         }
+
+        private void metroTile2_Click(object sender, EventArgs e)
+        {
+            var form = new frmKelolaGuru();
+            Hide();
+            form.ShowDialog();
+            Show();
+        }
     }
 }

@@ -166,3 +166,5 @@ E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.frmKelolaGuru.resou
 >>>>>>> 2a28c4ca9013ee2b4066628c26afd78014e9a12a
 E:\Dani\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.frmEditGuru.resources
 E:\Dani\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.frmKelolaGuru.resources
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.frmEditGuru.resources
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.frmTambahGuru.resources
