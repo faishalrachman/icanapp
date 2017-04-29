@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Transitions;
 
 namespace iCAN.GUI.Admin
 {
@@ -24,7 +25,7 @@ namespace iCAN.GUI.Admin
         private void MainDashboardAdmin_Load(object sender, EventArgs e)
         {
             lb_welcome.Text = "Selamat Datang, " + admin.Nama;
-        }
+            }
 
         private void MainDashboardAdmin_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -66,6 +67,11 @@ namespace iCAN.GUI.Admin
             Hide();
             form.ShowDialog();
             Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

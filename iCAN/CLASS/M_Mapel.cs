@@ -8,12 +8,16 @@ namespace iCAN.CLASS
 {
     class M_Mapel
     {
+        //id_jadwal 	id_kelas 	id_guru 	id_mapel 	nama_mapel 	id_user 	NIP 	nama 	jam 	hari 	ruangan 	2 	2 	4 	1 	Matematika 	17 	22 	1313 	06:30:00 	Selasa X IPA 1
+
         private String kdMapel;
         private String nmMapel;
         private M_Jadwal[] JadwalP = new M_Jadwal[100];
         private M_Nilai[] nilaiMapel;
         private M_Guru gr;
         private int jumlah = 0;
+
+
 
         public M_Mapel(String kode, String nama)
         {

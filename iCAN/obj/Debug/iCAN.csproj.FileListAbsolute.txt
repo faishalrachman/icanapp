@@ -168,3 +168,5 @@ E:\Dani\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.frmEditGuru.resources
 E:\Dani\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.frmKelolaGuru.resources
 E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.frmEditGuru.resources
 E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.frmTambahGuru.resources
+E:\Dani Project\Icanku\icanapp\iCAN\bin\Debug\Transitions.dll
+E:\Dani Project\Icanku\icanapp\iCAN\bin\Debug\Transitions.pdb
