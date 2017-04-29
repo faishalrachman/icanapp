@@ -24,6 +24,14 @@ namespace iCAN.GUI.Admin
 
         private void MainDashboardAdmin_Load(object sender, EventArgs e)
         {
+
+
+            for (double i = 0; i < 100; ++i)
+            {
+                this.Opacity = i / 100;
+                Application.DoEvents();
+                System.Threading.Thread.Sleep(0);
+            }
             lb_welcome.Text = "Selamat Datang, " + admin.Nama;
             }
 
@@ -72,6 +80,14 @@ namespace iCAN.GUI.Admin
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void metroTile4_Click(object sender, EventArgs e)
+        {
+            var form = new frmKelolaMapel();
+            Hide();
+            form.Show();
+            Show();
         }
     }
 }

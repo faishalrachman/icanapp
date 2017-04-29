@@ -216,17 +216,6 @@ CREATE TABLE `v_jadwalmapel` (
 ,`ruangan` text
 );
 
--- --------------------------------------------------------
-
---
--- Stand-in structure for view `v_nilai`
---
-CREATE TABLE `v_nilai` (
-);
-
--- --------------------------------------------------------
-
---
 -- Stand-in structure for view `v_siswa`
 --
 CREATE TABLE `v_siswa` (
@@ -260,16 +249,6 @@ DROP TABLE IF EXISTS `v_jadwalmapel`;
 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `v_jadwalmapel`  AS  select `mapel`.`id_jadwal` AS `id_jadwal`,`mapel`.`id_kelas` AS `id_kelas`,`guru`.`id_guru` AS `id_guru`,`mapel`.`kd_mapel` AS `kd_mapel`,`mapel`.`nama_mapel` AS `nama_mapel`,`guru`.`id_user` AS `id_user`,`guru`.`NIP` AS `NIP`,`user`.`nama` AS `nama`,`jadwal`.`jam` AS `jam`,`jadwal`.`hari` AS `hari`,`jadwal`.`ruangan` AS `ruangan` from ((((`mapel` join `guru` on((`mapel`.`id_guru` = `guru`.`id_guru`))) join `kelas` on((`mapel`.`id_kelas` = `kelas`.`id_kelas`))) join `jadwal` on((`mapel`.`id_jadwal` = `jadwal`.`id_jadwal`))) join `user` on((`user`.`id` = `guru`.`id_user`))) ;
 
 -- --------------------------------------------------------
-
---
--- Structure for view `v_nilai`
---
-DROP TABLE IF EXISTS `v_nilai`;
-
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `v_nilai`  AS  select `n`.`id_nilai` AS `id_nilai`,`n`.`NIS` AS `NIS`,`u`.`nama` AS `Nama`,`mapel`.`nama_mapel` AS `nama_mapel`,`n`.`nama_nilai` AS `nama_nilai`,`n`.`skor` AS `skor` from (((`nilai` `n` join `mapel` on((`n`.`id_mapel` = `mapel`.`id_mapel`))) join `siswa` `s` on((`n`.`NIS` = `s`.`NIS`))) join `user` `u` on((`u`.`id` = `s`.`id_user`))) ;
-
--- --------------------------------------------------------
-
 --
 -- Structure for view `v_siswa`
 --
