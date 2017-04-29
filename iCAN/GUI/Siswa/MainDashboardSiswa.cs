@@ -16,5 +16,10 @@ namespace iCAN.GUI.Siswa
         {
             InitializeComponent();
         }
+
+        private void metroTile1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
