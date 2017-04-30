@@ -170,3 +170,4 @@ E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.frmEditGuru.resourc
 E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.frmTambahGuru.resources
 E:\Dani Project\Icanku\icanapp\iCAN\bin\Debug\Transitions.dll
 E:\Dani Project\Icanku\icanapp\iCAN\bin\Debug\Transitions.pdb
+E:\Dani Project\Icanku\icanapp\iCAN\obj\Debug\iCAN.GUI.Admin.frmKelolaMapel.resources
