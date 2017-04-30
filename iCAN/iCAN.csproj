@@ -94,6 +94,7 @@
     </Compile>
     <Compile Include="CLASS\M_Guru.cs" />
     <Compile Include="CLASS\M_User.cs" />
+    <Compile Include="CLASS\WinApi.cs" />
     <Compile Include="GUI\Admin\Kelola_Guru\frmKelolaGuru.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +118,12 @@
     </Compile>
     <Compile Include="GUI\Admin\Kelola_Guru\frmTambahGuru.Designer.cs">
       <DependentUpon>frmTambahGuru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\Kelola_Mapel\frmTambahMapel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\Kelola_Mapel\frmTambahMapel.Designer.cs">
+      <DependentUpon>frmTambahMapel.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Admin\Kelola_Mapel\frmKelolaMapel.cs">
       <SubType>Form</SubType>
@@ -252,6 +259,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\Kelola_Guru\frmTambahGuru.resx">
       <DependentUpon>frmTambahGuru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\Kelola_Mapel\frmTambahMapel.resx">
+      <DependentUpon>frmTambahMapel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\Kelola_Mapel\frmKelolaMapel.resx">
       <DependentUpon>frmKelolaMapel.cs</DependentUpon>
