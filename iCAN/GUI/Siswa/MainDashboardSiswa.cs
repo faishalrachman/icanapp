@@ -21,5 +21,10 @@ namespace iCAN.GUI.Siswa
         {
 
         }
+
+        private void metroLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

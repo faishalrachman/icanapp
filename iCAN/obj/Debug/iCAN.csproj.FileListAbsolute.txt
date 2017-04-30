@@ -42,3 +42,6 @@ D:\Project\Tubes\PBO\icanapp\iCAN\obj\Debug\iCAN.Properties.Resources.resources
 D:\Project\Tubes\PBO\icanapp\iCAN\obj\Debug\iCAN.csproj.GenerateResource.Cache
 D:\Project\Tubes\PBO\icanapp\iCAN\obj\Debug\iCAN.exe
 D:\Project\Tubes\PBO\icanapp\iCAN\obj\Debug\iCAN.pdb
+D:\Kuliah\Semester IV\OOP\Tubes\C-Sharp\icanapp\iCAN\bin\Debug\iCAN.exe.config
+D:\Kuliah\Semester IV\OOP\Tubes\C-Sharp\icanapp\iCAN\obj\Debug\iCAN.exe
+D:\Kuliah\Semester IV\OOP\Tubes\C-Sharp\icanapp\iCAN\obj\Debug\iCAN.pdb

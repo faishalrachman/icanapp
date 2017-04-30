@@ -29,19 +29,29 @@
         private void InitializeComponent()
         {
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.metroTile1 = new MetroFramework.Controls.MetroTile();
-            this.metroTile2 = new MetroFramework.Controls.MetroTile();
-            this.metroTile3 = new MetroFramework.Controls.MetroTile();
-            this.metroTile4 = new MetroFramework.Controls.MetroTile();
+            this.metroBerita = new MetroFramework.Controls.MetroTile();
+            this.metroGuru = new MetroFramework.Controls.MetroTile();
+            this.metroJadwal = new MetroFramework.Controls.MetroTile();
+            this.metroNilai = new MetroFramework.Controls.MetroTile();
+            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
+            this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
+            this.metroPanel4 = new MetroFramework.Controls.MetroPanel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroPanel1.SuspendLayout();
+            this.metroBerita.SuspendLayout();
+            this.metroPanel2.SuspendLayout();
+            this.metroPanel3.SuspendLayout();
+            this.metroPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // metroPanel1
             // 
-            this.metroPanel1.Controls.Add(this.metroTile4);
-            this.metroPanel1.Controls.Add(this.metroTile3);
-            this.metroPanel1.Controls.Add(this.metroTile2);
-            this.metroPanel1.Controls.Add(this.metroTile1);
+            this.metroPanel1.Controls.Add(this.metroBerita);
+            this.metroPanel1.Controls.Add(this.metroGuru);
+            this.metroPanel1.Controls.Add(this.metroJadwal);
+            this.metroPanel1.Controls.Add(this.metroNilai);
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
@@ -53,46 +63,119 @@
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
-            // metroTile1
+            // metroBerita
             // 
-            this.metroTile1.ActiveControl = null;
-            this.metroTile1.Location = new System.Drawing.Point(12, 14);
-            this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(164, 94);
-            this.metroTile1.TabIndex = 2;
-            this.metroTile1.Text = "metroTile1";
-            this.metroTile1.UseSelectable = true;
-            this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
+            this.metroBerita.ActiveControl = null;
+            this.metroBerita.Controls.Add(this.metroPanel4);
+            this.metroBerita.Controls.Add(this.metroPanel3);
+            this.metroBerita.Controls.Add(this.metroPanel2);
+            this.metroBerita.Location = new System.Drawing.Point(365, 14);
+            this.metroBerita.Name = "metroBerita";
+            this.metroBerita.Size = new System.Drawing.Size(342, 325);
+            this.metroBerita.TabIndex = 5;
+            this.metroBerita.Text = "Berita";
+            this.metroBerita.UseSelectable = true;
             // 
-            // metroTile2
+            // metroGuru
             // 
-            this.metroTile2.ActiveControl = null;
-            this.metroTile2.Location = new System.Drawing.Point(12, 123);
-            this.metroTile2.Name = "metroTile2";
-            this.metroTile2.Size = new System.Drawing.Size(164, 101);
-            this.metroTile2.TabIndex = 3;
-            this.metroTile2.Text = "metroTile2";
-            this.metroTile2.UseSelectable = true;
+            this.metroGuru.ActiveControl = null;
+            this.metroGuru.Location = new System.Drawing.Point(12, 240);
+            this.metroGuru.Name = "metroGuru";
+            this.metroGuru.Size = new System.Drawing.Size(327, 99);
+            this.metroGuru.TabIndex = 4;
+            this.metroGuru.Text = "Guruku";
+            this.metroGuru.UseSelectable = true;
             // 
-            // metroTile3
+            // metroJadwal
             // 
-            this.metroTile3.ActiveControl = null;
-            this.metroTile3.Location = new System.Drawing.Point(12, 240);
-            this.metroTile3.Name = "metroTile3";
-            this.metroTile3.Size = new System.Drawing.Size(164, 99);
-            this.metroTile3.TabIndex = 4;
-            this.metroTile3.Text = "metroTile3";
-            this.metroTile3.UseSelectable = true;
+            this.metroJadwal.ActiveControl = null;
+            this.metroJadwal.Location = new System.Drawing.Point(12, 123);
+            this.metroJadwal.Name = "metroJadwal";
+            this.metroJadwal.Size = new System.Drawing.Size(327, 101);
+            this.metroJadwal.TabIndex = 3;
+            this.metroJadwal.Text = "Lihat Jadwal";
+            this.metroJadwal.UseSelectable = true;
             // 
-            // metroTile4
+            // metroNilai
             // 
-            this.metroTile4.ActiveControl = null;
-            this.metroTile4.Location = new System.Drawing.Point(365, 14);
-            this.metroTile4.Name = "metroTile4";
-            this.metroTile4.Size = new System.Drawing.Size(342, 325);
-            this.metroTile4.TabIndex = 5;
-            this.metroTile4.Text = "metroTile4";
-            this.metroTile4.UseSelectable = true;
+            this.metroNilai.ActiveControl = null;
+            this.metroNilai.Location = new System.Drawing.Point(12, 14);
+            this.metroNilai.Name = "metroNilai";
+            this.metroNilai.Size = new System.Drawing.Size(327, 94);
+            this.metroNilai.TabIndex = 2;
+            this.metroNilai.Text = "Lihat Nilai ";
+            this.metroNilai.UseSelectable = true;
+            this.metroNilai.Click += new System.EventHandler(this.metroTile1_Click);
+            // 
+            // metroPanel2
+            // 
+            this.metroPanel2.Controls.Add(this.metroLabel1);
+            this.metroPanel2.HorizontalScrollbarBarColor = true;
+            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel2.HorizontalScrollbarSize = 10;
+            this.metroPanel2.Location = new System.Drawing.Point(16, 13);
+            this.metroPanel2.Name = "metroPanel2";
+            this.metroPanel2.Size = new System.Drawing.Size(154, 100);
+            this.metroPanel2.TabIndex = 0;
+            this.metroPanel2.VerticalScrollbarBarColor = true;
+            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel2.VerticalScrollbarSize = 10;
+            // 
+            // metroPanel3
+            // 
+            this.metroPanel3.Controls.Add(this.metroLabel2);
+            this.metroPanel3.HorizontalScrollbarBarColor = true;
+            this.metroPanel3.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel3.HorizontalScrollbarSize = 10;
+            this.metroPanel3.Location = new System.Drawing.Point(189, 13);
+            this.metroPanel3.Name = "metroPanel3";
+            this.metroPanel3.Size = new System.Drawing.Size(134, 100);
+            this.metroPanel3.TabIndex = 1;
+            this.metroPanel3.VerticalScrollbarBarColor = true;
+            this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel3.VerticalScrollbarSize = 10;
+            // 
+            // metroPanel4
+            // 
+            this.metroPanel4.Controls.Add(this.metroLabel3);
+            this.metroPanel4.HorizontalScrollbarBarColor = true;
+            this.metroPanel4.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel4.HorizontalScrollbarSize = 10;
+            this.metroPanel4.Location = new System.Drawing.Point(16, 130);
+            this.metroPanel4.Name = "metroPanel4";
+            this.metroPanel4.Size = new System.Drawing.Size(307, 148);
+            this.metroPanel4.TabIndex = 2;
+            this.metroPanel4.VerticalScrollbarBarColor = true;
+            this.metroPanel4.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel4.VerticalScrollbarSize = 10;
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(3, 72);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(48, 19);
+            this.metroLabel1.TabIndex = 2;
+            this.metroLabel1.Text = "Berita1";
+            this.metroLabel1.Click += new System.EventHandler(this.metroLabel1_Click);
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(3, 72);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(50, 19);
+            this.metroLabel2.TabIndex = 2;
+            this.metroLabel2.Text = "Berita2";
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(3, 118);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(92, 19);
+            this.metroLabel3.TabIndex = 2;
+            this.metroLabel3.Text = "Berita Sekolah";
             // 
             // MainDashboardSiswa
             // 
@@ -103,6 +186,13 @@
             this.Name = "MainDashboardSiswa";
             this.Text = "Dashboard Siswa";
             this.metroPanel1.ResumeLayout(false);
+            this.metroBerita.ResumeLayout(false);
+            this.metroPanel2.ResumeLayout(false);
+            this.metroPanel2.PerformLayout();
+            this.metroPanel3.ResumeLayout(false);
+            this.metroPanel3.PerformLayout();
+            this.metroPanel4.ResumeLayout(false);
+            this.metroPanel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -110,10 +200,16 @@
         #endregion
 
         private MetroFramework.Controls.MetroPanel metroPanel1;
-        private MetroFramework.Controls.MetroTile metroTile2;
-        private MetroFramework.Controls.MetroTile metroTile1;
-        private MetroFramework.Controls.MetroTile metroTile4;
-        private MetroFramework.Controls.MetroTile metroTile3;
+        private MetroFramework.Controls.MetroTile metroJadwal;
+        private MetroFramework.Controls.MetroTile metroNilai;
+        private MetroFramework.Controls.MetroTile metroBerita;
+        private MetroFramework.Controls.MetroTile metroGuru;
+        private MetroFramework.Controls.MetroPanel metroPanel4;
+        private MetroFramework.Controls.MetroPanel metroPanel3;
+        private MetroFramework.Controls.MetroPanel metroPanel2;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
 
     }
 }
