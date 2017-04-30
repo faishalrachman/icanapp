@@ -39,6 +39,7 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.txnamaSiswa = new MetroFramework.Controls.MetroLabel();
             this.metroPanel1.SuspendLayout();
             this.metroBerita.SuspendLayout();
             this.metroPanel2.SuspendLayout();
@@ -177,11 +178,21 @@
             this.metroLabel3.TabIndex = 2;
             this.metroLabel3.Text = "Berita Sekolah";
             // 
+            // txnamaSiswa
+            // 
+            this.txnamaSiswa.AutoSize = true;
+            this.txnamaSiswa.Location = new System.Drawing.Point(404, 31);
+            this.txnamaSiswa.Name = "txnamaSiswa";
+            this.txnamaSiswa.Size = new System.Drawing.Size(108, 19);
+            this.txnamaSiswa.TabIndex = 1;
+            this.txnamaSiswa.Text = "Selamat datang, ";
+            // 
             // MainDashboardSiswa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(741, 425);
+            this.Controls.Add(this.txnamaSiswa);
             this.Controls.Add(this.metroPanel1);
             this.Name = "MainDashboardSiswa";
             this.Text = "Dashboard Siswa";
@@ -194,6 +205,7 @@
             this.metroPanel4.ResumeLayout(false);
             this.metroPanel4.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -210,6 +222,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroLabel txnamaSiswa;
 
     }
 }
