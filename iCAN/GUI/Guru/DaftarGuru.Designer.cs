@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.metroListView1 = new MetroFramework.Controls.MetroListView();
+            this.listViewGuru = new MetroFramework.Controls.MetroListView();
             this.Nama = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.NIP = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Alamat = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -39,7 +39,7 @@
             // 
             // metroPanel1
             // 
-            this.metroPanel1.Controls.Add(this.metroListView1);
+            this.metroPanel1.Controls.Add(this.listViewGuru);
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
@@ -51,22 +51,23 @@
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
-            // metroListView1
+            // listViewGuru
             // 
-            this.metroListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewGuru.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Nama,
             this.NIP,
             this.Alamat,
             this.Handphone});
-            this.metroListView1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.metroListView1.FullRowSelect = true;
-            this.metroListView1.Location = new System.Drawing.Point(17, 16);
-            this.metroListView1.Name = "metroListView1";
-            this.metroListView1.OwnerDraw = true;
-            this.metroListView1.Size = new System.Drawing.Size(766, 391);
-            this.metroListView1.TabIndex = 2;
-            this.metroListView1.UseCompatibleStateImageBehavior = false;
-            this.metroListView1.UseSelectable = true;
+            this.listViewGuru.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.listViewGuru.FullRowSelect = true;
+            this.listViewGuru.Location = new System.Drawing.Point(17, 16);
+            this.listViewGuru.Name = "listViewGuru";
+            this.listViewGuru.OwnerDraw = true;
+            this.listViewGuru.Size = new System.Drawing.Size(766, 391);
+            this.listViewGuru.TabIndex = 2;
+            this.listViewGuru.UseCompatibleStateImageBehavior = false;
+            this.listViewGuru.UseSelectable = true;
+            this.listViewGuru.View = System.Windows.Forms.View.Details;
             // 
             // NIP
             // 
@@ -97,7 +98,7 @@
         #endregion
 
         private MetroFramework.Controls.MetroPanel metroPanel1;
-        private MetroFramework.Controls.MetroListView metroListView1;
+        private MetroFramework.Controls.MetroListView listViewGuru;
         private System.Windows.Forms.ColumnHeader Nama;
         private System.Windows.Forms.ColumnHeader NIP;
         private System.Windows.Forms.ColumnHeader Alamat;

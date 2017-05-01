@@ -49,7 +49,7 @@
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.Location = new System.Drawing.Point(24, 73);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(138, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(137, 19);
             this.metroLabel1.TabIndex = 0;
             this.metroLabel1.Text = "Kode Mata Pelajaran :";
             // 
@@ -58,7 +58,7 @@
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.Location = new System.Drawing.Point(23, 102);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(144, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(143, 19);
             this.metroLabel2.TabIndex = 1;
             this.metroLabel2.Text = "Nama Mata Pelajaran :";
             // 
@@ -76,9 +76,9 @@
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.Location = new System.Drawing.Point(24, 170);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(45, 19);
+            this.metroLabel4.Size = new System.Drawing.Size(67, 19);
             this.metroLabel4.TabIndex = 3;
-            this.metroLabel4.Text = "Kelas :";
+            this.metroLabel4.Text = "Ruangan :";
             // 
             // tb_mapel
             // 
@@ -99,7 +99,7 @@
             // 
             // 
             this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(351, 1);
+            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(153, 1);
             this.metroTextBox1.CustomButton.Name = "";
             this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -281,7 +281,7 @@
             this.MaximizeBox = false;
             this.Name = "frmKelolaMapel";
             this.Text = "Kelola Mata Pelajaran";
-            this.Load += new System.EventHandler(this.frmKelolaMapel_Load);
+
             this.ResumeLayout(false);
             this.PerformLayout();
 

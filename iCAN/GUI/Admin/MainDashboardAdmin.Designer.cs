@@ -53,24 +53,28 @@
             // metroTile5
             // 
             this.metroTile5.ActiveControl = null;
+            this.metroTile5.BackColor = System.Drawing.Color.DeepPink;
             this.metroTile5.Location = new System.Drawing.Point(197, 251);
             this.metroTile5.Name = "metroTile5";
             this.metroTile5.Size = new System.Drawing.Size(168, 168);
             this.metroTile5.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTile5.TabIndex = 5;
             this.metroTile5.Text = "Kelola Admin";
+            this.metroTile5.UseCustomBackColor = true;
             this.metroTile5.UseSelectable = true;
             this.metroTile5.Click += new System.EventHandler(this.metroTile5_Click);
             // 
             // metroTile8
             // 
             this.metroTile8.ActiveControl = null;
+            this.metroTile8.BackColor = System.Drawing.Color.DodgerBlue;
             this.metroTile8.Location = new System.Drawing.Point(719, 74);
             this.metroTile8.Name = "metroTile8";
             this.metroTile8.Size = new System.Drawing.Size(168, 168);
             this.metroTile8.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTile8.TabIndex = 8;
             this.metroTile8.Text = "Kelola Jadwal";
+            this.metroTile8.UseCustomBackColor = true;
             this.metroTile8.UseSelectable = true;
             // 
             // lb_welcome
@@ -114,6 +118,7 @@
             // metroTile4
             // 
             this.metroTile4.ActiveControl = null;
+            this.metroTile4.BackColor = System.Drawing.Color.DarkMagenta;
             this.metroTile4.Location = new System.Drawing.Point(197, 74);
             this.metroTile4.Name = "metroTile4";
             this.metroTile4.Size = new System.Drawing.Size(342, 168);
@@ -122,6 +127,7 @@
             this.metroTile4.Text = "Kelola Mata Pelajaran";
             this.metroTile4.TileImage = global::iCAN.Properties.Resources.kelola_pelajaran;
             this.metroTile4.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile4.UseCustomBackColor = true;
             this.metroTile4.UseSelectable = true;
             this.metroTile4.UseTileImage = true;
             this.metroTile4.Click += new System.EventHandler(this.metroTile4_Click);

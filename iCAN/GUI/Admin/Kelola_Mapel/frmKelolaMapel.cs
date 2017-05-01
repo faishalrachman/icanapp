@@ -22,6 +22,7 @@ namespace iCAN.GUI.Admin
         }
         void FetchMapel()
         {
+
             //txIsi.Text = "";
             //txInputJudul.Text = "";
             //l_berita = new List<M_Berita>();
@@ -38,19 +39,37 @@ namespace iCAN.GUI.Admin
             //    l_berita.Add(berita);
             //    cbOpsiJudul.Items.Add(db.reader.GetString(1));
             //    //id_jadwal id_kelas    id_guru id_mapel    nama_mapel id_user     NIP nama    jam hari    ruangan
+            tb_mapel.Clear();
+            tb_mapel.Columns.Add("Kode Mata pelajaran",100);
+            tb_mapel.Columns.Add("Nama Mata Pelajaran",100);
+            tb_mapel.Columns.Add("Hari",100);
+            tb_mapel.Columns.Add("Jam",100);
+            tb_mapel.Columns.Add("Nama Guru",100);
+            tb_mapel.Columns.Add("Ruangan",100);
+            l_mapel = new List<M_Mapel>();
 
             Database db = new Database();
-            db.reader = db.callQuery("SELECT * FROM v_mapel");
+            db.reader = db.callQuery("SELECT * FROM v_jadwalmapel");
             while (db.reader.Read())
             {
+                String kdMapel = db.reader.GetString("kd_mapel");
+                String nmMapel = db.reader.GetString("nama_mapel"); 
+                String jam = db.reader.GetString("jam"); 
+                String hari = db.reader.GetString("hari"); 
+                String nama_guru = db.reader.GetString("nama"); 
+                String ruangan = db.reader.GetString("ruangan");
 
+                l_mapel.Add(new M_Mapel(kdMapel, nmMapel, jam, hari, nama_guru, ruangan));
+                ListViewItem item = new ListViewItem(kdMapel);//id_user
+                item.SubItems.Add(nmMapel);//nis
+                item.SubItems.Add(hari);//nis
+                item.SubItems.Add(jam);//nis
+                item.SubItems.Add(nama_guru);//nis
+                item.SubItems.Add(ruangan);//nis
+                tb_mapel.Items.Add(item);
             }
         }
-
-        private void frmKelolaMapel_Load(object sender, EventArgs e)
-        {
-
-        }
+            
     }
-    
+
 }

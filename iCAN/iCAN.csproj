@@ -223,6 +223,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI\Siswa\frmLihatNilai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Siswa\frmLihatNilai.Designer.cs">
+      <DependentUpon>frmLihatNilai.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Siswa\MainDashboardSiswa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -351,6 +357,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\kelola-pelajaran.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stock-photo-125106373.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
