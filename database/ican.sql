@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 28, 2017 at 10:19 PM
+-- Generation Time: Apr 29, 2017 at 06:59 AM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.6.24
 
@@ -63,15 +63,15 @@ CREATE TABLE `jadwal` (
   `id_jadwal` int(11) NOT NULL,
   `jam` time NOT NULL,
   `hari` text NOT NULL,
-  `id_ruangan` int(11) NOT NULL
+  `ruangan` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `jadwal`
 --
 
-INSERT INTO `jadwal` (`id_jadwal`, `jam`, `hari`, `id_ruangan`) VALUES
-(2, '06:30:00', 'Selasa', 1);
+INSERT INTO `jadwal` (`id_jadwal`, `jam`, `hari`, `ruangan`) VALUES
+(2, '06:30:00', 'Selasa', 'X IPA 1');
 
 -- --------------------------------------------------------
 
@@ -101,12 +101,19 @@ INSERT INTO `kelas` (`id_kelas`, `id_guru`, `nama_kelas`) VALUES
 --
 
 CREATE TABLE `mapel` (
-  `id_mapel` int(11) NOT NULL,
+  `kd_mapel` varchar(5) NOT NULL,
   `nama_mapel` text NOT NULL,
   `id_guru` int(11) NOT NULL,
   `id_kelas` int(11) NOT NULL,
   `id_jadwal` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `mapel`
+--
+
+INSERT INTO `mapel` (`kd_mapel`, `nama_mapel`, `id_guru`, `id_kelas`, `id_jadwal`) VALUES
+('1', 'Matematika', 4, 2, 2);
 
 -- --------------------------------------------------------
 
@@ -116,29 +123,11 @@ CREATE TABLE `mapel` (
 
 CREATE TABLE `nilai` (
   `id_nilai` int(11) NOT NULL,
-  `id_mapel` int(11) NOT NULL,
+  `kd_mapel` int(11) NOT NULL,
   `NIS` int(11) NOT NULL,
   `nama_nilai` text NOT NULL,
   `skor` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `ruangan`
---
-
-CREATE TABLE `ruangan` (
-  `id_ruangan` int(11) NOT NULL,
-  `nama_ruangan` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `ruangan`
---
-
-INSERT INTO `ruangan` (`id_ruangan`, `nama_ruangan`) VALUES
-(1, 'X IPA 1');
 
 -- --------------------------------------------------------
 
@@ -211,20 +200,22 @@ CREATE TABLE `v_guru` (
 -- --------------------------------------------------------
 
 --
--- Stand-in structure for view `v_nilai`
+-- Stand-in structure for view `v_jadwalmapel`
 --
-CREATE TABLE `v_nilai` (
-`id_nilai` int(11)
-,`NIS` int(11)
-,`Nama` text
+CREATE TABLE `v_jadwalmapel` (
+`id_jadwal` int(11)
+,`id_kelas` int(11)
+,`id_guru` int(11)
+,`kd_mapel` varchar(5)
 ,`nama_mapel` text
-,`nama_nilai` text
-,`skor` double
+,`id_user` int(11)
+,`NIP` varchar(20)
+,`nama` text
+,`jam` time
+,`hari` text
+,`ruangan` text
 );
 
--- --------------------------------------------------------
-
---
 -- Stand-in structure for view `v_siswa`
 --
 CREATE TABLE `v_siswa` (
@@ -251,14 +242,13 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 -- --------------------------------------------------------
 
 --
--- Structure for view `v_nilai`
+-- Structure for view `v_jadwalmapel`
 --
-DROP TABLE IF EXISTS `v_nilai`;
+DROP TABLE IF EXISTS `v_jadwalmapel`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `v_nilai`  AS  select `n`.`id_nilai` AS `id_nilai`,`n`.`NIS` AS `NIS`,`u`.`nama` AS `Nama`,`mapel`.`nama_mapel` AS `nama_mapel`,`n`.`nama_nilai` AS `nama_nilai`,`n`.`skor` AS `skor` from (((`nilai` `n` join `mapel` on((`n`.`id_mapel` = `mapel`.`id_mapel`))) join `siswa` `s` on((`n`.`NIS` = `s`.`NIS`))) join `user` `u` on((`u`.`id` = `s`.`id_user`))) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `v_jadwalmapel`  AS  select `mapel`.`id_jadwal` AS `id_jadwal`,`mapel`.`id_kelas` AS `id_kelas`,`guru`.`id_guru` AS `id_guru`,`mapel`.`kd_mapel` AS `kd_mapel`,`mapel`.`nama_mapel` AS `nama_mapel`,`guru`.`id_user` AS `id_user`,`guru`.`NIP` AS `NIP`,`user`.`nama` AS `nama`,`jadwal`.`jam` AS `jam`,`jadwal`.`hari` AS `hari`,`jadwal`.`ruangan` AS `ruangan` from ((((`mapel` join `guru` on((`mapel`.`id_guru` = `guru`.`id_guru`))) join `kelas` on((`mapel`.`id_kelas` = `kelas`.`id_kelas`))) join `jadwal` on((`mapel`.`id_jadwal` = `jadwal`.`id_jadwal`))) join `user` on((`user`.`id` = `guru`.`id_user`))) ;
 
 -- --------------------------------------------------------
-
 --
 -- Structure for view `v_siswa`
 --
@@ -299,19 +289,13 @@ ALTER TABLE `kelas`
 -- Indexes for table `mapel`
 --
 ALTER TABLE `mapel`
-  ADD PRIMARY KEY (`id_mapel`);
+  ADD PRIMARY KEY (`kd_mapel`);
 
 --
 -- Indexes for table `nilai`
 --
 ALTER TABLE `nilai`
   ADD PRIMARY KEY (`id_nilai`);
-
---
--- Indexes for table `ruangan`
---
-ALTER TABLE `ruangan`
-  ADD PRIMARY KEY (`id_ruangan`);
 
 --
 -- Indexes for table `siswa`
@@ -334,7 +318,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `berita`
 --
 ALTER TABLE `berita`
-  MODIFY `id_berita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_berita` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `guru`
 --
@@ -351,20 +335,10 @@ ALTER TABLE `jadwal`
 ALTER TABLE `kelas`
   MODIFY `id_kelas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
--- AUTO_INCREMENT for table `mapel`
---
-ALTER TABLE `mapel`
-  MODIFY `id_mapel` int(11) NOT NULL AUTO_INCREMENT;
---
 -- AUTO_INCREMENT for table `nilai`
 --
 ALTER TABLE `nilai`
   MODIFY `id_nilai` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `ruangan`
---
-ALTER TABLE `ruangan`
-  MODIFY `id_ruangan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `siswa`
 --

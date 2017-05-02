@@ -15,7 +15,7 @@ namespace iCAN.CLASS
             db.reader = db.callQuery("SELECT * FROM user where id=" + idUser + ";");
             if (db.reader.Read())
             {
-                Nama = db.reader.GetString(3);
+                Nama = db.reader.GetString("nama");
             }
             
         }

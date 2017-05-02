@@ -67,6 +67,9 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="Transitions, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\dot-net-transitions.1.2.1.0\lib\net40-full\Transitions.dll</HintPath>
+    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -91,6 +94,7 @@
     </Compile>
     <Compile Include="CLASS\M_Guru.cs" />
     <Compile Include="CLASS\M_User.cs" />
+    <Compile Include="CLASS\WinApi.cs" />
     <Compile Include="GUI\Admin\Kelola_Guru\frmKelolaGuru.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +118,18 @@
     </Compile>
     <Compile Include="GUI\Admin\Kelola_Guru\frmTambahGuru.Designer.cs">
       <DependentUpon>frmTambahGuru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\Kelola_Mapel\frmTambahMapel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\Kelola_Mapel\frmTambahMapel.Designer.cs">
+      <DependentUpon>frmTambahMapel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\Kelola_Mapel\frmKelolaMapel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\Kelola_Mapel\frmKelolaMapel.Designer.cs">
+      <DependentUpon>frmKelolaMapel.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Admin\Kelola_Siswa\frmKelolaSiswa.cs">
       <SubType>Form</SubType>
@@ -207,6 +223,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI\Siswa\frmLihatNilai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Siswa\frmLihatNilai.Designer.cs">
+      <DependentUpon>frmLihatNilai.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Siswa\MainDashboardSiswa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -243,6 +265,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\Kelola_Guru\frmTambahGuru.resx">
       <DependentUpon>frmTambahGuru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\Kelola_Mapel\frmTambahMapel.resx">
+      <DependentUpon>frmTambahMapel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\Kelola_Mapel\frmKelolaMapel.resx">
+      <DependentUpon>frmKelolaMapel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\Kelola_Siswa\frmKelolaSiswa.resx">
       <DependentUpon>frmKelolaSiswa.cs</DependentUpon>
@@ -317,6 +345,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Kelola-Berita-Dashboard.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kelola-guru.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kelola-guru1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kelola-pelajaran.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stock-photo-125106373.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
