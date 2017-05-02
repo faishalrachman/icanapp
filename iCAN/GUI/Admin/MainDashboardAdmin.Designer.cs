@@ -49,6 +49,7 @@
             this.metroTile3.TabIndex = 3;
             this.metroTile3.Text = "Kelola Kelas";
             this.metroTile3.UseSelectable = true;
+            this.metroTile3.Click += new System.EventHandler(this.metroTile3_Click);
             // 
             // metroTile5
             // 

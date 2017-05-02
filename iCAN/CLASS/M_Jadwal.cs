@@ -9,13 +9,53 @@ namespace iCAN.CLASS
     class M_Jadwal 
     {
         private String idJadwal;
-        public String tanggal;
-        public String jam;
+        private String jam;
 
-        public M_Jadwal(String tanggal, String ruangan)
+        public String Jam
+        {
+            get { return jam; }
+            set { jam = value; }
+        }
+        private String hari;
+
+        public String Hari
+        {
+            get { return hari; }
+            set { hari = value; }
+        }
+        private String ruangan;
+
+        public String Ruangan
+        {
+            get { return ruangan; }
+            set { ruangan = value; }
+        }
+
+        public M_Jadwal(String jam, String hari, String ruangan)
         {
             this.jam = jam;
-            this.tanggal = tanggal;
+            this.hari = hari;
+            this.ruangan = ruangan;
+            addtoDB();
+        }
+        public M_Jadwal(string id_jadwal)
+        {
+            Database db = new Database();
+            db.reader = db.callQuery("SELECT * from jadwal where id_jadwal = " + id_jadwal);
+            if (db.reader.Read())
+            {
+                this.jam = db.reader.GetString("jam");
+                this.ruangan = db.reader.GetString("ruangan");
+                this.hari = db.reader.GetString("hari");
+            }
+        }
+        public M_Jadwal(String idJadwal, String jam, String hari, String ruangan)
+        {
+            this.idJadwal = idJadwal;
+            this.jam = jam;
+            this.hari = hari;
+            this.ruangan = ruangan;
+
         }
 
         public String getId()
@@ -26,30 +66,24 @@ namespace iCAN.CLASS
         public bool addtoDB()
         {
             Database db = new Database();
-            string query = "INSERT INTO jadwal(tanggal,jam) VALUES('" + tanggal + "','" + jam + "')";
+            string query = "INSERT INTO jadwal(jam,hari,ruangan) VALUES('" + jam + "','" + hari + "','"+ruangan+"')";
             bool i = db.CallnonQuery(query);
-            //if (i)
-            //{
-            //    db.reader = db.callQuery("SELECT id_jadwal from jadwal where tanggal = '" + tanggal + "' AND jam = '" + jam + "'");
-            //    if (db.reader.Read())
-            //        idJadwal = db.reader.GetString(0);
-            //}
             return i;
         }
 
-        //public bool savetoDB()
-        //{
-        //    Database db = new Database();
-        //    string query = "UPDATE jadwal SET judul = '" + judul + "', isi = '" + isi + "' where id_berita = " + idNews;
-        //    bool i = db.CallnonQuery(query);
-        //    return i;
-        //}
-        //public bool deletefromDB()
-        //{
-        //    Database db = new Database();
-        //    string query = "DELETE FROM berita where id_berita = " + idNews;
-        //    bool i = db.CallnonQuery(query);
-        //    return i;
-        //}
+        public bool savetoDB()
+        {
+            Database db = new Database();
+            string query = "UPDATE jadwal SET jam = '" + jam + "', hari = '" + "', ruangan = '" + ruangan + "' where id_jadwal = " + idJadwal;
+            bool i = db.CallnonQuery(query);
+            return i;
+        }
+        public bool deletefromDB()
+        {
+            Database db = new Database();
+            string query = "DELETE FROM jadwal where id_jadwal = " + idJadwal;
+            bool i = db.CallnonQuery(query);
+            return i;
+        }
     }
 }

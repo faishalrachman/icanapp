@@ -9,67 +9,105 @@ namespace iCAN.CLASS
 {
     class M_Kelas
     {
-        private String NmKelas;
-        private int JumlahSiswa = 0;
-        private int SiswaMax;
-        private M_Siswa[] siswa;
-        private M_Guru Gr;
+        private String idKelas;
 
-        public M_Kelas(String Name, int SiswaMax)
+        public String IdKelas
         {
-            this.NmKelas = Name;
-            this.SiswaMax = SiswaMax;
-            this.siswa = new M_Siswa[SiswaMax];
+            get { return idKelas; }
+            set { idKelas = value; }
+        }
+        private String nama_kelas;
+
+        public String Nama_kelas
+        {
+            get { return nama_kelas; }
+            set { nama_kelas = value; }
+        }
+        private String nama_wali;
+
+        public String Nama_wali
+        {
+            get { return nama_wali; }
+            set { nama_wali = value; }
         }
 
-        public void AddSiswa(M_Siswa Anak)
+        public M_Kelas(string idKelas, string nama_kelas, String nama_wali)
         {
-            if (this.JumlahSiswa < this.SiswaMax)
+            this.idKelas = idKelas;
+            this.nama_kelas = nama_kelas;
+            this.nama_wali = nama_wali;
+        }
+        public M_Kelas(string idKelas)
+        {
+            Database db = new Database();
+            db.reader = db.callQuery("SELECT * FROM v_kelas where id_kelas =" + idKelas);
+            if (db.reader.Read())
             {
-                this.siswa[this.JumlahSiswa] = Anak;
-                this.JumlahSiswa++;
+                this.nama_kelas = db.reader.GetString("nama_kelas");
+                this.nama_wali = db.reader.GetString("nama_guru");
             }
-            else
-                MessageBox.Show("Siswa Sudah Penuh");
+        }
+        public M_Kelas(string nama_kelas, string nama_wali)
+        {
+            this.nama_kelas = nama_kelas;
+            this.nama_wali = nama_wali;
         }
 
-        public M_Siswa RemoveSiswa(String Name)
-        {
-            M_Siswa s = null;
-            for (int i = 0; i <= this.JumlahSiswa; i++)
-            {
-                if (this.siswa[i].Nama == Name)
-                {
-                    s = this.siswa[i];
-                    for (int j = i; j < this.JumlahSiswa - 1; j++)
-                        this.siswa[j] = this.siswa[j + 1];
-                }
-            }
-            return s;
-        }
+        //public M_Kelas(String Name, int SiswaMax)
+        //{
+        //    this.NmKelas = Name;
+        //    this.SiswaMax = SiswaMax;
+        //    this.siswa = new M_Siswa[SiswaMax];
+        //}
 
-        public void SetWali(M_Guru Gr)
-        {
-            this.Gr = Gr;
-        }
+        //public void AddSiswa(M_Siswa Anak)
+        //{
+        //    if (this.JumlahSiswa < this.SiswaMax)
+        //    {
+        //        this.siswa[this.JumlahSiswa] = Anak;
+        //        this.JumlahSiswa++;
+        //    }
+        //    else
+        //        MessageBox.Show("Siswa Sudah Penuh");
+        //}
 
-        public M_Guru GetWali()
-        {
-            return this.Gr;
-        }
+        //public M_Siswa RemoveSiswa(String Name)
+        //{
+        //    M_Siswa s = null;
+        //    for (int i = 0; i <= this.JumlahSiswa; i++)
+        //    {
+        //        if (this.siswa[i].Nama == Name)
+        //        {
+        //            s = this.siswa[i];
+        //            for (int j = i; j < this.JumlahSiswa - 1; j++)
+        //                this.siswa[j] = this.siswa[j + 1];
+        //        }
+        //    }
+        //    return s;
+        //}
 
-        public void LihatSiswa()
-        {
-            if (JumlahSiswa != 0)
-            {
-                for (int i = 0; i < this.JumlahSiswa; i++)
-                {
-                    //System.OutOfMemoryException.println("Nama Siswa : " + this.siswa[i].GetName());
-                    //System.out.println("NIS Siswa : " + this.siswa[i].GetNIS());
-                }
-            }
-            //else
-                //System.out.println("Tidak ada siswa");
-        }
+        //public void SetWali(M_Guru Gr)
+        //{
+        //    this.Gr = Gr;
+        //}
+
+        //public M_Guru GetWali()
+        //{
+        //    return this.Gr;
+        //}
+
+        //public void LihatSiswa()
+        //{
+        //    if (JumlahSiswa != 0)
+        //    {
+        //        for (int i = 0; i < this.JumlahSiswa; i++)
+        //        {
+        //            //System.OutOfMemoryException.println("Nama Siswa : " + this.siswa[i].GetName());
+        //            //System.out.println("NIS Siswa : " + this.siswa[i].GetNIS());
+        //        }
+        //    }
+        //    //else
+        //        //System.out.println("Tidak ada siswa");
+        //}
     }
 }

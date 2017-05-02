@@ -86,8 +86,13 @@ namespace iCAN.GUI.Admin
         {
             var form = new frmKelolaMapel();
             Hide();
-            form.Show();
+            form.ShowDialog();
             Show();
+        }
+
+        private void metroTile3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

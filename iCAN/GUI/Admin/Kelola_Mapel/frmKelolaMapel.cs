@@ -40,12 +40,12 @@ namespace iCAN.GUI.Admin
             //    cbOpsiJudul.Items.Add(db.reader.GetString(1));
             //    //id_jadwal id_kelas    id_guru id_mapel    nama_mapel id_user     NIP nama    jam hari    ruangan
             tb_mapel.Clear();
-            tb_mapel.Columns.Add("Kode Mata pelajaran",100);
-            tb_mapel.Columns.Add("Nama Mata Pelajaran",100);
-            tb_mapel.Columns.Add("Hari",100);
-            tb_mapel.Columns.Add("Jam",100);
-            tb_mapel.Columns.Add("Nama Guru",100);
-            tb_mapel.Columns.Add("Ruangan",100);
+            tb_mapel.Columns.Add("Kode Mata pelajaran",150);
+            tb_mapel.Columns.Add("Nama Mata Pelajaran",150);
+            tb_mapel.Columns.Add("Hari",50);
+            tb_mapel.Columns.Add("Jam",50);
+            tb_mapel.Columns.Add("Nama Guru",50);
+            tb_mapel.Columns.Add("Ruangan",50);
             l_mapel = new List<M_Mapel>();
 
             Database db = new Database();
@@ -68,6 +68,45 @@ namespace iCAN.GUI.Admin
                 item.SubItems.Add(ruangan);//nis
                 tb_mapel.Items.Add(item);
             }
+        }
+
+        private void tb_mapel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tb_mapel.SelectedItems.Count > 0)
+                mapel = l_mapel.ElementAt(tb_mapel.SelectedIndices[0]);
+            txGuru.Text = mapel.Nama_guru;
+            txKdMapel.Text = mapel.KdMapel;
+            txNamaMapel.Text = mapel.NmMapel;
+            txRuangan.Text = mapel.Ruangan;
+            }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            var f = new frmTambahMapel();
+            Hide();
+            f.ShowDialog();
+            FetchMapel();
+            Show();
+        }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Apakah anda yakin akan menghapus mata pelajaran ini?", "PERINGATAN", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Database db = new Database();
+                bool i = db.CallnonQuery("DELETE FROM mapel where kd_mapel = '" + mapel.KdMapel + "'");
+                if (i)
+                {
+                    MessageBox.Show("Berhasil terhapus");
+                    FetchMapel();
+                }
+            }
+        }
+
+        private void frmKelolaMapel_Load(object sender, EventArgs e)
+        {
+
         }
             
     }

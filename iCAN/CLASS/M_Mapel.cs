@@ -11,11 +11,47 @@ namespace iCAN.CLASS
         //id_jadwal 	id_kelas 	id_guru 	id_mapel 	nama_mapel 	id_user 	NIP 	nama 	jam 	hari 	ruangan 	2 	2 	4 	1 	Matematika 	17 	22 	1313 	06:30:00 	Selasa X IPA 1
 
         private String kdMapel;
+
+        public String KdMapel
+        {
+            get { return kdMapel; }
+            set { kdMapel = value; }
+        }
         private String nmMapel;
+
+        public String NmMapel
+        {
+            get { return nmMapel; }
+            set { nmMapel = value; }
+        }
         private String jam;
+
+        public String Jam
+        {
+            get { return jam; }
+            set { jam = value; }
+        }
         private String hari;
+
+        public String Hari
+        {
+            get { return hari; }
+            set { hari = value; }
+        }
         private String nama_guru;
+
+        public String Nama_guru
+        {
+            get { return nama_guru; }
+            set { nama_guru = value; }
+        }
         private String ruangan;
+
+        public String Ruangan
+        {
+            get { return ruangan; }
+            set { ruangan = value; }
+        }
 
 
 
@@ -33,12 +69,12 @@ namespace iCAN.CLASS
 
         public void setNama(String Nama)
         {
-            this.nmMapel = Nama;
+            this.NmMapel = Nama;
         }
 
         public String getNama()
         {
-            return this.nmMapel;
+            return this.NmMapel;
         }
 
         //public void addJadwal(M_Jadwal jd)
