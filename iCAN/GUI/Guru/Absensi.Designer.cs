@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.PilihKelas = new MetroFramework.Controls.MetroLabel();
+            this.btnPilihKelas = new MetroFramework.Controls.MetroButton();
+            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.metroScrollBar1 = new MetroFramework.Controls.MetroScrollBar();
             this.metroListView1 = new MetroFramework.Controls.MetroListView();
             this.Nama = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.NIS = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Kehadiran = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.metroScrollBar1 = new MetroFramework.Controls.MetroScrollBar();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
-            this.btnPilihKelas = new MetroFramework.Controls.MetroButton();
-            this.PilihKelas = new MetroFramework.Controls.MetroLabel();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,35 +58,34 @@
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
-            // metroListView1
+            // PilihKelas
             // 
-            this.metroListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Nama,
-            this.NIS,
-            this.Kehadiran});
-            this.metroListView1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.metroListView1.FullRowSelect = true;
-            this.metroListView1.GridLines = true;
-            this.metroListView1.Location = new System.Drawing.Point(14, 80);
-            this.metroListView1.Name = "metroListView1";
-            this.metroListView1.OwnerDraw = true;
-            this.metroListView1.Size = new System.Drawing.Size(777, 352);
-            this.metroListView1.TabIndex = 2;
-            this.metroListView1.UseCompatibleStateImageBehavior = false;
-            this.metroListView1.UseSelectable = true;
+            this.PilihKelas.AutoSize = true;
+            this.PilihKelas.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.PilihKelas.Location = new System.Drawing.Point(28, 26);
+            this.PilihKelas.Name = "PilihKelas";
+            this.PilihKelas.Size = new System.Drawing.Size(87, 25);
+            this.PilihKelas.TabIndex = 6;
+            this.PilihKelas.Text = "Pilih Kelas";
             // 
-            // Nama
+            // btnPilihKelas
             // 
-            this.Nama.Text = "Nama Siswa";
+            this.btnPilihKelas.Location = new System.Drawing.Point(317, 22);
+            this.btnPilihKelas.Name = "btnPilihKelas";
+            this.btnPilihKelas.Size = new System.Drawing.Size(75, 29);
+            this.btnPilihKelas.TabIndex = 5;
+            this.btnPilihKelas.Text = "PilihKelas";
+            this.btnPilihKelas.UseSelectable = true;
             // 
-            // NIS
+            // metroComboBox1
             // 
-            this.NIS.Text = "NIS";
-            this.NIS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // Kehadiran
-            // 
-            this.Kehadiran.Text = "Kehadiran Siswa";
+            this.metroComboBox1.FormattingEnabled = true;
+            this.metroComboBox1.ItemHeight = 23;
+            this.metroComboBox1.Location = new System.Drawing.Point(121, 22);
+            this.metroComboBox1.Name = "metroComboBox1";
+            this.metroComboBox1.Size = new System.Drawing.Size(190, 29);
+            this.metroComboBox1.TabIndex = 4;
+            this.metroComboBox1.UseSelectable = true;
             // 
             // metroScrollBar1
             // 
@@ -103,34 +102,36 @@
             this.metroScrollBar1.UseSelectable = true;
             this.metroScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.metroScrollBar1_Scroll);
             // 
-            // metroComboBox1
+            // metroListView1
             // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Location = new System.Drawing.Point(121, 22);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(190, 29);
-            this.metroComboBox1.TabIndex = 4;
-            this.metroComboBox1.UseSelectable = true;
+            this.metroListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Nama,
+            this.NIS,
+            this.Kehadiran});
+            this.metroListView1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.metroListView1.FullRowSelect = true;
+            this.metroListView1.GridLines = true;
+            this.metroListView1.Location = new System.Drawing.Point(14, 80);
+            this.metroListView1.Name = "metroListView1";
+            this.metroListView1.OwnerDraw = true;
+            this.metroListView1.Size = new System.Drawing.Size(777, 352);
+            this.metroListView1.TabIndex = 2;
+            this.metroListView1.UseCompatibleStateImageBehavior = false;
+            this.metroListView1.UseSelectable = true;
+            this.metroListView1.SelectedIndexChanged += new System.EventHandler(this.metroListView1_SelectedIndexChanged);
             // 
-            // btnPilihKelas
+            // Nama
             // 
-            this.btnPilihKelas.Location = new System.Drawing.Point(317, 22);
-            this.btnPilihKelas.Name = "btnPilihKelas";
-            this.btnPilihKelas.Size = new System.Drawing.Size(75, 29);
-            this.btnPilihKelas.TabIndex = 5;
-            this.btnPilihKelas.Text = "PilihKelas";
-            this.btnPilihKelas.UseSelectable = true;
+            this.Nama.Text = "Nama Siswa";
             // 
-            // PilihKelas
+            // NIS
             // 
-            this.PilihKelas.AutoSize = true;
-            this.PilihKelas.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.PilihKelas.Location = new System.Drawing.Point(28, 26);
-            this.PilihKelas.Name = "PilihKelas";
-            this.PilihKelas.Size = new System.Drawing.Size(87, 25);
-            this.PilihKelas.TabIndex = 6;
-            this.PilihKelas.Text = "Pilih Kelas";
+            this.NIS.Text = "NIS";
+            this.NIS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Kehadiran
+            // 
+            this.Kehadiran.Text = "Kehadiran Siswa";
             // 
             // Absensi
             // 

@@ -12,7 +12,6 @@ namespace iCAN.GUI.Guru
 {
     public partial class DaftarGuru : MetroFramework.Forms.MetroForm
     {
-        private object tb_guru;
 
         public DaftarGuru()
         {
@@ -49,5 +48,9 @@ namespace iCAN.GUI.Guru
             db.databaseConnection.Close();
         }
 
+        private void listViewGuru_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
