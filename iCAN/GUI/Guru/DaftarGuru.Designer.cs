@@ -68,19 +68,29 @@
             this.listViewGuru.UseCompatibleStateImageBehavior = false;
             this.listViewGuru.UseSelectable = true;
             this.listViewGuru.View = System.Windows.Forms.View.Details;
+            this.listViewGuru.SelectedIndexChanged += new System.EventHandler(this.listViewGuru_SelectedIndexChanged);
+            // 
+            // Nama
+            // 
+            this.Nama.Text = "Nama";
+            this.Nama.Width = 181;
             // 
             // NIP
             // 
+            this.NIP.Text = "NIP";
             this.NIP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.NIP.Width = 119;
             // 
             // Alamat
             // 
             this.Alamat.Text = "Alamat";
             this.Alamat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Alamat.Width = 158;
             // 
             // Handphone
             // 
             this.Handphone.Text = "Nomor Handphone";
+            this.Handphone.Width = 184;
             // 
             // DaftarGuru
             // 

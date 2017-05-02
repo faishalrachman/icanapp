@@ -1,6 +1,6 @@
 ﻿namespace iCAN.GUI.Guru
 {
-    partial class GuruBerita
+    partial class BeritaGuru
     {
         /// <summary>
         /// Required designer variable.
@@ -28,60 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.Scrool = new System.Windows.Forms.VScrollBar();
-            this.metroPanel1.SuspendLayout();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.txBerita = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // metroPanel1
-            // 
-            this.metroPanel1.Controls.Add(this.Scrool);
-            this.metroPanel1.HorizontalScrollbarBarColor = true;
-            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(128, 93);
-            this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(422, 364);
-            this.metroPanel1.TabIndex = 0;
-            this.metroPanel1.VerticalScrollbarBarColor = true;
-            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 10;
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(128, 463);
+            this.metroButton1.Location = new System.Drawing.Point(208, 463);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(75, 23);
             this.metroButton1.TabIndex = 1;
             this.metroButton1.Text = "Next";
             this.metroButton1.UseSelectable = true;
             // 
-            // Scrool
+            // btnBack
             // 
-            this.Scrool.Location = new System.Drawing.Point(402, 0);
-            this.Scrool.Name = "Scrool";
-            this.Scrool.Size = new System.Drawing.Size(20, 364);
-            this.Scrool.TabIndex = 2;
+            this.btnBack.Location = new System.Drawing.Point(127, 463);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 2;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
             // 
-            // GuruBerita
+            // txBerita
+            // 
+            this.txBerita.Location = new System.Drawing.Point(96, 64);
+            this.txBerita.MaxLength = 99999999;
+            this.txBerita.Multiline = true;
+            this.txBerita.Name = "txBerita";
+            this.txBerita.Size = new System.Drawing.Size(582, 393);
+            this.txBerita.TabIndex = 3;
+            // 
+            // BeritaGuru
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(692, 507);
+            this.ClientSize = new System.Drawing.Size(764, 507);
+            this.Controls.Add(this.txBerita);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.metroButton1);
-            this.Controls.Add(this.metroPanel1);
-            this.Name = "GuruBerita";
+            this.Name = "BeritaGuru";
             this.Text = "Berita";
-            this.metroPanel1.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.BeritaGuru_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private MetroFramework.Controls.MetroPanel metroPanel1;
-        private System.Windows.Forms.VScrollBar Scrool;
         private MetroFramework.Controls.MetroButton metroButton1;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.TextBox txBerita;
     }
 }

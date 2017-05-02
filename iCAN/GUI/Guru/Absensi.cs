@@ -21,9 +21,9 @@ namespace iCAN.GUI.Guru
             metroListView1.View = View.Details;
             // Add a column with width 20 and left alignment.
             //Set Columns
-            metroListView1.Columns.Add("Col1");
-            metroListView1.Columns.Add("Col2");
-            metroListView1.Columns.Add("Col3");
+            metroListView1.Columns.Add("Nama");
+            metroListView1.Columns.Add("NIS");
+            metroListView1.Columns.Add("Kelas");
             metroListView1.Columns.Add("Col4");
             metroListView1.Columns.Add("Col5");
             metroListView1.CheckBoxes = true;
@@ -45,6 +45,11 @@ namespace iCAN.GUI.Guru
         }
 
         private void metroScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+
+        }
+
+        private void metroListView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

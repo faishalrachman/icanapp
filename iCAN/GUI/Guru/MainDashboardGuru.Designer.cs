@@ -29,18 +29,23 @@
         private void InitializeComponent()
         {
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.mTanggal = new MetroFramework.Controls.MetroTile();
+            this.listDaftarSiswa = new MetroFramework.Controls.MetroTile();
+            this.mtJadwalGuru = new MetroFramework.Controls.MetroTile();
+            this.mMapel = new MetroFramework.Controls.MetroTile();
             this.mProfileGuru = new MetroFramework.Controls.MetroTile();
             this.mDaftarGuru = new MetroFramework.Controls.MetroTile();
             this.mNilai = new MetroFramework.Controls.MetroTile();
-            this.mAbsensi = new MetroFramework.Controls.MetroTile();
             this.mBeritaGuru = new MetroFramework.Controls.MetroTile();
+            this.mAbsensi = new MetroFramework.Controls.MetroTile();
+            this.lb_welcome = new MetroFramework.Controls.MetroLabel();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // metroPanel1
             // 
-            this.metroPanel1.Controls.Add(this.mTanggal);
+            this.metroPanel1.Controls.Add(this.listDaftarSiswa);
+            this.metroPanel1.Controls.Add(this.mtJadwalGuru);
+            this.metroPanel1.Controls.Add(this.mMapel);
             this.metroPanel1.Controls.Add(this.mProfileGuru);
             this.metroPanel1.Controls.Add(this.mDaftarGuru);
             this.metroPanel1.Controls.Add(this.mNilai);
@@ -51,49 +56,79 @@
             this.metroPanel1.HorizontalScrollbarSize = 10;
             this.metroPanel1.Location = new System.Drawing.Point(26, 63);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(802, 307);
+            this.metroPanel1.Size = new System.Drawing.Size(764, 368);
             this.metroPanel1.TabIndex = 0;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
+            this.metroPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.metroPanel1_Paint);
             // 
-            // mTanggal
+            // listDaftarSiswa
             // 
-            this.mTanggal.ActiveControl = null;
-            this.mTanggal.Location = new System.Drawing.Point(622, 71);
-            this.mTanggal.Name = "mTanggal";
-            this.mTanggal.Size = new System.Drawing.Size(165, 204);
-            this.mTanggal.Style = MetroFramework.MetroColorStyle.Lime;
-            this.mTanggal.TabIndex = 7;
-            this.mTanggal.Text = "Tanggal";
-            this.mTanggal.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.mTanggal.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.mTanggal.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.mTanggal.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.mTanggal.UseSelectable = true;
-            this.mTanggal.UseStyleColors = true;
-            this.mTanggal.UseTileImage = true;
+            this.listDaftarSiswa.ActiveControl = null;
+            this.listDaftarSiswa.Location = new System.Drawing.Point(595, 151);
+            this.listDaftarSiswa.Name = "listDaftarSiswa";
+            this.listDaftarSiswa.Size = new System.Drawing.Size(150, 115);
+            this.listDaftarSiswa.TabIndex = 9;
+            this.listDaftarSiswa.Text = "Daftar Siswa";
+            this.listDaftarSiswa.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.listDaftarSiswa.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.listDaftarSiswa.UseSelectable = true;
+            this.listDaftarSiswa.Click += new System.EventHandler(this.metroTile2_Click);
+            // 
+            // mtJadwalGuru
+            // 
+            this.mtJadwalGuru.ActiveControl = null;
+            this.mtJadwalGuru.Location = new System.Drawing.Point(255, 151);
+            this.mtJadwalGuru.Name = "mtJadwalGuru";
+            this.mtJadwalGuru.Size = new System.Drawing.Size(164, 115);
+            this.mtJadwalGuru.TabIndex = 8;
+            this.mtJadwalGuru.Text = "Jadwal";
+            this.mtJadwalGuru.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.mtJadwalGuru.UseSelectable = true;
+            this.mtJadwalGuru.Click += new System.EventHandler(this.mtJadwalGuru_Click);
+            // 
+            // mMapel
+            // 
+            this.mMapel.ActiveControl = null;
+            this.mMapel.Location = new System.Drawing.Point(595, 30);
+            this.mMapel.Name = "mMapel";
+            this.mMapel.Size = new System.Drawing.Size(150, 114);
+            this.mMapel.Style = MetroFramework.MetroColorStyle.Lime;
+            this.mMapel.TabIndex = 7;
+            this.mMapel.Text = "Mata Pelajaran";
+            this.mMapel.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.mMapel.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.mMapel.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.mMapel.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.mMapel.UseSelectable = true;
+            this.mMapel.UseStyleColors = true;
+            this.mMapel.UseTileImage = true;
+            this.mMapel.Click += new System.EventHandler(this.mMapel_Click);
             // 
             // mProfileGuru
             // 
             this.mProfileGuru.ActiveControl = null;
-            this.mProfileGuru.Location = new System.Drawing.Point(448, 178);
+            this.mProfileGuru.Location = new System.Drawing.Point(448, 151);
             this.mProfileGuru.Name = "mProfileGuru";
-            this.mProfileGuru.Size = new System.Drawing.Size(168, 96);
+            this.mProfileGuru.Size = new System.Drawing.Size(141, 115);
             this.mProfileGuru.Style = MetroFramework.MetroColorStyle.Pink;
             this.mProfileGuru.TabIndex = 6;
             this.mProfileGuru.Text = "Profile";
+            this.mProfileGuru.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.mProfileGuru.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.mProfileGuru.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.mProfileGuru.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.mProfileGuru.UseSelectable = true;
+            this.mProfileGuru.Click += new System.EventHandler(this.mProfileGuru_Click);
             // 
             // mDaftarGuru
             // 
             this.mDaftarGuru.ActiveControl = null;
             this.mDaftarGuru.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.mDaftarGuru.Location = new System.Drawing.Point(448, 70);
+            this.mDaftarGuru.Location = new System.Drawing.Point(448, 30);
             this.mDaftarGuru.Name = "mDaftarGuru";
-            this.mDaftarGuru.Size = new System.Drawing.Size(168, 102);
+            this.mDaftarGuru.Size = new System.Drawing.Size(141, 115);
             this.mDaftarGuru.Style = MetroFramework.MetroColorStyle.Blue;
             this.mDaftarGuru.TabIndex = 5;
             this.mDaftarGuru.Text = "Daftar Guru";
@@ -109,9 +144,9 @@
             // 
             this.mNilai.ActiveControl = null;
             this.mNilai.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.mNilai.Location = new System.Drawing.Point(255, 70);
+            this.mNilai.Location = new System.Drawing.Point(255, 30);
             this.mNilai.Name = "mNilai";
-            this.mNilai.Size = new System.Drawing.Size(164, 205);
+            this.mNilai.Size = new System.Drawing.Size(164, 114);
             this.mNilai.Style = MetroFramework.MetroColorStyle.Teal;
             this.mNilai.TabIndex = 4;
             this.mNilai.Text = "Kelola Nilai";
@@ -121,12 +156,27 @@
             this.mNilai.UseSelectable = true;
             this.mNilai.Click += new System.EventHandler(this.mNilai_Click);
             // 
+            // mBeritaGuru
+            // 
+            this.mBeritaGuru.ActiveControl = null;
+            this.mBeritaGuru.Location = new System.Drawing.Point(15, 150);
+            this.mBeritaGuru.Name = "mBeritaGuru";
+            this.mBeritaGuru.Size = new System.Drawing.Size(234, 115);
+            this.mBeritaGuru.Style = MetroFramework.MetroColorStyle.Green;
+            this.mBeritaGuru.TabIndex = 3;
+            this.mBeritaGuru.Text = "Berita ";
+            this.mBeritaGuru.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.mBeritaGuru.TileImage = global::iCAN.Properties.Resources.stock_photo_125106373;
+            this.mBeritaGuru.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.mBeritaGuru.UseSelectable = true;
+            this.mBeritaGuru.Click += new System.EventHandler(this.mBeritaGuru_Click);
+            // 
             // mAbsensi
             // 
             this.mAbsensi.ActiveControl = null;
-            this.mAbsensi.Location = new System.Drawing.Point(15, 70);
+            this.mAbsensi.Location = new System.Drawing.Point(15, 30);
             this.mAbsensi.Name = "mAbsensi";
-            this.mAbsensi.Size = new System.Drawing.Size(234, 102);
+            this.mAbsensi.Size = new System.Drawing.Size(234, 114);
             this.mAbsensi.Style = MetroFramework.MetroColorStyle.Orange;
             this.mAbsensi.TabIndex = 2;
             this.mAbsensi.Text = "Absensi";
@@ -137,26 +187,21 @@
             this.mAbsensi.UseSelectable = true;
             this.mAbsensi.Click += new System.EventHandler(this.mAbsensi_Click);
             // 
-            // mBeritaGuru
+            // lb_welcome
             // 
-            this.mBeritaGuru.ActiveControl = null;
-            this.mBeritaGuru.Location = new System.Drawing.Point(15, 178);
-            this.mBeritaGuru.Name = "mBeritaGuru";
-            this.mBeritaGuru.Size = new System.Drawing.Size(234, 97);
-            this.mBeritaGuru.Style = MetroFramework.MetroColorStyle.Green;
-            this.mBeritaGuru.TabIndex = 3;
-            this.mBeritaGuru.Text = "Berita ";
-            this.mBeritaGuru.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.mBeritaGuru.TileImage = global::iCAN.Properties.Resources.stock_photo_125106373;
-            this.mBeritaGuru.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.mBeritaGuru.UseSelectable = true;
-            this.mBeritaGuru.Click += new System.EventHandler(this.metroTile2_Click);
+            this.lb_welcome.AutoSize = true;
+            this.lb_welcome.Location = new System.Drawing.Point(474, 24);
+            this.lb_welcome.Name = "lb_welcome";
+            this.lb_welcome.Size = new System.Drawing.Size(109, 19);
+            this.lb_welcome.TabIndex = 10;
+            this.lb_welcome.Text = "Selamat Datang, ";
             // 
             // MainDashboardGuru
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(839, 433);
+            this.ClientSize = new System.Drawing.Size(815, 454);
+            this.Controls.Add(this.lb_welcome);
             this.Controls.Add(this.metroPanel1);
             this.Name = "MainDashboardGuru";
             this.Text = "Dashboard Guru";
@@ -164,6 +209,7 @@
             this.Load += new System.EventHandler(this.MainDashboardGuru_Load);
             this.metroPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -172,9 +218,12 @@
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private MetroFramework.Controls.MetroTile mBeritaGuru;
         private MetroFramework.Controls.MetroTile mAbsensi;
-        private MetroFramework.Controls.MetroTile mTanggal;
+        private MetroFramework.Controls.MetroTile mMapel;
         private MetroFramework.Controls.MetroTile mProfileGuru;
         private MetroFramework.Controls.MetroTile mDaftarGuru;
         private MetroFramework.Controls.MetroTile mNilai;
+        private MetroFramework.Controls.MetroTile listDaftarSiswa;
+        private MetroFramework.Controls.MetroTile mtJadwalGuru;
+        private MetroFramework.Controls.MetroLabel lb_welcome;
     }
 }

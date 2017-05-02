@@ -191,11 +191,29 @@
     <Compile Include="GUI\Guru\DaftarGuru.Designer.cs">
       <DependentUpon>DaftarGuru.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Guru\DaftarSiswa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Guru\DaftarSiswa.Designer.cs">
+      <DependentUpon>DaftarSiswa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Guru\JadwalGuru.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Guru\JadwalGuru.Designer.cs">
+      <DependentUpon>JadwalGuru.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Guru\MainDashboardGuru.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\Guru\MainDashboardGuru.designer.cs">
       <DependentUpon>MainDashboardGuru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Guru\Mapel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Guru\Mapel.Designer.cs">
+      <DependentUpon>Mapel.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Guru\NilaiGuru.cs">
       <SubType>Form</SubType>
@@ -302,8 +320,17 @@
     <EmbeddedResource Include="GUI\Guru\DaftarGuru.resx">
       <DependentUpon>DaftarGuru.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Guru\DaftarSiswa.resx">
+      <DependentUpon>DaftarSiswa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Guru\JadwalGuru.resx">
+      <DependentUpon>JadwalGuru.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Guru\MainDashboardGuru.resx">
       <DependentUpon>MainDashboardGuru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Guru\Mapel.resx">
+      <DependentUpon>Mapel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Guru\NilaiGuru.resx">
       <DependentUpon>NilaiGuru.cs</DependentUpon>

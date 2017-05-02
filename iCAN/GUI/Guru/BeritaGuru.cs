@@ -10,16 +10,48 @@ using System.Windows.Forms;
 
 namespace iCAN.GUI.Guru
 {
-    public partial class GuruBerita : MetroFramework.Forms.MetroForm
+    public partial class BeritaGuru : MetroFramework.Forms.MetroForm
     {
-        public GuruBerita()
+        string berita;
+        private object beritaGuru;
+        public BeritaGuru()
         {
             InitializeComponent();
+            Fetch();
+        }
+
+        private void Fetch()
+        {
+            Database db = new Database();
+            db.reader = db.callQuery("SELECT * FROM berita");
+            while (db.reader.Read())
+            {
+                berita += db.reader.GetString("judul");
+                berita += "@==============================@";
+                berita += "@";
+                berita += db.reader.GetString("isi");
+                berita += "@";
+            }
+            if (berita != null && berita.Contains("@"))
+            {
+                berita = berita.Replace("@", System.Environment.NewLine);
+            }
+            txBerita.Text = berita;
         }
 
         private void htmlPanel1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void metroPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+
+        }
+
+        private void BeritaGuru_Load(object sender, EventArgs e)
+        {
         }
     }
 }
