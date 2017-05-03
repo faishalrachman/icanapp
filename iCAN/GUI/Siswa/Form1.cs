@@ -10,22 +10,11 @@ using System.Windows.Forms;
 
 namespace iCAN.GUI.Siswa
 {
-    public partial class frmLihatNilai : MetroFramework.Forms.MetroForm
-
+    public partial class Form1 : Form
     {
-        public frmLihatNilai()
+        public Form1()
         {
             InitializeComponent();
-        }
-
-        private void frmLihatNilai_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
