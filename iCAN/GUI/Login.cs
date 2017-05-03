@@ -67,7 +67,7 @@ namespace iCAN.GUI
                 switch (user.Role)
                 {
                     case "guru":
-                        guru = new MainDashboardGuru();
+                        guru = new MainDashboardGuru(user.IdUser);
                         guru.Show();
                         break;
                     case "admin":
