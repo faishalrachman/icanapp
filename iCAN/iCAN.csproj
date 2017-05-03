@@ -241,6 +241,18 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI\Siswa\frmGuruku.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Siswa\frmGuruku.Designer.cs">
+      <DependentUpon>frmGuruku.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Siswa\frmLihatJadwal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Siswa\frmLihatJadwal.Designer.cs">
+      <DependentUpon>frmLihatJadwal.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Siswa\frmLihatNilai.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -343,6 +355,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\MainSplash.resx">
       <DependentUpon>MainSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Siswa\frmGuruku.resx">
+      <DependentUpon>frmGuruku.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Siswa\frmLihatJadwal.resx">
+      <DependentUpon>frmLihatJadwal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Siswa\frmLihatNilai.resx">
+      <DependentUpon>frmLihatNilai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Siswa\MainDashboardSiswa.resx">
       <DependentUpon>MainDashboardSiswa.cs</DependentUpon>
