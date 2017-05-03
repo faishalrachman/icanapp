@@ -63,6 +63,7 @@
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
+            this.metroPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.metroPanel1_Paint);
             // 
             // metroBerita
             // 
@@ -156,6 +157,7 @@
             this.metroGuru.TabIndex = 4;
             this.metroGuru.Text = "Guruku";
             this.metroGuru.UseSelectable = true;
+            this.metroGuru.Click += new System.EventHandler(this.metroGuru_Click);
             // 
             // metroJadwal
             // 
@@ -166,6 +168,7 @@
             this.metroJadwal.TabIndex = 3;
             this.metroJadwal.Text = "Lihat Jadwal";
             this.metroJadwal.UseSelectable = true;
+            this.metroJadwal.Click += new System.EventHandler(this.metroJadwal_Click);
             // 
             // metroNilai
             // 
@@ -196,6 +199,7 @@
             this.Controls.Add(this.metroPanel1);
             this.Name = "MainDashboardSiswa";
             this.Text = "Dashboard Siswa";
+            this.Load += new System.EventHandler(this.MainDashboardSiswa_Load);
             this.metroPanel1.ResumeLayout(false);
             this.metroBerita.ResumeLayout(false);
             this.metroPanel4.ResumeLayout(false);
