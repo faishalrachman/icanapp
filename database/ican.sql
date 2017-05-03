@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 02 Mei 2017 pada 20.07
--- Versi Server: 10.1.19-MariaDB
--- PHP Version: 5.6.28
+-- Generation Time: May 03, 2017 at 06:17 AM
+-- Server version: 10.1.19-MariaDB
+-- PHP Version: 5.6.24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -23,7 +23,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `berita`
+-- Table structure for table `berita`
 --
 
 CREATE TABLE `berita` (
@@ -35,7 +35,7 @@ CREATE TABLE `berita` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `guru`
+-- Table structure for table `guru`
 --
 
 CREATE TABLE `guru` (
@@ -47,17 +47,18 @@ CREATE TABLE `guru` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `guru`
+-- Dumping data for table `guru`
 --
 
 INSERT INTO `guru` (`id_guru`, `id_user`, `NIP`, `alamat`, `no_hp`) VALUES
 (4, 17, '22', '13', '13'),
-(5, 18, '123313', 'F', '083833838');
+(5, 18, '123313', 'F', '083833838'),
+(6, 19, '100101010', '2', '2');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `jadwal`
+-- Table structure for table `jadwal`
 --
 
 CREATE TABLE `jadwal` (
@@ -68,7 +69,7 @@ CREATE TABLE `jadwal` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `jadwal`
+-- Dumping data for table `jadwal`
 --
 
 INSERT INTO `jadwal` (`id_jadwal`, `jam`, `hari`, `ruangan`) VALUES
@@ -77,7 +78,7 @@ INSERT INTO `jadwal` (`id_jadwal`, `jam`, `hari`, `ruangan`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kelas`
+-- Table structure for table `kelas`
 --
 
 CREATE TABLE `kelas` (
@@ -87,7 +88,7 @@ CREATE TABLE `kelas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `kelas`
+-- Dumping data for table `kelas`
 --
 
 INSERT INTO `kelas` (`id_kelas`, `id_guru`, `nama_kelas`) VALUES
@@ -99,7 +100,7 @@ INSERT INTO `kelas` (`id_kelas`, `id_guru`, `nama_kelas`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `mapel`
+-- Table structure for table `mapel`
 --
 
 CREATE TABLE `mapel` (
@@ -111,17 +112,20 @@ CREATE TABLE `mapel` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `mapel`
+-- Dumping data for table `mapel`
 --
 
 INSERT INTO `mapel` (`kd_mapel`, `nama_mapel`, `id_guru`, `id_kelas`, `id_jadwal`) VALUES
+('007', '1', 6, 6, 2),
 ('1', 'Matematika', 4, 2, 2),
-('INDO-1', 'Bahasa Indonesia', 4, 4, 2);
+('11', '11', 4, 4, 2),
+('FIS-1', 'Fisika', 5, 5, 2),
+('FIS-2', 'FISIKA', 5, 5, 2);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `nilai`
+-- Table structure for table `nilai`
 --
 
 CREATE TABLE `nilai` (
@@ -135,7 +139,7 @@ CREATE TABLE `nilai` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `siswa`
+-- Table structure for table `siswa`
 --
 
 CREATE TABLE `siswa` (
@@ -150,7 +154,7 @@ CREATE TABLE `siswa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `siswa`
+-- Dumping data for table `siswa`
 --
 
 INSERT INTO `siswa` (`NIS`, `id_user`, `jenis_kelamin`, `id_kelas`, `tempat_lahir`, `tanggal_lahir`, `agama`, `alamat`) VALUES
@@ -160,7 +164,7 @@ INSERT INTO `siswa` (`NIS`, `id_user`, `jenis_kelamin`, `id_kelas`, `tempat_lahi
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -172,7 +176,7 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `user`
+-- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `nama`, `role`) VALUES
@@ -185,7 +189,8 @@ INSERT INTO `user` (`id`, `username`, `password`, `nama`, `role`) VALUES
 (15, '123', '', '123', 'guru'),
 (16, 'dws', 'dwsganteng', 'Dodi Wisaksono Sugiharto', 'guru'),
 (17, '22', '2', '1313', 'guru'),
-(18, 'faishalrachman', '123', 'Faishal R', 'guru');
+(18, 'faishalrachman', '123', 'Faishal R', 'guru'),
+(19, 'ipatganteng', '159753', 'Ipat Ganteng', 'guru');
 
 -- --------------------------------------------------------
 
@@ -208,16 +213,22 @@ CREATE TABLE `v_guru` (
 --
 CREATE TABLE `v_jadwalmapel` (
 `id_jadwal` int(11)
-,`id_kelas` int(11)
 ,`id_guru` int(11)
 ,`kd_mapel` varchar(20)
 ,`nama_mapel` text
+,`id_kelas` int(11)
 ,`id_user` int(11)
 ,`NIP` varchar(20)
-,`nama` text
+,`alamat` text
+,`no_hp` varchar(13)
 ,`jam` time
 ,`hari` text
 ,`ruangan` text
+,`id` int(11)
+,`username` varchar(50)
+,`password` text
+,`nama` text
+,`role` varchar(10)
 );
 
 -- --------------------------------------------------------
@@ -282,7 +293,7 @@ CREATE TABLE `v_siswa` (
 -- --------------------------------------------------------
 
 --
--- Struktur untuk view `v_guru`
+-- Structure for view `v_guru`
 --
 DROP TABLE IF EXISTS `v_guru`;
 
@@ -291,16 +302,16 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 -- --------------------------------------------------------
 
 --
--- Struktur untuk view `v_jadwalmapel`
+-- Structure for view `v_jadwalmapel`
 --
 DROP TABLE IF EXISTS `v_jadwalmapel`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `v_jadwalmapel`  AS  select `mapel`.`id_jadwal` AS `id_jadwal`,`mapel`.`id_kelas` AS `id_kelas`,`guru`.`id_guru` AS `id_guru`,`mapel`.`kd_mapel` AS `kd_mapel`,`mapel`.`nama_mapel` AS `nama_mapel`,`guru`.`id_user` AS `id_user`,`guru`.`NIP` AS `NIP`,`user`.`nama` AS `nama`,`jadwal`.`jam` AS `jam`,`jadwal`.`hari` AS `hari`,`jadwal`.`ruangan` AS `ruangan` from ((((`mapel` join `guru` on((`mapel`.`id_guru` = `guru`.`id_guru`))) join `kelas` on((`mapel`.`id_kelas` = `kelas`.`id_kelas`))) join `jadwal` on((`mapel`.`id_jadwal` = `jadwal`.`id_jadwal`))) join `user` on((`user`.`id` = `guru`.`id_user`))) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `v_jadwalmapel`  AS  select `mapel`.`id_jadwal` AS `id_jadwal`,`mapel`.`id_guru` AS `id_guru`,`mapel`.`kd_mapel` AS `kd_mapel`,`mapel`.`nama_mapel` AS `nama_mapel`,`mapel`.`id_kelas` AS `id_kelas`,`guru`.`id_user` AS `id_user`,`guru`.`NIP` AS `NIP`,`guru`.`alamat` AS `alamat`,`guru`.`no_hp` AS `no_hp`,`jadwal`.`jam` AS `jam`,`jadwal`.`hari` AS `hari`,`jadwal`.`ruangan` AS `ruangan`,`user`.`id` AS `id`,`user`.`username` AS `username`,`user`.`password` AS `password`,`user`.`nama` AS `nama`,`user`.`role` AS `role` from (((`mapel` join `guru` on((`mapel`.`id_guru` = `guru`.`id_guru`))) join `jadwal` on((`mapel`.`id_jadwal` = `jadwal`.`id_jadwal`))) join `user` on((`guru`.`id_user` = `user`.`id`))) WITH CASCADED CHECK OPTION ;
 
 -- --------------------------------------------------------
 
 --
--- Struktur untuk view `v_kelas`
+-- Structure for view `v_kelas`
 --
 DROP TABLE IF EXISTS `v_kelas`;
 
@@ -309,7 +320,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 -- --------------------------------------------------------
 
 --
--- Struktur untuk view `v_mapel`
+-- Structure for view `v_mapel`
 --
 DROP TABLE IF EXISTS `v_mapel`;
 
@@ -318,7 +329,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 -- --------------------------------------------------------
 
 --
--- Struktur untuk view `v_siswa`
+-- Structure for view `v_siswa`
 --
 DROP TABLE IF EXISTS `v_siswa`;
 
@@ -391,7 +402,7 @@ ALTER TABLE `berita`
 -- AUTO_INCREMENT for table `guru`
 --
 ALTER TABLE `guru`
-  MODIFY `id_guru` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_guru` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `jadwal`
 --
@@ -416,7 +427,7 @@ ALTER TABLE `siswa`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

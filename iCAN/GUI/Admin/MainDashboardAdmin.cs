@@ -94,5 +94,14 @@ namespace iCAN.GUI.Admin
         {
 
         }
+
+        private void metroTile8_Click(object sender, EventArgs e)
+        {
+
+            var form = new frmKelolaJadwal();
+            Hide();
+            form.ShowDialog();
+            Show();
+        }
     }
 }

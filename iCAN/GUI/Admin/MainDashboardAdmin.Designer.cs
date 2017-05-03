@@ -77,6 +77,7 @@
             this.metroTile8.Text = "Kelola Jadwal";
             this.metroTile8.UseCustomBackColor = true;
             this.metroTile8.UseSelectable = true;
+            this.metroTile8.Click += new System.EventHandler(this.metroTile8_Click);
             // 
             // lb_welcome
             // 
