@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Win32;
 using iCAN.GUI.Admin;
+using iCAN.GUI.Siswa;
 
 namespace iCAN.GUI
 {
@@ -18,6 +19,7 @@ namespace iCAN.GUI
     {
         MainDashboardGuru guru;
         MainDashboardAdmin admin;
+        MainDashboardSiswa siswa;
         RegistryKey reg;
 
 
@@ -74,6 +76,10 @@ namespace iCAN.GUI
                         admin = new MainDashboardAdmin(user.IdUser);
                         admin.Show();
                         break;
+                    case "siswa" :
+                        siswa = new MainDashboardSiswa();
+                        siswa.Show();
+                        break;
                     default:
                         break;
                 }
@@ -85,7 +91,7 @@ namespace iCAN.GUI
                 {
                     reg.SetValue("username", "-");
                 }
-                Close();
+                Hide();
             }
             else
             {
