@@ -43,8 +43,8 @@ namespace iCAN.CLASS
             db.reader = db.callQuery("SELECT * FROM v_kelas where id_kelas =" + idKelas);
             if (db.reader.Read())
             {
-                this.nama_kelas = db.reader.GetString("nama_kelas");
-                this.nama_wali = db.reader.GetString("nama_guru");
+                nama_kelas = db.reader.GetString("nama_kelas");
+                nama_wali = db.reader.GetString("nama_guru");
             }
         }
         public M_Kelas(string nama_kelas, string nama_wali)
@@ -52,62 +52,19 @@ namespace iCAN.CLASS
             this.nama_kelas = nama_kelas;
             this.nama_wali = nama_wali;
         }
+        public M_Kelas(int id_guru, string nama_kelas)
+        {
+            Database db = new Database();
+            string query = "INSERT INTO kelas(id_guru,nama_kelas) VALUES(" + id_guru + ",'" + nama_kelas + "')";
+            bool i = db.CallnonQuery(query);
+        }
 
-        //public M_Kelas(String Name, int SiswaMax)
-        //{
-        //    this.NmKelas = Name;
-        //    this.SiswaMax = SiswaMax;
-        //    this.siswa = new M_Siswa[SiswaMax];
-        //}
-
-        //public void AddSiswa(M_Siswa Anak)
-        //{
-        //    if (this.JumlahSiswa < this.SiswaMax)
-        //    {
-        //        this.siswa[this.JumlahSiswa] = Anak;
-        //        this.JumlahSiswa++;
-        //    }
-        //    else
-        //        MessageBox.Show("Siswa Sudah Penuh");
-        //}
-
-        //public M_Siswa RemoveSiswa(String Name)
-        //{
-        //    M_Siswa s = null;
-        //    for (int i = 0; i <= this.JumlahSiswa; i++)
-        //    {
-        //        if (this.siswa[i].Nama == Name)
-        //        {
-        //            s = this.siswa[i];
-        //            for (int j = i; j < this.JumlahSiswa - 1; j++)
-        //                this.siswa[j] = this.siswa[j + 1];
-        //        }
-        //    }
-        //    return s;
-        //}
-
-        //public void SetWali(M_Guru Gr)
-        //{
-        //    this.Gr = Gr;
-        //}
-
-        //public M_Guru GetWali()
-        //{
-        //    return this.Gr;
-        //}
-
-        //public void LihatSiswa()
-        //{
-        //    if (JumlahSiswa != 0)
-        //    {
-        //        for (int i = 0; i < this.JumlahSiswa; i++)
-        //        {
-        //            //System.OutOfMemoryException.println("Nama Siswa : " + this.siswa[i].GetName());
-        //            //System.out.println("NIS Siswa : " + this.siswa[i].GetNIS());
-        //        }
-        //    }
-        //    //else
-        //        //System.out.println("Tidak ada siswa");
-        //}
+        public bool deletefromDB()
+        {
+            Database db = new Database();
+            string query = "DELETE FROM kelas where id_kelas = " + idKelas;
+            bool i = db.CallnonQuery(query);
+            return i;
+        }
     }
 }

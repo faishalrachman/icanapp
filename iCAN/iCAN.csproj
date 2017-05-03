@@ -95,10 +95,22 @@
     <Compile Include="CLASS\M_Guru.cs" />
     <Compile Include="CLASS\M_User.cs" />
     <Compile Include="CLASS\WinApi.cs" />
-    <Compile Include="GUI\Admin\frmKelolaJadwal.cs">
+    <Compile Include="GUI\Admin\Kelola_Kelas\frmTambahKelas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Admin\frmKelolaJadwal.Designer.cs">
+    <Compile Include="GUI\Admin\Kelola_Kelas\frmTambahKelas.Designer.cs">
+      <DependentUpon>frmTambahKelas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\Kelola_Kelas\frmKelolaKelas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\Kelola_Kelas\frmKelolaKelas.Designer.cs">
+      <DependentUpon>frmKelolaKelas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\Kelola_Jadwal\frmKelolaJadwal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\Kelola_Jadwal\frmKelolaJadwal.Designer.cs">
       <DependentUpon>frmKelolaJadwal.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Admin\Kelola_Guru\frmKelolaGuru.cs">
@@ -290,7 +302,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="GUI\Admin\frmKelolaJadwal.resx">
+    <EmbeddedResource Include="GUI\Admin\Kelola_Kelas\frmTambahKelas.resx">
+      <DependentUpon>frmTambahKelas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\Kelola_Kelas\frmKelolaKelas.resx">
+      <DependentUpon>frmKelolaKelas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\Kelola_Jadwal\frmKelolaJadwal.resx">
       <DependentUpon>frmKelolaJadwal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\Kelola_Guru\frmKelolaGuru.resx">

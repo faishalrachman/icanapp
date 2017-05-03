@@ -46,7 +46,7 @@
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.Location = new System.Drawing.Point(20, 72);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(138, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(137, 19);
             this.metroLabel1.TabIndex = 0;
             this.metroLabel1.Text = "Kode Mata Pelajaran :";
             // 
@@ -55,7 +55,7 @@
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.Location = new System.Drawing.Point(19, 101);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(144, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(143, 19);
             this.metroLabel2.TabIndex = 1;
             this.metroLabel2.Text = "Nama Mata Pelajaran :";
             // 
@@ -71,7 +71,7 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(20, 173);
+            this.metroLabel4.Location = new System.Drawing.Point(20, 167);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(45, 19);
             this.metroLabel4.TabIndex = 3;
@@ -110,7 +110,7 @@
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(18, 212);
+            this.metroLabel5.Location = new System.Drawing.Point(19, 202);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(55, 19);
             this.metroLabel5.TabIndex = 6;

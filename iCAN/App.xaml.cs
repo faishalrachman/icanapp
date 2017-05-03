@@ -21,6 +21,7 @@ namespace iCAN
             base.OnStartup(e);
             var form = new frmLogin();
             form.Show();
+            form.Focus();
         }
     }
 }

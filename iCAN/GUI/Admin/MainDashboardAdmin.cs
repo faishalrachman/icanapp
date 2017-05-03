@@ -45,6 +45,7 @@ namespace iCAN.GUI.Admin
             Hide();
             form.ShowDialog();
             Show();
+            Focus();
         }
 
         private void metroTile5_Click(object sender, EventArgs e)
@@ -54,8 +55,9 @@ namespace iCAN.GUI.Admin
             Hide();
             form.ShowDialog();
             Show();
+            Focus();
         }
-
+        
         private void MainDashboardAdmin_FormClosing(object sender, FormClosingEventArgs e)
         {
             Environment.Exit(0);
@@ -67,6 +69,7 @@ namespace iCAN.GUI.Admin
             Hide();
             form.ShowDialog();
             Show();
+            Focus();
         }
 
         private void metroTile2_Click(object sender, EventArgs e)
@@ -75,6 +78,7 @@ namespace iCAN.GUI.Admin
             Hide();
             form.ShowDialog();
             Show();
+            Focus();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -88,10 +92,16 @@ namespace iCAN.GUI.Admin
             Hide();
             form.ShowDialog();
             Show();
+            Focus();
         }
 
         private void metroTile3_Click(object sender, EventArgs e)
         {
+            var form = new frmKelolaKelas();
+            Hide();
+            form.ShowDialog();
+            Show();
+            Focus();
 
         }
 
@@ -102,6 +112,7 @@ namespace iCAN.GUI.Admin
             Hide();
             form.ShowDialog();
             Show();
+            Focus();
         }
     }
 }

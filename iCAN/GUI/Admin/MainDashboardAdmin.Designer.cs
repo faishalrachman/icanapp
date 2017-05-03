@@ -33,7 +33,6 @@
             this.metroTile8 = new MetroFramework.Controls.MetroTile();
             this.lb_welcome = new MetroFramework.Controls.MetroLabel();
             this.metroTile6 = new MetroFramework.Controls.MetroTile();
-            this.metroTile9 = new MetroFramework.Controls.MetroTile();
             this.metroTile4 = new MetroFramework.Controls.MetroTile();
             this.metroTile2 = new MetroFramework.Controls.MetroTile();
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
@@ -44,7 +43,7 @@
             this.metroTile3.ActiveControl = null;
             this.metroTile3.Location = new System.Drawing.Point(23, 251);
             this.metroTile3.Name = "metroTile3";
-            this.metroTile3.Size = new System.Drawing.Size(168, 168);
+            this.metroTile3.Size = new System.Drawing.Size(341, 168);
             this.metroTile3.Style = MetroFramework.MetroColorStyle.Brown;
             this.metroTile3.TabIndex = 3;
             this.metroTile3.Text = "Kelola Kelas";
@@ -55,9 +54,9 @@
             // 
             this.metroTile5.ActiveControl = null;
             this.metroTile5.BackColor = System.Drawing.Color.DeepPink;
-            this.metroTile5.Location = new System.Drawing.Point(197, 251);
+            this.metroTile5.Location = new System.Drawing.Point(370, 251);
             this.metroTile5.Name = "metroTile5";
-            this.metroTile5.Size = new System.Drawing.Size(168, 168);
+            this.metroTile5.Size = new System.Drawing.Size(169, 168);
             this.metroTile5.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTile5.TabIndex = 5;
             this.metroTile5.Text = "Kelola Admin";
@@ -101,21 +100,6 @@
             this.metroTile6.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.metroTile6.UseSelectable = true;
             this.metroTile6.Click += new System.EventHandler(this.metroTile6_Click);
-            // 
-            // metroTile9
-            // 
-            this.metroTile9.ActiveControl = null;
-            this.metroTile9.Location = new System.Drawing.Point(371, 251);
-            this.metroTile9.Name = "metroTile9";
-            this.metroTile9.Size = new System.Drawing.Size(168, 168);
-            this.metroTile9.Style = MetroFramework.MetroColorStyle.Purple;
-            this.metroTile9.TabIndex = 10;
-            this.metroTile9.Text = "Kelola Absensi";
-            this.metroTile9.TileImage = global::iCAN.Properties.Resources.Kelola_Siswa_Dashboard;
-            this.metroTile9.TileImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.metroTile9.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile9.UseSelectable = true;
-            this.metroTile9.UseTileImage = true;
             // 
             // metroTile4
             // 
@@ -170,7 +154,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(912, 460);
-            this.Controls.Add(this.metroTile9);
             this.Controls.Add(this.lb_welcome);
             this.Controls.Add(this.metroTile8);
             this.Controls.Add(this.metroTile6);
@@ -199,6 +182,5 @@
         private MetroFramework.Controls.MetroTile metroTile6;
         private MetroFramework.Controls.MetroTile metroTile8;
         private MetroFramework.Controls.MetroLabel lb_welcome;
-        private MetroFramework.Controls.MetroTile metroTile9;
     }
 }
