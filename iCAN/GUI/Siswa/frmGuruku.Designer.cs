@@ -39,12 +39,12 @@
             // htmlLabel1
             // 
             this.htmlLabel1.AutoScroll = true;
-            this.htmlLabel1.AutoScrollMinSize = new System.Drawing.Size(34, 23);
+            this.htmlLabel1.AutoScrollMinSize = new System.Drawing.Size(84, 48);
             this.htmlLabel1.AutoSize = false;
             this.htmlLabel1.BackColor = System.Drawing.SystemColors.Window;
             this.htmlLabel1.Location = new System.Drawing.Point(24, 64);
             this.htmlLabel1.Name = "htmlLabel1";
-            this.htmlLabel1.Size = new System.Drawing.Size(49, 23);
+            this.htmlLabel1.Size = new System.Drawing.Size(72, 24);
             this.htmlLabel1.TabIndex = 0;
             this.htmlLabel1.Text = "NIP :";
             this.htmlLabel1.Click += new System.EventHandler(this.htmlLabel1_Click);
@@ -52,7 +52,7 @@
             // htmlLabel2
             // 
             this.htmlLabel2.AutoScroll = true;
-            this.htmlLabel2.AutoScrollMinSize = new System.Drawing.Size(45, 23);
+            this.htmlLabel2.AutoScrollMinSize = new System.Drawing.Size(117, 48);
             this.htmlLabel2.AutoSize = false;
             this.htmlLabel2.BackColor = System.Drawing.SystemColors.Window;
             this.htmlLabel2.Location = new System.Drawing.Point(24, 94);
@@ -64,7 +64,7 @@
             // htmlLabel3
             // 
             this.htmlLabel3.AutoScroll = true;
-            this.htmlLabel3.AutoScrollMinSize = new System.Drawing.Size(62, 23);
+            this.htmlLabel3.AutoScrollMinSize = new System.Drawing.Size(166, 48);
             this.htmlLabel3.AutoSize = false;
             this.htmlLabel3.BackColor = System.Drawing.SystemColors.Window;
             this.htmlLabel3.Location = new System.Drawing.Point(24, 124);
@@ -80,7 +80,7 @@
             // 
             // 
             this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(53, 1);
+            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(88, 1);
             this.metroTextBox1.CustomButton.Name = "";
             this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -112,7 +112,7 @@
             // 
             // 
             this.metroTextBox2.CustomButton.Image = null;
-            this.metroTextBox2.CustomButton.Location = new System.Drawing.Point(53, 1);
+            this.metroTextBox2.CustomButton.Location = new System.Drawing.Point(88, 1);
             this.metroTextBox2.CustomButton.Name = "";
             this.metroTextBox2.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.metroTextBox2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -144,7 +144,7 @@
             // 
             // 
             this.metroTextBox3.CustomButton.Image = null;
-            this.metroTextBox3.CustomButton.Location = new System.Drawing.Point(53, 1);
+            this.metroTextBox3.CustomButton.Location = new System.Drawing.Point(88, 1);
             this.metroTextBox3.CustomButton.Name = "";
             this.metroTextBox3.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.metroTextBox3.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
