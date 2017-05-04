@@ -58,6 +58,15 @@ namespace iCAN.CLASS
             set { NIS = value; }
         }
 
+        private String idKelas;
+
+        public String IdKelas
+        {
+            get { return idKelas; }
+            set { idKelas = value; }
+        }
+
+
 
         public M_Siswa(int idUser) : base(idUser)
         {
@@ -77,6 +86,7 @@ namespace iCAN.CLASS
                 tanggal_lahir = db.reader.GetString(6);
                 agama = db.reader.GetString(7);
                 alamat = db.reader.GetString(8);
+                idKelas = db.reader.GetString("id_kelas");
                 db.databaseConnection.Close();
             }
             else

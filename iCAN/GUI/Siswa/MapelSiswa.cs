@@ -1,4 +1,5 @@
-﻿using System;
+﻿using iCAN.CLASS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace iCAN.GUI.Siswa
 {
     public partial class MapelSiswa : MetroFramework.Forms.MetroForm
     {
-        public MapelSiswa()
+        int idUser;
+        public MapelSiswa(int idUser)
         {
             InitializeComponent();
+            this.idUser = idUser;
             Fetch();
         }
 
@@ -25,10 +28,9 @@ namespace iCAN.GUI.Siswa
             metroListMapel.Columns.Add("Nama Mapel", 100);
             metroListMapel.Columns.Add("Nama Guru", 100);
             metroListMapel.Columns.Add("Kelas", 100);
-
-
+            M_Siswa siswa = new M_Siswa(idUser);
             Database db = new Database();
-            db.reader = db.callQuery("SELECT * FROM v_mapel");
+            db.reader = db.callQuery("SELECT * FROM v_mapel JOIN kelas using (id_kelas) where nama_kelas = '"+siswa.Nama_kelas+"'");
             while (db.reader.Read())
             {
 

@@ -42,6 +42,7 @@
             this.metroListMapel.TabIndex = 0;
             this.metroListMapel.UseCompatibleStateImageBehavior = false;
             this.metroListMapel.UseSelectable = true;
+            this.metroListMapel.View = System.Windows.Forms.View.Details;
             this.metroListMapel.SelectedIndexChanged += new System.EventHandler(this.metroListMapel_SelectedIndexChanged);
             // 
             // MapelSiswa

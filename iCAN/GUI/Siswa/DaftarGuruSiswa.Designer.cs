@@ -42,6 +42,8 @@
             this.metroListGuru.TabIndex = 0;
             this.metroListGuru.UseCompatibleStateImageBehavior = false;
             this.metroListGuru.UseSelectable = true;
+            this.metroListGuru.View = System.Windows.Forms.View.Details;
+            this.metroListGuru.SelectedIndexChanged += new System.EventHandler(this.metroListGuru_SelectedIndexChanged);
             // 
             // DaftarGuruSiswa
             // 

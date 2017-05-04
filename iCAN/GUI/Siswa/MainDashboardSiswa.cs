@@ -1,4 +1,5 @@
 ﻿using iCAN.CLASS;
+using iCAN.GUI.Guru;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,7 +24,7 @@ namespace iCAN.GUI.Siswa
 
         private void metroTile1_Click(object sender, EventArgs e)
         {
-            var form = new frmLihatNilai();
+            var form = new frmLihatNilai(siswa.IdUser);
             Hide();
             form.ShowDialog();
             Show();
@@ -54,7 +55,7 @@ namespace iCAN.GUI.Siswa
 
         private void metroGuru_Click(object sender, EventArgs e)
         {
-            var form = new frmGuruku();
+            var form = new frmGuruku(siswa.IdUser);
             Hide();
             form.ShowDialog();
             Show();
@@ -62,10 +63,32 @@ namespace iCAN.GUI.Siswa
 
         private void metroPelajaran_Click(object sender, EventArgs e)
         {
-            var form = new MapelSiswa();
+            var form = new MapelSiswa(siswa.IdUser);
             Hide();
             form.ShowDialog();
             Show();
+        }
+
+        private void MainDashboardSiswa_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void metroBerita_Click(object sender, EventArgs e)
+        {
+            var form = new BeritaGuru();
+            form.ShowDialog();
+        }
+
+        private void metroDaftarGuru_Click(object sender, EventArgs e)
+        {
+            var form = new DaftarGuruSiswa();
+            form.ShowDialog();
+        }
+
+        private void metroProfile_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

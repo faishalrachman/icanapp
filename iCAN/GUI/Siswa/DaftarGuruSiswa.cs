@@ -46,5 +46,10 @@ namespace iCAN.GUI.Siswa
             db.databaseConnection.Close();
 
         }
+
+        private void metroListGuru_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

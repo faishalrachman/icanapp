@@ -73,6 +73,7 @@
             this.metroDaftarGuru.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroDaftarGuru.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.metroDaftarGuru.UseSelectable = true;
+            this.metroDaftarGuru.Click += new System.EventHandler(this.metroDaftarGuru_Click);
             // 
             // metroProfile
             // 
@@ -85,6 +86,7 @@
             this.metroProfile.Text = "Presensi";
             this.metroProfile.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroProfile.UseSelectable = true;
+            this.metroProfile.Click += new System.EventHandler(this.metroProfile_Click);
             // 
             // metroBerita
             // 
@@ -97,6 +99,7 @@
             this.metroBerita.Text = "Berita";
             this.metroBerita.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroBerita.UseSelectable = true;
+            this.metroBerita.Click += new System.EventHandler(this.metroBerita_Click);
             // 
             // metroPelajaran
             // 
@@ -171,6 +174,7 @@
             this.Controls.Add(this.metroPanel1);
             this.Name = "MainDashboardSiswa";
             this.Text = "Dashboard Siswa";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainDashboardSiswa_FormClosing);
             this.Load += new System.EventHandler(this.MainDashboardSiswa_Load);
             this.metroPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
