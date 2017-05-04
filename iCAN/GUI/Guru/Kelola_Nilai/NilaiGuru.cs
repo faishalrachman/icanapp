@@ -14,6 +14,7 @@ namespace iCAN.GUI.Guru
     public partial class NilaiGuru : MetroFramework.Forms.MetroForm
     {
         int idGuru;
+        string kd_mapel;
         List<M_Mapel> l_m = new List<M_Mapel>();
         M_Mapel mapel;
         M_Nilai nilai;
@@ -35,6 +36,7 @@ namespace iCAN.GUI.Guru
             while (db.reader.Read())
             {
                 string kd_mapel = db.reader.GetString("kd_mapel");
+                this.kd_mapel = kd_mapel;
                 string nm_mapel = db.reader.GetString("nama_mapel");
                 string nm_kelas = db.reader.GetString("nama_kelas");
                 M_Mapel m = new M_Mapel(kd_mapel, nm_mapel, "", "", "", "");
@@ -47,11 +49,13 @@ namespace iCAN.GUI.Guru
         void FetchNilai()
         {
             tb_nilai.Clear();
-            tb_nilai.Columns.Add("Kode Mapel",200);
-            tb_nilai.Columns.Add("Nama Nilai",200);
+            tb_nilai.Columns.Add("NIS", 150);
+            tb_nilai.Columns.Add("Nama Siswa", 100);
+            tb_nilai.Columns.Add("Kode Mapel", 100);
+            tb_nilai.Columns.Add("Nama Nilai",100);
             tb_nilai.Columns.Add("Skor");
             Database db = new Database();
-            db.reader = db.callQuery("SELECT * FROM nilai where kd_mapel = '" + l_m.ElementAt(cbKelas.SelectedIndex).KdMapel+"'");
+            db.reader = db.callQuery("SELECT * FROM nilai JOIN siswa using(NIS) JOIN user on (siswa.id_user = user.id) where kd_mapel = '" + l_m.ElementAt(cbKelas.SelectedIndex).KdMapel+"'");
 
 
             while (db.reader.Read())
@@ -59,11 +63,14 @@ namespace iCAN.GUI.Guru
                 string id_nilai = db.reader.GetString("id_nilai");
                 string kd_mapel = db.reader.GetString("kd_mapel");
                 string NIS = db.reader.GetString("NIS");
+                string nama_siswa = db.reader.GetString("nama");
                 string nama_nilai = db.reader.GetString("nama_nilai");
                 double skor = Convert.ToDouble(db.reader.GetString("skor"));
                 nilai = new M_Nilai(id_nilai);
                 l_nilai.Add(nilai);
-                ListViewItem item = new ListViewItem(kd_mapel);//id_user
+                ListViewItem item = new ListViewItem(NIS);//id_user
+                item.SubItems.Add(nama_siswa);//ID Jadwal
+                item.SubItems.Add(kd_mapel);//ID Jadwal
                 item.SubItems.Add(nama_nilai);//ID Jadwal
                 item.SubItems.Add(Convert.ToString(skor));//Jam
                 tb_nilai.Items.Add(item);
@@ -86,9 +93,9 @@ namespace iCAN.GUI.Guru
 
         private void metroButton2_Click(object sender, EventArgs e)
         {
-            var f = new TambahNilaiGuru(idGuru);
+            var f = new TambahNilaiGuru(idGuru,kd_mapel);
             f.ShowDialog();
-
+            FetchNilai();
         }
     }
 }

@@ -14,16 +14,18 @@ namespace iCAN.GUI.Guru
     public partial class TambahNilaiGuru : MetroFramework.Forms.MetroForm
     {
         int idGuru;
+        string kd_mapel;
         List<M_Mapel> l_m = new List<M_Mapel>();
         M_Mapel mapel;
         M_Nilai nilai;
         List<M_Nilai> l_nilai = new List<M_Nilai>();
         private BindingSource bSource;
 
-        public TambahNilaiGuru(int idGuru)
+        public TambahNilaiGuru(int idGuru, string kd_mapel)
         {
             InitializeComponent();
             this.idGuru = idGuru;
+            this.kd_mapel = kd_mapel;
             Fetch();
         }
 
@@ -56,6 +58,7 @@ namespace iCAN.GUI.Guru
             bSource = new BindingSource();
             bSource.DataSource = da;
             gridR.DataSource = bSource;
+
             /*
 
 
@@ -74,10 +77,30 @@ namespace iCAN.GUI.Guru
                 tb_nilai.Items.Add(item);
             }*/
         }
+        void AddNilai()
+        {
+            string nama_nilai = txJenisNilai.Text;
+            Database db = new Database();
+            bool i = false;
+            foreach (DataGridViewRow row in gridR.Rows)
+            {
+                string NIS = row.Cells["NIS"].Value.ToString();
+                string skor = row.Cells["skor"].Value.ToString();
+                i = db.CallnonQuery("INSERT INTO nilai(kd_mapel,NIS,nama_nilai,skor) VALUES ('" + kd_mapel + "'," + NIS + ",'" + nama_nilai + "',+" + skor + ")");
+            }
+            if (i)
+                MessageBox.Show("Berhasil di Inputkan");
+            Close();
+        }
 
         private void cbKelas_SelectedIndexChanged(object sender, EventArgs e)
         {
             FetchNilai();
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            AddNilai();
         }
     }
 }
