@@ -29,27 +29,23 @@
         private void InitializeComponent()
         {
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.metroDaftarGuru = new MetroFramework.Controls.MetroTile();
+            this.metroProfile = new MetroFramework.Controls.MetroTile();
             this.metroBerita = new MetroFramework.Controls.MetroTile();
-            this.metroPanel4 = new MetroFramework.Controls.MetroPanel();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroPelajaran = new MetroFramework.Controls.MetroTile();
             this.metroGuru = new MetroFramework.Controls.MetroTile();
             this.metroJadwal = new MetroFramework.Controls.MetroTile();
             this.metroNilai = new MetroFramework.Controls.MetroTile();
             this.txnamaSiswa = new MetroFramework.Controls.MetroLabel();
             this.metroPanel1.SuspendLayout();
-            this.metroBerita.SuspendLayout();
-            this.metroPanel4.SuspendLayout();
-            this.metroPanel3.SuspendLayout();
-            this.metroPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // metroPanel1
             // 
+            this.metroPanel1.Controls.Add(this.metroDaftarGuru);
+            this.metroPanel1.Controls.Add(this.metroProfile);
             this.metroPanel1.Controls.Add(this.metroBerita);
+            this.metroPanel1.Controls.Add(this.metroPelajaran);
             this.metroPanel1.Controls.Add(this.metroGuru);
             this.metroPanel1.Controls.Add(this.metroJadwal);
             this.metroPanel1.Controls.Add(this.metroNilai);
@@ -58,127 +54,103 @@
             this.metroPanel1.HorizontalScrollbarSize = 10;
             this.metroPanel1.Location = new System.Drawing.Point(11, 63);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(716, 348);
+            this.metroPanel1.Size = new System.Drawing.Size(716, 400);
             this.metroPanel1.TabIndex = 0;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             this.metroPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.metroPanel1_Paint);
             // 
+            // metroDaftarGuru
+            // 
+            this.metroDaftarGuru.ActiveControl = null;
+            this.metroDaftarGuru.Location = new System.Drawing.Point(13, 256);
+            this.metroDaftarGuru.Name = "metroDaftarGuru";
+            this.metroDaftarGuru.Size = new System.Drawing.Size(296, 94);
+            this.metroDaftarGuru.Style = MetroFramework.MetroColorStyle.Green;
+            this.metroDaftarGuru.TabIndex = 10;
+            this.metroDaftarGuru.Text = "Daftar Guru";
+            this.metroDaftarGuru.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroDaftarGuru.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.metroDaftarGuru.UseSelectable = true;
+            // 
+            // metroProfile
+            // 
+            this.metroProfile.ActiveControl = null;
+            this.metroProfile.Location = new System.Drawing.Point(507, 150);
+            this.metroProfile.Name = "metroProfile";
+            this.metroProfile.Size = new System.Drawing.Size(178, 99);
+            this.metroProfile.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroProfile.TabIndex = 7;
+            this.metroProfile.Text = "Presensi";
+            this.metroProfile.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroProfile.UseSelectable = true;
+            // 
             // metroBerita
             // 
             this.metroBerita.ActiveControl = null;
-            this.metroBerita.Controls.Add(this.metroPanel4);
-            this.metroBerita.Controls.Add(this.metroPanel3);
-            this.metroBerita.Controls.Add(this.metroPanel2);
-            this.metroBerita.Location = new System.Drawing.Point(365, 14);
+            this.metroBerita.Location = new System.Drawing.Point(507, 33);
             this.metroBerita.Name = "metroBerita";
-            this.metroBerita.Size = new System.Drawing.Size(342, 325);
-            this.metroBerita.TabIndex = 5;
+            this.metroBerita.Size = new System.Drawing.Size(179, 109);
+            this.metroBerita.Style = MetroFramework.MetroColorStyle.Silver;
+            this.metroBerita.TabIndex = 6;
             this.metroBerita.Text = "Berita";
+            this.metroBerita.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroBerita.UseSelectable = true;
             // 
-            // metroPanel4
+            // metroPelajaran
             // 
-            this.metroPanel4.Controls.Add(this.metroLabel3);
-            this.metroPanel4.HorizontalScrollbarBarColor = true;
-            this.metroPanel4.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel4.HorizontalScrollbarSize = 10;
-            this.metroPanel4.Location = new System.Drawing.Point(16, 130);
-            this.metroPanel4.Name = "metroPanel4";
-            this.metroPanel4.Size = new System.Drawing.Size(307, 148);
-            this.metroPanel4.TabIndex = 2;
-            this.metroPanel4.VerticalScrollbarBarColor = true;
-            this.metroPanel4.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel4.VerticalScrollbarSize = 10;
-            // 
-            // metroLabel3
-            // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(3, 118);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(92, 19);
-            this.metroLabel3.TabIndex = 2;
-            this.metroLabel3.Text = "Berita Sekolah";
-            // 
-            // metroPanel3
-            // 
-            this.metroPanel3.Controls.Add(this.metroLabel2);
-            this.metroPanel3.HorizontalScrollbarBarColor = true;
-            this.metroPanel3.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel3.HorizontalScrollbarSize = 10;
-            this.metroPanel3.Location = new System.Drawing.Point(189, 13);
-            this.metroPanel3.Name = "metroPanel3";
-            this.metroPanel3.Size = new System.Drawing.Size(134, 100);
-            this.metroPanel3.TabIndex = 1;
-            this.metroPanel3.VerticalScrollbarBarColor = true;
-            this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel3.VerticalScrollbarSize = 10;
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(3, 72);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(50, 19);
-            this.metroLabel2.TabIndex = 2;
-            this.metroLabel2.Text = "Berita2";
-            // 
-            // metroPanel2
-            // 
-            this.metroPanel2.Controls.Add(this.metroLabel1);
-            this.metroPanel2.HorizontalScrollbarBarColor = true;
-            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(16, 13);
-            this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(154, 100);
-            this.metroPanel2.TabIndex = 0;
-            this.metroPanel2.VerticalScrollbarBarColor = true;
-            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.VerticalScrollbarSize = 10;
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(3, 72);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(48, 19);
-            this.metroLabel1.TabIndex = 2;
-            this.metroLabel1.Text = "Berita1";
-            this.metroLabel1.Click += new System.EventHandler(this.metroLabel1_Click);
+            this.metroPelajaran.ActiveControl = null;
+            this.metroPelajaran.Location = new System.Drawing.Point(335, 33);
+            this.metroPelajaran.Name = "metroPelajaran";
+            this.metroPelajaran.Size = new System.Drawing.Size(167, 109);
+            this.metroPelajaran.Style = MetroFramework.MetroColorStyle.Lime;
+            this.metroPelajaran.TabIndex = 5;
+            this.metroPelajaran.Text = "Mata Pelajaran";
+            this.metroPelajaran.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroPelajaran.UseSelectable = true;
+            this.metroPelajaran.Click += new System.EventHandler(this.metroPelajaran_Click);
             // 
             // metroGuru
             // 
             this.metroGuru.ActiveControl = null;
-            this.metroGuru.Location = new System.Drawing.Point(12, 240);
+            this.metroGuru.Location = new System.Drawing.Point(335, 148);
             this.metroGuru.Name = "metroGuru";
-            this.metroGuru.Size = new System.Drawing.Size(327, 99);
+            this.metroGuru.Size = new System.Drawing.Size(167, 99);
+            this.metroGuru.Style = MetroFramework.MetroColorStyle.Pink;
             this.metroGuru.TabIndex = 4;
-            this.metroGuru.Text = "Guruku";
+            this.metroGuru.Text = "Wali Kelasku";
+            this.metroGuru.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroGuru.UseSelectable = true;
             this.metroGuru.Click += new System.EventHandler(this.metroGuru_Click);
             // 
             // metroJadwal
             // 
             this.metroJadwal.ActiveControl = null;
-            this.metroJadwal.Location = new System.Drawing.Point(12, 123);
+            this.metroJadwal.Location = new System.Drawing.Point(12, 148);
             this.metroJadwal.Name = "metroJadwal";
-            this.metroJadwal.Size = new System.Drawing.Size(327, 101);
+            this.metroJadwal.Size = new System.Drawing.Size(297, 101);
+            this.metroJadwal.Style = MetroFramework.MetroColorStyle.Teal;
             this.metroJadwal.TabIndex = 3;
             this.metroJadwal.Text = "Lihat Jadwal";
+            this.metroJadwal.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroJadwal.UseSelectable = true;
             this.metroJadwal.Click += new System.EventHandler(this.metroJadwal_Click);
             // 
             // metroNilai
             // 
             this.metroNilai.ActiveControl = null;
-            this.metroNilai.Location = new System.Drawing.Point(12, 14);
+            this.metroNilai.Location = new System.Drawing.Point(12, 33);
             this.metroNilai.Name = "metroNilai";
-            this.metroNilai.Size = new System.Drawing.Size(327, 94);
+            this.metroNilai.Size = new System.Drawing.Size(297, 109);
+            this.metroNilai.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroNilai.TabIndex = 2;
             this.metroNilai.Text = "Lihat Nilai ";
+            this.metroNilai.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.metroNilai.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroNilai.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.metroNilai.UseSelectable = true;
+            this.metroNilai.UseStyleColors = true;
             this.metroNilai.Click += new System.EventHandler(this.metroTile1_Click);
             // 
             // txnamaSiswa
@@ -194,20 +166,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(741, 425);
+            this.ClientSize = new System.Drawing.Size(741, 486);
             this.Controls.Add(this.txnamaSiswa);
             this.Controls.Add(this.metroPanel1);
             this.Name = "MainDashboardSiswa";
             this.Text = "Dashboard Siswa";
             this.Load += new System.EventHandler(this.MainDashboardSiswa_Load);
             this.metroPanel1.ResumeLayout(false);
-            this.metroBerita.ResumeLayout(false);
-            this.metroPanel4.ResumeLayout(false);
-            this.metroPanel4.PerformLayout();
-            this.metroPanel3.ResumeLayout(false);
-            this.metroPanel3.PerformLayout();
-            this.metroPanel2.ResumeLayout(false);
-            this.metroPanel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,15 +183,11 @@
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private MetroFramework.Controls.MetroTile metroJadwal;
         private MetroFramework.Controls.MetroTile metroNilai;
-        private MetroFramework.Controls.MetroTile metroBerita;
         private MetroFramework.Controls.MetroTile metroGuru;
-        private MetroFramework.Controls.MetroPanel metroPanel4;
-        private MetroFramework.Controls.MetroPanel metroPanel3;
-        private MetroFramework.Controls.MetroPanel metroPanel2;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroLabel metroLabel3;
-        private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel txnamaSiswa;
-
+        private MetroFramework.Controls.MetroTile metroProfile;
+        private MetroFramework.Controls.MetroTile metroBerita;
+        private MetroFramework.Controls.MetroTile metroPelajaran;
+        private MetroFramework.Controls.MetroTile metroDaftarGuru;
     }
 }

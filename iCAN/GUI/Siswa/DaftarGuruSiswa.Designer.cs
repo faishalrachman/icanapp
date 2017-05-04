@@ -1,6 +1,6 @@
-﻿namespace iCAN.GUI.Guru
+﻿namespace iCAN.GUI.Siswa
 {
-    partial class Mapel
+    partial class DaftarGuruSiswa
     {
         /// <summary>
         /// Required designer variable.
@@ -28,37 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listviewMapel = new MetroFramework.Controls.MetroListView();
+            this.metroListGuru = new MetroFramework.Controls.MetroListView();
             this.SuspendLayout();
             // 
-            // listviewMapel
+            // metroListGuru
             // 
-            this.listviewMapel.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.listviewMapel.FullRowSelect = true;
-            this.listviewMapel.Location = new System.Drawing.Point(24, 85);
-            this.listviewMapel.Name = "listviewMapel";
-            this.listviewMapel.OwnerDraw = true;
-            this.listviewMapel.Size = new System.Drawing.Size(741, 321);
-            this.listviewMapel.TabIndex = 0;
-            this.listviewMapel.UseCompatibleStateImageBehavior = false;
-            this.listviewMapel.UseSelectable = true;
-            this.listviewMapel.View = System.Windows.Forms.View.Details;
-            this.listviewMapel.SelectedIndexChanged += new System.EventHandler(this.listviewMapel_SelectedIndexChanged);
+            this.metroListGuru.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.metroListGuru.FullRowSelect = true;
+            this.metroListGuru.Location = new System.Drawing.Point(24, 84);
+            this.metroListGuru.Name = "metroListGuru";
+            this.metroListGuru.OwnerDraw = true;
+            this.metroListGuru.Size = new System.Drawing.Size(699, 322);
+            this.metroListGuru.TabIndex = 0;
+            this.metroListGuru.UseCompatibleStateImageBehavior = false;
+            this.metroListGuru.UseSelectable = true;
             // 
-            // Mapel
+            // DaftarGuruSiswa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(810, 437);
-            this.Controls.Add(this.listviewMapel);
-            this.Name = "Mapel";
-            this.Text = "Mata Pelajaran";
+            this.ClientSize = new System.Drawing.Size(766, 447);
+            this.Controls.Add(this.metroListGuru);
+            this.Name = "DaftarGuruSiswa";
+            this.Text = "Daftar Guru";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private MetroFramework.Controls.MetroListView listviewMapel;
+        private MetroFramework.Controls.MetroListView metroListGuru;
     }
 }

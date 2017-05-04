@@ -26,28 +26,33 @@ namespace iCAN.GUI.Guru
         private void Fetch()
         {
             listViewJadwal.Clear();
-            listViewJadwal.Columns.Add("ID Jadwal", 100);
+            listViewJadwal.Columns.Add("Kode Mapel", 100);
+            listViewJadwal.Columns.Add("Nama Mapel", 100);
+            listViewJadwal.Columns.Add("Nama Guru", 100);
             listViewJadwal.Columns.Add("Jam", 100);
-            listViewJadwal.Columns.Add("Hari", 100);
-            listViewJadwal.Columns.Add("Ruangan", 100);
-            
-            
+            listViewJadwal.Columns.Add("hari", 100);
+            listViewJadwal.Columns.Add("ruangan", 100);
+
+
             Database db = new Database();
-            db.reader = db.callQuery("SELECT * FROM jadwal");
+            db.reader = db.callQuery("SELECT * FROM v_jadwalmapel");
             while (db.reader.Read())
             {
-                int id_user = Convert.ToInt32(db.reader.GetString(1));
-                string id_jadwal = db.reader.GetString(0);
-                string jam = db.reader.GetString(1);
-                string hari = db.reader.GetString(2);
-                string ruangan = db.reader.GetString(3);
                 
-                ListViewItem item = new ListViewItem(db.reader.GetString(1));//id_user
-                item.SubItems.Add(db.reader.GetString(0));//ID Jadwal
-                item.SubItems.Add(db.reader.GetString(1));//Jam
-                item.SubItems.Add(db.reader.GetString(2));//hari
-                item.SubItems.Add(db.reader.GetString(3));//Ruangan
-              
+                string kd_mapel = db.reader.GetString(3);
+                string namamapel = db.reader.GetString(4);
+                string namaguru = db.reader.GetString(7);
+                string jam = db.reader.GetString(8);
+                string hari = db.reader.GetString(9);
+                string ruangan = db.reader.GetString(10);
+
+                ListViewItem item = new ListViewItem(db.reader.GetString(3));//id_user
+                item.SubItems.Add(db.reader.GetString(4));//ID Jadwal
+                item.SubItems.Add(db.reader.GetString(7));//Jam
+                item.SubItems.Add(db.reader.GetString(8));//hari
+                item.SubItems.Add(db.reader.GetString(9));//Ruangan
+                item.SubItems.Add(db.reader.GetString(10));//Ruangan
+
                 listViewJadwal.Items.Add(item);
 
             }

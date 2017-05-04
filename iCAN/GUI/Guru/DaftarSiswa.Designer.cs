@@ -30,7 +30,7 @@
         {
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.selectkelas = new MetroFramework.Controls.MetroComboBox();
             this.listViewSiswa = new MetroFramework.Controls.MetroListView();
             this.SuspendLayout();
             // 
@@ -53,20 +53,26 @@
             this.metroLabel1.TabIndex = 7;
             this.metroLabel1.Text = "Pilih Kelas";
             // 
-            // metroComboBox1
+            // selectkelas
             // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Location = new System.Drawing.Point(125, 75);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(121, 29);
-            this.metroComboBox1.TabIndex = 6;
-            this.metroComboBox1.UseSelectable = true;
+            this.selectkelas.FormattingEnabled = true;
+            this.selectkelas.ItemHeight = 23;
+            this.selectkelas.Location = new System.Drawing.Point(125, 75);
+            this.selectkelas.Name = "selectkelas";
+            this.selectkelas.Size = new System.Drawing.Size(121, 29);
+            this.selectkelas.TabIndex = 6;
+            this.selectkelas.UseSelectable = true;
+            this.selectkelas.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged);
             // 
             // listViewSiswa
             // 
+            this.listViewSiswa.Activation = System.Windows.Forms.ItemActivation.OneClick;
             this.listViewSiswa.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.listViewSiswa.FullRowSelect = true;
+            this.listViewSiswa.GridLines = true;
+            this.listViewSiswa.HotTracking = true;
+            this.listViewSiswa.HoverSelection = true;
+            this.listViewSiswa.LabelEdit = true;
             this.listViewSiswa.Location = new System.Drawing.Point(32, 124);
             this.listViewSiswa.Name = "listViewSiswa";
             this.listViewSiswa.OwnerDraw = true;
@@ -74,6 +80,8 @@
             this.listViewSiswa.TabIndex = 9;
             this.listViewSiswa.UseCompatibleStateImageBehavior = false;
             this.listViewSiswa.UseSelectable = true;
+            this.listViewSiswa.View = System.Windows.Forms.View.Details;
+            this.listViewSiswa.SelectedIndexChanged += new System.EventHandler(this.listViewSiswa_SelectedIndexChanged);
             // 
             // DaftarSiswa
             // 
@@ -83,7 +91,7 @@
             this.Controls.Add(this.listViewSiswa);
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.metroLabel1);
-            this.Controls.Add(this.metroComboBox1);
+            this.Controls.Add(this.selectkelas);
             this.Name = "DaftarSiswa";
             this.Text = "Daftar Siswa";
             this.ResumeLayout(false);
@@ -95,7 +103,7 @@
 
         private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private MetroFramework.Controls.MetroComboBox selectkelas;
         private MetroFramework.Controls.MetroListView listViewSiswa;
     }
 }

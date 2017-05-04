@@ -259,6 +259,18 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI\Siswa\BeritaSiswa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Siswa\BeritaSiswa.Designer.cs">
+      <DependentUpon>BeritaSiswa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Siswa\DaftarGuruSiswa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Siswa\DaftarGuruSiswa.Designer.cs">
+      <DependentUpon>DaftarGuruSiswa.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Siswa\frmGuruku.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -282,6 +294,18 @@
     </Compile>
     <Compile Include="GUI\Siswa\MainDashboardSiswa.Designer.cs">
       <DependentUpon>MainDashboardSiswa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Siswa\MapelSiswa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Siswa\MapelSiswa.Designer.cs">
+      <DependentUpon>MapelSiswa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Siswa\Presensi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Siswa\Presensi.Designer.cs">
+      <DependentUpon>Presensi.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\SpashScreen.cs">
       <SubType>Form</SubType>
@@ -383,6 +407,12 @@
     <EmbeddedResource Include="GUI\MainSplash.resx">
       <DependentUpon>MainSplash.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Siswa\BeritaSiswa.resx">
+      <DependentUpon>BeritaSiswa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Siswa\DaftarGuruSiswa.resx">
+      <DependentUpon>DaftarGuruSiswa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Siswa\frmGuruku.resx">
       <DependentUpon>frmGuruku.cs</DependentUpon>
     </EmbeddedResource>
@@ -394,6 +424,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Siswa\MainDashboardSiswa.resx">
       <DependentUpon>MainDashboardSiswa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Siswa\MapelSiswa.resx">
+      <DependentUpon>MapelSiswa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Siswa\Presensi.resx">
+      <DependentUpon>Presensi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\SpashScreen.resx">
       <DependentUpon>SpashScreen.cs</DependentUpon>

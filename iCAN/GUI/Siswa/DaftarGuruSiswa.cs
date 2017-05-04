@@ -8,24 +8,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace iCAN.GUI.Guru
+namespace iCAN.GUI.Siswa
 {
-    public partial class DaftarGuru : MetroFramework.Forms.MetroForm
+    public partial class DaftarGuruSiswa : MetroFramework.Forms.MetroForm
     {
-
-        public DaftarGuru()
+        public DaftarGuruSiswa()
         {
             InitializeComponent();
             FetchUser();
         }
-        void FetchUser()
+
+        private void FetchUser()
         {
-            listViewGuru.Clear();
-           
-            listViewGuru.Columns.Add("NIP", 100);
-            listViewGuru.Columns.Add("Nama", 100);
-            listViewGuru.Columns.Add("Alamat", 100);
-            listViewGuru.Columns.Add("No HP", 100);
+            metroListGuru.Clear();
+
+            metroListGuru.Columns.Add("NIP", 100);
+            metroListGuru.Columns.Add("Nama", 100);
+            metroListGuru.Columns.Add("Alamat", 100);
+            metroListGuru.Columns.Add("No HP", 100);
             Database db = new Database();
             db.reader = db.callQuery("SELECT * FROM v_guru");
             while (db.reader.Read())
@@ -40,14 +40,10 @@ namespace iCAN.GUI.Guru
                 item.SubItems.Add(db.reader.GetString(3));//ID Guru
                 item.SubItems.Add(db.reader.GetString(4));//NIP
                 item.SubItems.Add(db.reader.GetString(5));//nama
-               
-                listViewGuru.Items.Add(item);
+
+                metroListGuru.Items.Add(item);
             }
             db.databaseConnection.Close();
-        }
-
-        private void listViewGuru_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
         }
     }

@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroListView1 = new MetroFramework.Controls.MetroListView();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.metroListView1 = new MetroFramework.Controls.MetroListView();
             this.Nama = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.NIS = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Kelas = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Aksi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,27 +57,14 @@
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
-            // metroComboBox1
+            // metroButton1
             // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Location = new System.Drawing.Point(110, 9);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(121, 29);
-            this.metroComboBox1.TabIndex = 2;
-            this.metroComboBox1.UseSelectable = true;
-            this.metroComboBox1.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged);
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel1.Location = new System.Drawing.Point(17, 13);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(87, 25);
-            this.metroLabel1.TabIndex = 3;
-            this.metroLabel1.Text = "Pilih Kelas";
-            this.metroLabel1.Click += new System.EventHandler(this.metroLabel1_Click);
+            this.metroButton1.Location = new System.Drawing.Point(249, 9);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(77, 29);
+            this.metroButton1.TabIndex = 5;
+            this.metroButton1.Text = "Pilih";
+            this.metroButton1.UseSelectable = true;
             // 
             // metroListView1
             // 
@@ -95,15 +82,7 @@
             this.metroListView1.TabIndex = 4;
             this.metroListView1.UseCompatibleStateImageBehavior = false;
             this.metroListView1.UseSelectable = true;
-            // 
-            // metroButton1
-            // 
-            this.metroButton1.Location = new System.Drawing.Point(249, 9);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(77, 29);
-            this.metroButton1.TabIndex = 5;
-            this.metroButton1.Text = "Pilih";
-            this.metroButton1.UseSelectable = true;
+            this.metroListView1.SelectedIndexChanged += new System.EventHandler(this.metroListView1_SelectedIndexChanged);
             // 
             // Nama
             // 
@@ -120,6 +99,28 @@
             // Aksi
             // 
             this.Aksi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel1.Location = new System.Drawing.Point(17, 13);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(87, 25);
+            this.metroLabel1.TabIndex = 3;
+            this.metroLabel1.Text = "Pilih Kelas";
+            this.metroLabel1.Click += new System.EventHandler(this.metroLabel1_Click);
+            // 
+            // metroComboBox1
+            // 
+            this.metroComboBox1.FormattingEnabled = true;
+            this.metroComboBox1.ItemHeight = 23;
+            this.metroComboBox1.Location = new System.Drawing.Point(110, 9);
+            this.metroComboBox1.Name = "metroComboBox1";
+            this.metroComboBox1.Size = new System.Drawing.Size(121, 29);
+            this.metroComboBox1.TabIndex = 2;
+            this.metroComboBox1.UseSelectable = true;
+            this.metroComboBox1.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged);
             // 
             // NilaiGuru
             // 

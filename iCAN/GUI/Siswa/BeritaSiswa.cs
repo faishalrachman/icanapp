@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace iCAN.GUI.Guru
+namespace iCAN.GUI.Siswa
 {
-    public partial class ProfilGuru : MetroFramework.Forms.MetroForm
+    public partial class BeritaSiswa : MetroFramework.Forms.MetroForm
     {
-        public ProfilGuru()
+        public BeritaSiswa()
         {
             InitializeComponent();
         }
 
-        private void metroPanel1_Paint(object sender, PaintEventArgs e)
+        private void BeritaSiswa_Load(object sender, EventArgs e)
         {
 
         }

@@ -39,7 +39,7 @@
             // htmlLabel1
             // 
             this.htmlLabel1.AutoScroll = true;
-            this.htmlLabel1.AutoScrollMinSize = new System.Drawing.Size(84, 48);
+            this.htmlLabel1.AutoScrollMinSize = new System.Drawing.Size(34, 23);
             this.htmlLabel1.AutoSize = false;
             this.htmlLabel1.BackColor = System.Drawing.SystemColors.Window;
             this.htmlLabel1.Location = new System.Drawing.Point(24, 64);
@@ -52,7 +52,7 @@
             // htmlLabel2
             // 
             this.htmlLabel2.AutoScroll = true;
-            this.htmlLabel2.AutoScrollMinSize = new System.Drawing.Size(117, 48);
+            this.htmlLabel2.AutoScrollMinSize = new System.Drawing.Size(45, 23);
             this.htmlLabel2.AutoSize = false;
             this.htmlLabel2.BackColor = System.Drawing.SystemColors.Window;
             this.htmlLabel2.Location = new System.Drawing.Point(24, 94);
@@ -64,7 +64,7 @@
             // htmlLabel3
             // 
             this.htmlLabel3.AutoScroll = true;
-            this.htmlLabel3.AutoScrollMinSize = new System.Drawing.Size(166, 48);
+            this.htmlLabel3.AutoScrollMinSize = new System.Drawing.Size(62, 23);
             this.htmlLabel3.AutoSize = false;
             this.htmlLabel3.BackColor = System.Drawing.SystemColors.Window;
             this.htmlLabel3.Location = new System.Drawing.Point(24, 124);
@@ -105,6 +105,7 @@
             this.metroTextBox1.UseSelectable = true;
             this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.metroTextBox1.Click += new System.EventHandler(this.metroTextBox1_Click);
             // 
             // metroTextBox2
             // 
@@ -174,7 +175,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(296, 179);
+            this.ClientSize = new System.Drawing.Size(631, 364);
             this.Controls.Add(this.metroTextBox3);
             this.Controls.Add(this.metroTextBox2);
             this.Controls.Add(this.metroTextBox1);
@@ -182,7 +183,7 @@
             this.Controls.Add(this.htmlLabel2);
             this.Controls.Add(this.htmlLabel1);
             this.Name = "frmGuruku";
-            this.Text = "Guruku";
+            this.Text = "Wali Kelas";
             this.Load += new System.EventHandler(this.frmGuruku_Load);
             this.ResumeLayout(false);
 

@@ -26,5 +26,10 @@ namespace iCAN.GUI.Guru
         {
 
         }
+
+        private void metroListView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
