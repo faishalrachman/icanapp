@@ -79,6 +79,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CLASS\M_Absensi.cs" />
     <Compile Include="CLASS\M_Admin.cs" />
     <Compile Include="CLASS\M_Ekskul.cs" />
     <Compile Include="CLASS\M_Jadwal.cs" />

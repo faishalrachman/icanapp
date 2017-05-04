@@ -1,4 +1,5 @@
-﻿using System;
+﻿using iCAN.CLASS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,14 @@ namespace iCAN.GUI.Guru
 {
     public partial class Absensi : MetroFramework.Forms.MetroForm
     {
-        public Absensi()
+        M_Guru guru;
+        int idGuru;
+        public Absensi(int id_guru)
         {
-          
+            idGuru = id_guru;
             InitializeComponent();
+            guru = new M_Guru(Convert.ToInt32(id_guru));
+            Fetch();
             metroListView1.BeginUpdate();
             metroListView1.Items.Clear();
             metroListView1.View = View.Details;
@@ -52,6 +57,16 @@ namespace iCAN.GUI.Guru
         private void metroListView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+        void Fetch()
+        {
+            Database db = new Database();
+            db.reader = db.callQuery("SELECT * FROM v_mapel JOIN kelas on (v_mapel.id_kelas = kelas.id_kelas) where id_user = "+idGuru);
+            while (db.reader.Read())
+            {
+                string kelas = db.reader.GetString("nama_kelas");
+                cbKelas.Items.Add(kelas);
+            }
         }
     }
 }
