@@ -59,5 +59,13 @@ namespace iCAN.GUI.Siswa
             form.ShowDialog();
             Show();
         }
+
+        private void metroPelajaran_Click(object sender, EventArgs e)
+        {
+            var form = new MapelSiswa();
+            Hide();
+            form.ShowDialog();
+            Show();
+        }
     }
 }

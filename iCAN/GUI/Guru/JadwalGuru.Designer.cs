@@ -42,6 +42,7 @@
             this.listViewJadwal.TabIndex = 0;
             this.listViewJadwal.UseCompatibleStateImageBehavior = false;
             this.listViewJadwal.UseSelectable = true;
+            this.listViewJadwal.View = System.Windows.Forms.View.Details;
             this.listViewJadwal.SelectedIndexChanged += new System.EventHandler(this.metroListView1_SelectedIndexChanged);
             // 
             // JadwalGuru

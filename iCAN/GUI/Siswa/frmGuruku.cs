@@ -15,6 +15,12 @@ namespace iCAN.GUI.Siswa
         public frmGuruku()
         {
             InitializeComponent();
+            Fetch();
+        }
+
+        private void Fetch()
+        {
+            
         }
 
         private void frmGuruku_Load(object sender, EventArgs e)
@@ -28,6 +34,11 @@ namespace iCAN.GUI.Siswa
         }
 
         private void htmlLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroTextBox1_Click(object sender, EventArgs e)
         {
 
         }

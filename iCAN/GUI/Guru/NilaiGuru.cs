@@ -78,5 +78,10 @@ namespace iCAN.GUI.Guru
             
             FetchNilai();
         }
+
+        private void metroListView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
