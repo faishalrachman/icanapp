@@ -81,22 +81,20 @@
             this.metroButton2.UseSelectable = true;
             this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
             // 
-<<<<<<< HEAD:iCAN/GUI/Guru/NilaiGuru.Designer.cs
-            this.metroButton1.Location = new System.Drawing.Point(249, 9);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(77, 29);
-            this.metroButton1.TabIndex = 5;
-            this.metroButton1.Text = "Pilih";
-            this.metroButton1.UseSelectable = true;
+
+            this.metroButton2.Location = new System.Drawing.Point(249, 9);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(77, 29);
+            this.metroButton2.TabIndex = 5;
+            this.metroButton2.Text = "Pilih";
+            this.metroButton2.UseSelectable = true;
 
 
-         
+
             // 
 
-             // 
+            // 
 
-=======
->>>>>>> 73883c5444a90e1e7cda0e018a7bc2940419ef21:iCAN/GUI/Guru/Kelola_Nilai/NilaiGuru.Designer.cs
             // tb_nilai
             // 
             this.tb_nilai.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -153,7 +151,7 @@
             this.cbKelas.UseSelectable = true;
             this.cbKelas.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged);
             // 
-<<<<<<< HEAD:iCAN/GUI/Guru/NilaiGuru.Designer.cs
+
             // metroButton2
             // 
             this.metroButton2.Location = new System.Drawing.Point(476, 15);
@@ -173,8 +171,6 @@
             this.metroButton3.UseSelectable = true;
 
 
-=======
->>>>>>> 73883c5444a90e1e7cda0e018a7bc2940419ef21:iCAN/GUI/Guru/Kelola_Nilai/NilaiGuru.Designer.cs
             // NilaiGuru
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

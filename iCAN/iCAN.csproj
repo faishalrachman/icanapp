@@ -246,11 +246,11 @@
     <Compile Include="GUI\Guru\Kelola_Nilai\NilaiGuru.Designer.cs">
       <DependentUpon>NilaiGuru.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Guru\ProfilGuru.cs">
+    <Compile Include="GUI\Guru\waliKelas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Guru\ProfilGuru.Designer.cs">
-      <DependentUpon>ProfilGuru.cs</DependentUpon>
+    <Compile Include="GUI\Guru\waliKelas.Designer.cs">
+      <DependentUpon>waliKelas.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\MainSplash.cs">
       <SubType>Form</SubType>
@@ -405,11 +405,11 @@
     <EmbeddedResource Include="GUI\Guru\Kelola_Nilai\NilaiGuru.resx">
       <DependentUpon>NilaiGuru.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Guru\ProfilGuru.resx">
-      <DependentUpon>ProfilGuru.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Guru\Kelola_Nilai\TambahNilaiGuru.resx">
       <DependentUpon>TambahNilaiGuru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Guru\waliKelas.resx">
+      <DependentUpon>waliKelas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -449,6 +449,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
