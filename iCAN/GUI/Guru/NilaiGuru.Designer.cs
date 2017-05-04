@@ -31,7 +31,6 @@
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.tb_nilai = new MetroFramework.Controls.MetroListView();
-            this.metroListView1 = new MetroFramework.Controls.MetroListView();
             this.Nama = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.NIS = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Kelas = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -40,7 +39,6 @@
             this.cbKelas = new MetroFramework.Controls.MetroComboBox();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroButton3 = new MetroFramework.Controls.MetroButton();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,25 +69,7 @@
             this.metroButton1.TabIndex = 5;
             this.metroButton1.Text = "Pilih";
             this.metroButton1.UseSelectable = true;
-            // 
-            // metroListView1
-            // 
-            this.metroListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Nama,
-            this.NIS,
-            this.Kelas,
-            this.Aksi});
-            this.metroListView1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.metroListView1.FullRowSelect = true;
-            this.metroListView1.Location = new System.Drawing.Point(17, 60);
-            this.metroListView1.Name = "metroListView1";
-            this.metroListView1.OwnerDraw = true;
-            this.metroListView1.Size = new System.Drawing.Size(781, 347);
-            this.metroListView1.TabIndex = 4;
-            this.metroListView1.UseCompatibleStateImageBehavior = false;
-            this.metroListView1.UseSelectable = true;
-            this.metroListView1.SelectedIndexChanged += new System.EventHandler(this.metroListView1_SelectedIndexChanged);
-            // 
+             // 
             // tb_nilai
             // 
             this.tb_nilai.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -162,17 +142,7 @@
             this.metroButton3.TabIndex = 7;
             this.metroButton3.Text = "Hapus";
             this.metroButton3.UseSelectable = true;
-            // metroComboBox1
-            // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Location = new System.Drawing.Point(110, 9);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(121, 29);
-            this.metroComboBox1.TabIndex = 2;
-            this.metroComboBox1.UseSelectable = true;
-            this.metroComboBox1.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged);
-            // 
+               // 
             // NilaiGuru
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
