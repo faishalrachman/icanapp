@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -45,6 +46,26 @@ namespace iCAN
 
                 MessageBox.Show("Cant connect to database");
                 return reader;
+            }
+        }
+        public DataTable callQuerytoDataTable(string query)
+        {
+            DataTable dataTable = new DataTable();
+            try
+            {
+                databaseConnection.Close();
+                databaseConnection.Open();
+                commandDatabase = new MySqlCommand(query, databaseConnection);
+                MySqlDataAdapter da = new MySqlDataAdapter(commandDatabase);
+                da.Fill(dataTable);
+                return dataTable;
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Cant connect to database");
+                return dataTable;
             }
         }
         public bool CallnonQuery(string query)

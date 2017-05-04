@@ -41,17 +41,18 @@ namespace iCAN.GUI.Guru
                 l_m.Add(m);
                 cbKelas.Items.Add(nm_kelas);
             }
-            
+            tb_nilai.Clear();
+
         }
         void FetchNilai()
         {
             tb_nilai.Clear();
-            tb_nilai.Columns.Add("Kode Mapel");
-            tb_nilai.Columns.Add("Nama Mapel");
-            tb_nilai.Columns.Add("Nama Nilai");
+            tb_nilai.Columns.Add("Kode Mapel",200);
+            tb_nilai.Columns.Add("Nama Nilai",200);
             tb_nilai.Columns.Add("Skor");
             Database db = new Database();
             db.reader = db.callQuery("SELECT * FROM nilai where kd_mapel = '" + l_m.ElementAt(cbKelas.SelectedIndex).KdMapel+"'");
+
 
             while (db.reader.Read())
             {
@@ -75,12 +76,18 @@ namespace iCAN.GUI.Guru
 
         private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
             FetchNilai();
         }
 
         private void metroListView1_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+            var f = new TambahNilaiGuru(idGuru);
+            f.ShowDialog();
 
         }
     }

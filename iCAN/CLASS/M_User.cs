@@ -68,7 +68,8 @@ namespace iCAN.CLASS
         public bool check_login(String username, String password)
         {
             Database db = new Database();
-            string query = "SELECT * FROM user where username = '" + username + "'";
+            string query = "SELECT * FROM user where username = '" + db.escapeString(username) + "' AND password = '"+ db.escapeString(password) + "'";
+            
             db.reader = db.callQuery(query);
 
             if (db.reader.Read())

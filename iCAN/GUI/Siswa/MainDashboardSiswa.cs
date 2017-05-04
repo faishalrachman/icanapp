@@ -15,9 +15,9 @@ namespace iCAN.GUI.Siswa
     {
         M_Siswa siswa;
 
-        public MainDashboardSiswa()
+        public MainDashboardSiswa(int idUser)
         {
-            //siswa = new M_Siswa(idUser);
+            siswa = new M_Siswa(idUser);
             InitializeComponent();
         }
 
@@ -36,7 +36,7 @@ namespace iCAN.GUI.Siswa
 
         private void MainDashboardSiswa_Load(object sender, EventArgs e)
         {
-
+            txnamaSiswa.Text = "Selamat datang, " + siswa.Nama;
         }
 
         private void metroPanel1_Paint(object sender, PaintEventArgs e)
@@ -46,7 +46,7 @@ namespace iCAN.GUI.Siswa
 
         private void metroJadwal_Click(object sender, EventArgs e)
         {
-            var form = new frmLihatJadwal();
+            var form = new frmLihatJadwal(siswa.IdUser);
             Hide();
             form.ShowDialog();
             Show();

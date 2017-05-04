@@ -216,6 +216,12 @@
     <Compile Include="GUI\Guru\DaftarSiswa.Designer.cs">
       <DependentUpon>DaftarSiswa.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Guru\Kelola_Nilai\TambahNilaiGuru.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Guru\Kelola_Nilai\TambahNilaiGuru.Designer.cs">
+      <DependentUpon>TambahNilaiGuru.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Guru\JadwalGuru.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -234,10 +240,10 @@
     <Compile Include="GUI\Guru\Mapel.Designer.cs">
       <DependentUpon>Mapel.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Guru\NilaiGuru.cs">
+    <Compile Include="GUI\Guru\Kelola_Nilai\NilaiGuru.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Guru\NilaiGuru.Designer.cs">
+    <Compile Include="GUI\Guru\Kelola_Nilai\NilaiGuru.Designer.cs">
       <DependentUpon>NilaiGuru.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Guru\ProfilGuru.cs">
@@ -396,11 +402,14 @@
     <EmbeddedResource Include="GUI\Guru\Mapel.resx">
       <DependentUpon>Mapel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Guru\NilaiGuru.resx">
+    <EmbeddedResource Include="GUI\Guru\Kelola_Nilai\NilaiGuru.resx">
       <DependentUpon>NilaiGuru.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Guru\ProfilGuru.resx">
       <DependentUpon>ProfilGuru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Guru\Kelola_Nilai\TambahNilaiGuru.resx">
+      <DependentUpon>TambahNilaiGuru.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
