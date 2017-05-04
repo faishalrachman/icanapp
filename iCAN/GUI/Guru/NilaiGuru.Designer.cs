@@ -31,7 +31,9 @@
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.tb_nilai = new MetroFramework.Controls.MetroListView();
+
 //           this.metroListView1 = new MetroFramework.Controls.MetroListView();
+
             this.Nama = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.NIS = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Kelas = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -71,8 +73,12 @@
             this.metroButton1.Text = "Pilih";
             this.metroButton1.UseSelectable = true;
 
+
          
             // 
+
+             // 
+
             // tb_nilai
             // 
             this.tb_nilai.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -145,7 +151,8 @@
             this.metroButton3.TabIndex = 7;
             this.metroButton3.Text = "Hapus";
             this.metroButton3.UseSelectable = true;
-          // 
+
+
             // NilaiGuru
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
