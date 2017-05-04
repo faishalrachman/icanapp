@@ -30,7 +30,7 @@
         {
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
-            this.metroListView1 = new MetroFramework.Controls.MetroListView();
+            this.metroListNilai = new MetroFramework.Controls.MetroListView();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -53,24 +53,25 @@
             this.metroComboBox1.UseSelectable = true;
             this.metroComboBox1.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged);
             // 
-            // metroListView1
+            // metroListNilai
             // 
-            this.metroListView1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.metroListView1.FullRowSelect = true;
-            this.metroListView1.Location = new System.Drawing.Point(23, 98);
-            this.metroListView1.Name = "metroListView1";
-            this.metroListView1.OwnerDraw = true;
-            this.metroListView1.Size = new System.Drawing.Size(567, 299);
-            this.metroListView1.TabIndex = 2;
-            this.metroListView1.UseCompatibleStateImageBehavior = false;
-            this.metroListView1.UseSelectable = true;
+            this.metroListNilai.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.metroListNilai.FullRowSelect = true;
+            this.metroListNilai.Location = new System.Drawing.Point(23, 98);
+            this.metroListNilai.Name = "metroListNilai";
+            this.metroListNilai.OwnerDraw = true;
+            this.metroListNilai.Size = new System.Drawing.Size(567, 299);
+            this.metroListNilai.TabIndex = 2;
+            this.metroListNilai.UseCompatibleStateImageBehavior = false;
+            this.metroListNilai.UseSelectable = true;
+            this.metroListNilai.SelectedIndexChanged += new System.EventHandler(this.metroListView1_SelectedIndexChanged);
             // 
             // frmLihatNilai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(613, 412);
-            this.Controls.Add(this.metroListView1);
+            this.Controls.Add(this.metroListNilai);
             this.Controls.Add(this.metroComboBox1);
             this.Controls.Add(this.metroLabel1);
             this.Name = "frmLihatNilai";
@@ -85,6 +86,6 @@
 
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroComboBox metroComboBox1;
-        private MetroFramework.Controls.MetroListView metroListView1;
+        private MetroFramework.Controls.MetroListView metroListNilai;
     }
 }
