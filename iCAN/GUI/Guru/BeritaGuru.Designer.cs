@@ -29,27 +29,18 @@
         private void InitializeComponent()
         {
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.btnBack = new System.Windows.Forms.Button();
             this.txBerita = new System.Windows.Forms.TextBox();
+            this.back = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(208, 463);
+            this.metroButton1.Location = new System.Drawing.Point(187, 463);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(75, 23);
             this.metroButton1.TabIndex = 1;
             this.metroButton1.Text = "Next";
             this.metroButton1.UseSelectable = true;
-            // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(127, 463);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
-            this.btnBack.TabIndex = 2;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
             // 
             // txBerita
             // 
@@ -60,13 +51,22 @@
             this.txBerita.Size = new System.Drawing.Size(582, 393);
             this.txBerita.TabIndex = 3;
             // 
+            // back
+            // 
+            this.back.Location = new System.Drawing.Point(96, 461);
+            this.back.Name = "back";
+            this.back.Size = new System.Drawing.Size(75, 23);
+            this.back.TabIndex = 4;
+            this.back.Text = "Back";
+            this.back.UseSelectable = true;
+            // 
             // BeritaGuru
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(764, 507);
+            this.Controls.Add(this.back);
             this.Controls.Add(this.txBerita);
-            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.metroButton1);
             this.Name = "BeritaGuru";
             this.Text = "Berita";
@@ -78,7 +78,7 @@
 
         #endregion
         private MetroFramework.Controls.MetroButton metroButton1;
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.TextBox txBerita;
+        private MetroFramework.Controls.MetroButton back;
     }
 }
