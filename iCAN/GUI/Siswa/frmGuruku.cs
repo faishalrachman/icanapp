@@ -20,7 +20,9 @@ namespace iCAN.GUI.Siswa
 
         private void Fetch()
         {
-            
+            Database db = new Database();
+            db.reader = db.callQuery("Select * from guru ");
+            txAlamat.Text = db.reader.GetString("alamat");
         }
 
         private void frmGuruku_Load(object sender, EventArgs e)
@@ -40,7 +42,7 @@ namespace iCAN.GUI.Siswa
 
         private void metroTextBox1_Click(object sender, EventArgs e)
         {
-
+           
         }
     }
 }
