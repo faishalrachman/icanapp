@@ -32,6 +32,9 @@
             this.metroButton3 = new MetroFramework.Controls.MetroButton();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.tb_nilai = new MetroFramework.Controls.MetroListView();
+
+//           this.metroListView1 = new MetroFramework.Controls.MetroListView();
+
             this.Nama = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.NIS = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Kelas = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -78,6 +81,20 @@
             this.metroButton2.UseSelectable = true;
             this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
             // 
+
+            this.metroButton2.Location = new System.Drawing.Point(249, 9);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(77, 29);
+            this.metroButton2.TabIndex = 5;
+            this.metroButton2.Text = "Pilih";
+            this.metroButton2.UseSelectable = true;
+
+
+
+            // 
+
+            // 
+
             // tb_nilai
             // 
             this.tb_nilai.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -134,6 +151,26 @@
             this.cbKelas.UseSelectable = true;
             this.cbKelas.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged);
             // 
+
+            // metroButton2
+            // 
+            this.metroButton2.Location = new System.Drawing.Point(476, 15);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(75, 23);
+            this.metroButton2.TabIndex = 6;
+            this.metroButton2.Text = "Tambah";
+            this.metroButton2.UseSelectable = true;
+            // 
+            // metroButton3
+            // 
+            this.metroButton3.Location = new System.Drawing.Point(679, 15);
+            this.metroButton3.Name = "metroButton3";
+            this.metroButton3.Size = new System.Drawing.Size(75, 23);
+            this.metroButton3.TabIndex = 7;
+            this.metroButton3.Text = "Hapus";
+            this.metroButton3.UseSelectable = true;
+
+
             // NilaiGuru
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

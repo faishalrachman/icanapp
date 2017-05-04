@@ -43,6 +43,7 @@
             this.lvjawalsiswa.UseCompatibleStateImageBehavior = false;
             this.lvjawalsiswa.UseSelectable = true;
             this.lvjawalsiswa.View = System.Windows.Forms.View.Details;
+            this.lvjawalsiswa.SelectedIndexChanged += new System.EventHandler(this.lvjawalsiswa_SelectedIndexChanged);
             // 
             // frmLihatJadwal
             // 

@@ -74,10 +74,7 @@ namespace iCAN.GUI.Guru
 
         private void mProfileGuru_Click(object sender, EventArgs e)
         {
-            var form = new ProfilGuru();
-            Hide();
-            form.ShowDialog();
-            Show();
+           
         }
 
         private void metroPanel1_Paint(object sender, PaintEventArgs e)
@@ -120,6 +117,15 @@ namespace iCAN.GUI.Guru
             Hide();
             form.ShowDialog();
             Show();
+        }
+
+        private void WaliGuru_Click(object sender, EventArgs e)
+        {
+            var form = new waliKelas();
+            Hide();
+            form.ShowDialog();
+            Show();
+
         }
     }
 }

@@ -24,24 +24,21 @@ namespace iCAN.GUI.Guru
             listviewMapel.Columns.Add("Kode Mapel", 100);
             listviewMapel.Columns.Add("Nama Mapel", 100);
             listviewMapel.Columns.Add("Nama Guru", 100);
-            listviewMapel.Columns.Add("Kelas", 100);
-           
 
             Database db = new Database();
             db.reader = db.callQuery("SELECT * FROM v_mapel");
             while (db.reader.Read())
             {
                
-                string id_mapel = db.reader.GetString(0);
-                string nama_mapel = db.reader.GetString(1);
-                string namaguru = db.reader.GetString(2);
-                string namakelas = db.reader.GetString(3);
+                string kd_mapel = db.reader.GetString("kd_mapel");
+                string nama_mapel = db.reader.GetString("nama_mapel");
+                string namaguru = db.reader.GetString("nama");
                 
-                ListViewItem item = new ListViewItem(db.reader.GetString(1));//id_user
-                item.SubItems.Add(db.reader.GetString(2));//ID Mapel
-               
-                item.SubItems.Add(db.reader.GetString(12));//Nama Guru
-                item.SubItems.Add(db.reader.GetString(3));//Nama Kelas
+                
+                ListViewItem item = new ListViewItem(kd_mapel);//id_user
+                item.SubItems.Add(db.reader.GetString(nama_mapel));
+                item.SubItems.Add(db.reader.GetString(namaguru));//Nama Guru
+                
                 listviewMapel.Items.Add(item);
 
             }

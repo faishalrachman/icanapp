@@ -12,12 +12,14 @@ using System.Windows.Forms;
 namespace iCAN.GUI.Siswa
 {
     public partial class frmLihatNilai : MetroFramework.Forms.MetroForm
+      
 
     {
         M_Siswa siswa;
         public frmLihatNilai(int idUser)
         {
             InitializeComponent();
+<<<<<<< HEAD
             siswa = new M_Siswa(idUser);
             fetchNilai();
         }
@@ -44,6 +46,40 @@ namespace iCAN.GUI.Siswa
                 item.SubItems.Add(Convert.ToString(skor));//skor
 
                 listNilai.Items.Add(item);
+=======
+            Fetch();
+        }
+
+        private void Fetch()
+        {
+            metroListNilai.Clear();
+            metroListNilai.Columns.Add("Kode Mapel", 100);
+            metroListNilai.Columns.Add("Nama Mapel", 100);
+            metroListNilai.Columns.Add("Jenis Nilai", 100);
+            metroListNilai.Columns.Add("Skor", 100);
+
+
+
+            Database db = new Database();
+            db.reader = db.callQuery("SELECT * FROM v_nilai");
+            while (db.reader.Read())
+            {
+
+                string kd_mapel = db.reader.GetString("kd_mapel");
+                string namamapel = db.reader.GetString("nama_mapel");
+                string jenisnilai = db.reader.GetString("nama_nilai");
+                string skor = db.reader.GetString("skor");
+                
+
+                ListViewItem item = new ListViewItem(db.reader.GetString("id_user"));
+                item.SubItems.Add(db.reader.GetString("kd_mapel"));//ID Jadwal
+                item.SubItems.Add(db.reader.GetString("nama_mapel"));//Jam
+                item.SubItems.Add(db.reader.GetString("nama_nilai"));//hari
+                item.SubItems.Add(db.reader.GetString("skor"));//Ruangan
+                
+
+                metroListNilai.Items.Add(item);
+>>>>>>> e97259a59ee2e7786031b49f9f1f6f1cced5142a
 
             }
             db.databaseConnection.Close();
@@ -61,7 +97,11 @@ namespace iCAN.GUI.Siswa
 
         private void metroListView1_SelectedIndexChanged(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> e97259a59ee2e7786031b49f9f1f6f1cced5142a
         }
     }
 }
