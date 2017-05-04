@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.metroButton3 = new MetroFramework.Controls.MetroButton();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.tb_nilai = new MetroFramework.Controls.MetroListView();
 
 //           this.metroListView1 = new MetroFramework.Controls.MetroListView();
@@ -40,8 +41,6 @@
             this.Aksi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.cbKelas = new MetroFramework.Controls.MetroComboBox();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.metroButton3 = new MetroFramework.Controls.MetroButton();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +48,6 @@
             // 
             this.metroPanel1.Controls.Add(this.metroButton3);
             this.metroPanel1.Controls.Add(this.metroButton2);
-            this.metroPanel1.Controls.Add(this.metroButton1);
             this.metroPanel1.Controls.Add(this.tb_nilai);
             this.metroPanel1.Controls.Add(this.metroLabel1);
             this.metroPanel1.Controls.Add(this.cbKelas);
@@ -64,8 +62,26 @@
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
-            // metroButton1
+            // metroButton3
             // 
+            this.metroButton3.Location = new System.Drawing.Point(679, 15);
+            this.metroButton3.Name = "metroButton3";
+            this.metroButton3.Size = new System.Drawing.Size(75, 23);
+            this.metroButton3.TabIndex = 7;
+            this.metroButton3.Text = "Hapus";
+            this.metroButton3.UseSelectable = true;
+            // 
+            // metroButton2
+            // 
+            this.metroButton2.Location = new System.Drawing.Point(476, 15);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(75, 23);
+            this.metroButton2.TabIndex = 6;
+            this.metroButton2.Text = "Tambah";
+            this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
+            // 
+<<<<<<< HEAD:iCAN/GUI/Guru/NilaiGuru.Designer.cs
             this.metroButton1.Location = new System.Drawing.Point(249, 9);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(77, 29);
@@ -79,6 +95,8 @@
 
              // 
 
+=======
+>>>>>>> 73883c5444a90e1e7cda0e018a7bc2940419ef21:iCAN/GUI/Guru/Kelola_Nilai/NilaiGuru.Designer.cs
             // tb_nilai
             // 
             this.tb_nilai.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -95,6 +113,7 @@
             this.tb_nilai.TabIndex = 4;
             this.tb_nilai.UseCompatibleStateImageBehavior = false;
             this.tb_nilai.UseSelectable = true;
+            this.tb_nilai.View = System.Windows.Forms.View.Details;
             // 
             // Nama
             // 
@@ -134,6 +153,7 @@
             this.cbKelas.UseSelectable = true;
             this.cbKelas.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged);
             // 
+<<<<<<< HEAD:iCAN/GUI/Guru/NilaiGuru.Designer.cs
             // metroButton2
             // 
             this.metroButton2.Location = new System.Drawing.Point(476, 15);
@@ -153,6 +173,8 @@
             this.metroButton3.UseSelectable = true;
 
 
+=======
+>>>>>>> 73883c5444a90e1e7cda0e018a7bc2940419ef21:iCAN/GUI/Guru/Kelola_Nilai/NilaiGuru.Designer.cs
             // NilaiGuru
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -172,7 +194,6 @@
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroComboBox cbKelas;
-        private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroListView tb_nilai;
         private System.Windows.Forms.ColumnHeader Nama;
         private System.Windows.Forms.ColumnHeader NIS;

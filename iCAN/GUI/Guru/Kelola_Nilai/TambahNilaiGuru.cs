@@ -11,20 +11,23 @@ using System.Windows.Forms;
 
 namespace iCAN.GUI.Guru
 {
-    public partial class NilaiGuru : MetroFramework.Forms.MetroForm
+    public partial class TambahNilaiGuru : MetroFramework.Forms.MetroForm
     {
         int idGuru;
+        string kd_mapel;
         List<M_Mapel> l_m = new List<M_Mapel>();
         M_Mapel mapel;
         M_Nilai nilai;
         List<M_Nilai> l_nilai = new List<M_Nilai>();
-        public NilaiGuru(int idGuru)
+        private BindingSource bSource;
+
+        public TambahNilaiGuru(int idGuru, string kd_mapel)
         {
             InitializeComponent();
             this.idGuru = idGuru;
+            this.kd_mapel = kd_mapel;
             Fetch();
         }
-
 
         void Fetch()
         {
@@ -42,16 +45,22 @@ namespace iCAN.GUI.Guru
                 cbKelas.Items.Add(nm_kelas);
             }
             
+
         }
+
         void FetchNilai()
         {
-            tb_nilai.Clear();
-            tb_nilai.Columns.Add("Kode Mapel");
-            tb_nilai.Columns.Add("Nama Mapel");
-            tb_nilai.Columns.Add("Nama Nilai");
-            tb_nilai.Columns.Add("Skor");
+            gridR.Columns.Clear();
             Database db = new Database();
-            db.reader = db.callQuery("SELECT * FROM nilai where kd_mapel = '" + l_m.ElementAt(cbKelas.SelectedIndex).KdMapel+"'");
+            //db.reader = db.callQuery("SELECT * FROM nilai where kd_mapel = '" + l_m.ElementAt(cbKelas.SelectedIndex).KdMapel + "'");
+            DataTable da = db.callQuerytoDataTable("SELECT NIS,nama FROM siswa JOIN user on(user.id = siswa.id_user) JOIN mapel using (id_kelas) where kd_mapel = '" + l_m.ElementAt(cbKelas.SelectedIndex).KdMapel + "'");
+            da.Columns.Add("Skor");
+            bSource = new BindingSource();
+            bSource.DataSource = da;
+            gridR.DataSource = bSource;
+
+            /*
+
 
             while (db.reader.Read())
             {
@@ -66,22 +75,32 @@ namespace iCAN.GUI.Guru
                 item.SubItems.Add(nama_nilai);//ID Jadwal
                 item.SubItems.Add(Convert.ToString(skor));//Jam
                 tb_nilai.Items.Add(item);
+            }*/
+        }
+        void AddNilai()
+        {
+            string nama_nilai = txJenisNilai.Text;
+            Database db = new Database();
+            bool i = false;
+            foreach (DataGridViewRow row in gridR.Rows)
+            {
+                string NIS = row.Cells["NIS"].Value.ToString();
+                string skor = row.Cells["skor"].Value.ToString();
+                i = db.CallnonQuery("INSERT INTO nilai(kd_mapel,NIS,nama_nilai,skor) VALUES ('" + kd_mapel + "'," + NIS + ",'" + nama_nilai + "',+" + skor + ")");
             }
+            if (i)
+                MessageBox.Show("Berhasil di Inputkan");
+            Close();
         }
-        private void metroLabel1_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbKelas_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
             FetchNilai();
         }
 
-        private void metroListView1_SelectedIndexChanged(object sender, EventArgs e)
+        private void metroButton1_Click(object sender, EventArgs e)
         {
-
+            AddNilai();
         }
     }
 }

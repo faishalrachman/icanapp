@@ -77,7 +77,7 @@ namespace iCAN.GUI
                         admin.Show();
                         break;
                     case "siswa" :
-                        siswa = new MainDashboardSiswa();
+                        siswa = new MainDashboardSiswa(user.IdUser);
                         siswa.Show();
                         break;
                     default:
