@@ -72,8 +72,8 @@ iCAN\CLASS\M_Siswa.cs
 iCAN\CLASS\M_User.cs
 
 ############################################################
-Nama : Dani Agung Prastiyo (1301154646)
 
+Nama : Dani Agung Prastiyo (1301154646)
 File List yang dikerjakan : 
 
 iCAN\CLASS\Mapel.cs
@@ -127,7 +127,6 @@ iCAN\GUI\Guru\Kelola_Nilai\TambahNilaiGuru.resx
 ############################################################
 
 Nama : Mochammad Farrel (1301154162)
-
 File list Yang Dikerjakan
 
 iCAN\GUI\Siswa\BeritaSiswa.cs
