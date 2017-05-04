@@ -25,12 +25,12 @@ namespace iCAN.GUI.Siswa
         void fetchNilai()
         {
             listNilai.Clear();
-            listNilai.Columns.Add("NIS");
-            listNilai.Columns.Add("kode mapel");
-            listNilai.Columns.Add("nama nilai");
-            listNilai.Columns.Add("skor ");
+            listNilai.Columns.Add("NIS",100);
+            listNilai.Columns.Add("kode mapel",100);
+            listNilai.Columns.Add("nama nilai",100);
+            listNilai.Columns.Add("skor ",100);
             Database db = new Database();
-            string query = "Select * from nilai where NIS = " + siswa.myNIS;
+            string query = "Select * from nilai where NIS = '" + siswa.myNIS + "'";
             db.reader = db.callQuery(query);
             while (db.reader.Read())
             {
@@ -38,12 +38,15 @@ namespace iCAN.GUI.Siswa
                 string NIS = db.reader.GetString("NIS");
                 string nama_nilai = db.reader.GetString("nama_nilai");
                 double skor = Convert.ToDouble(db.reader.GetString("skor"));
-                ListViewItem item = new ListViewItem(NIS);//id_user
-                item.SubItems.Add(kd_mapel);//ID Jadwal
-                item.SubItems.Add(nama_nilai);//ID Jadwal
-                item.SubItems.Add(Convert.ToString(skor));//Jam
-                
+                ListViewItem item = new ListViewItem(NIS);//NIS
+                item.SubItems.Add(kd_mapel);//kd_mapel
+                item.SubItems.Add(nama_nilai);//nama_nilai
+                item.SubItems.Add(Convert.ToString(skor));//skor
+
+                listNilai.Items.Add(item);
+
             }
+            db.databaseConnection.Close();
         }
 
         private void frmLihatNilai_Load(object sender, EventArgs e)
