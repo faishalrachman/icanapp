@@ -31,7 +31,7 @@
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.PilihKelas = new MetroFramework.Controls.MetroLabel();
             this.btnPilihKelas = new MetroFramework.Controls.MetroButton();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.cbKelas = new MetroFramework.Controls.MetroComboBox();
             this.metroScrollBar1 = new MetroFramework.Controls.MetroScrollBar();
             this.metroListView1 = new MetroFramework.Controls.MetroListView();
             this.Nama = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -44,7 +44,7 @@
             // 
             this.metroPanel1.Controls.Add(this.PilihKelas);
             this.metroPanel1.Controls.Add(this.btnPilihKelas);
-            this.metroPanel1.Controls.Add(this.metroComboBox1);
+            this.metroPanel1.Controls.Add(this.cbKelas);
             this.metroPanel1.Controls.Add(this.metroScrollBar1);
             this.metroPanel1.Controls.Add(this.metroListView1);
             this.metroPanel1.HorizontalScrollbarBarColor = true;
@@ -77,15 +77,15 @@
             this.btnPilihKelas.Text = "PilihKelas";
             this.btnPilihKelas.UseSelectable = true;
             // 
-            // metroComboBox1
+            // cbKelas
             // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Location = new System.Drawing.Point(121, 22);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(190, 29);
-            this.metroComboBox1.TabIndex = 4;
-            this.metroComboBox1.UseSelectable = true;
+            this.cbKelas.FormattingEnabled = true;
+            this.cbKelas.ItemHeight = 23;
+            this.cbKelas.Location = new System.Drawing.Point(121, 22);
+            this.cbKelas.Name = "cbKelas";
+            this.cbKelas.Size = new System.Drawing.Size(190, 29);
+            this.cbKelas.TabIndex = 4;
+            this.cbKelas.UseSelectable = true;
             // 
             // metroScrollBar1
             // 
@@ -157,6 +157,6 @@
         private MetroFramework.Controls.MetroScrollBar metroScrollBar1;
         private MetroFramework.Controls.MetroLabel PilihKelas;
         private MetroFramework.Controls.MetroButton btnPilihKelas;
-        private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private MetroFramework.Controls.MetroComboBox cbKelas;
     }
 }

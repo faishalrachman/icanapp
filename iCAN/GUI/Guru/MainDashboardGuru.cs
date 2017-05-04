@@ -16,10 +16,11 @@ namespace iCAN.GUI.Guru
     {
      
         M_Guru guru;
-
+        int idGuru;
         public MainDashboardGuru(int idGuru)
         {
             guru = new M_Guru(idGuru);
+            this.idGuru = idGuru;
             InitializeComponent();
         }
 
@@ -42,15 +43,14 @@ namespace iCAN.GUI.Guru
 
         private void mAbsensi_Click(object sender, EventArgs e)
         {
-            var form = new Absensi();
             Hide();
-            form.ShowDialog();
+            new Absensi(idGuru).ShowDialog();
             Show();
         }
 
         private void mNilai_Click(object sender, EventArgs e)
         {
-            var form = new NilaiGuru();
+            var form = new NilaiGuru(idGuru);
             Hide();
             form.ShowDialog();
             Show();
