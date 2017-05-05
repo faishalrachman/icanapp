@@ -127,8 +127,9 @@ iCAN\GUI\Guru\Kelola_Nilai\TambahNilaiGuru.resx
 ############################################################
 
 Nama : Mochammad Farrel (1301154162)
-File list Yang Dikerjakan
+File list Yang Dikerjakan 
 
+Class Diagram
 iCAN\GUI\Siswa\BeritaSiswa.cs
 iCAN\GUI\Siswa\BeritaSiswa.Designer.cs
 iCAN\GUI\Siswa\BeritaSiswa.resx

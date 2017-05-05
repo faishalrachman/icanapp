@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 04, 2017 at 12:46 PM
+-- Generation Time: May 05, 2017 at 03:46 AM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.6.24
 
@@ -469,15 +469,36 @@ CREATE TABLE `v_nilai` (
 -- Stand-in structure for view `v_siswa`
 --
 CREATE TABLE `v_siswa` (
-`NIS` int(11)
+`id_kelas` int(11)
+,`NIS` int(11)
 ,`id_user` int(11)
-,`nama` text
 ,`jenis_kelamin` tinyint(1)
-,`nama_kelas` text
 ,`tempat_lahir` text
 ,`tanggal_lahir` text
 ,`agama` text
 ,`alamat` text
+,`id_guru` int(11)
+,`nama_kelas` text
+,`id` int(11)
+,`username` varchar(50)
+,`password` text
+,`nama` text
+,`role` varchar(10)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `v_walikelas`
+--
+CREATE TABLE `v_walikelas` (
+`id_kelas` int(11)
+,`id_guru` int(11)
+,`nama_kelas` text
+,`NIP` varchar(20)
+,`nama` text
+,`alamat` text
+,`no_hp` varchar(13)
 );
 
 -- --------------------------------------------------------
@@ -541,7 +562,16 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 DROP TABLE IF EXISTS `v_siswa`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `v_siswa`  AS  select `s`.`NIS` AS `NIS`,`s`.`id_user` AS `id_user`,`u`.`nama` AS `nama`,`s`.`jenis_kelamin` AS `jenis_kelamin`,`k`.`nama_kelas` AS `nama_kelas`,`s`.`tempat_lahir` AS `tempat_lahir`,`s`.`tanggal_lahir` AS `tanggal_lahir`,`s`.`agama` AS `agama`,`s`.`alamat` AS `alamat` from ((`user` `u` join `siswa` `s`) join `kelas` `k`) where ((`s`.`id_user` = `u`.`id`) and (`s`.`id_kelas` = `k`.`id_kelas`)) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `v_siswa`  AS  select `siswa`.`id_kelas` AS `id_kelas`,`siswa`.`NIS` AS `NIS`,`siswa`.`id_user` AS `id_user`,`siswa`.`jenis_kelamin` AS `jenis_kelamin`,`siswa`.`tempat_lahir` AS `tempat_lahir`,`siswa`.`tanggal_lahir` AS `tanggal_lahir`,`siswa`.`agama` AS `agama`,`siswa`.`alamat` AS `alamat`,`kelas`.`id_guru` AS `id_guru`,`kelas`.`nama_kelas` AS `nama_kelas`,`user`.`id` AS `id`,`user`.`username` AS `username`,`user`.`password` AS `password`,`user`.`nama` AS `nama`,`user`.`role` AS `role` from ((`siswa` join `kelas` on((`siswa`.`id_kelas` = `kelas`.`id_kelas`))) join `user` on((`user`.`id` = `siswa`.`id_user`))) ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `v_walikelas`
+--
+DROP TABLE IF EXISTS `v_walikelas`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `v_walikelas`  AS  select `kelas`.`id_kelas` AS `id_kelas`,`kelas`.`id_guru` AS `id_guru`,`kelas`.`nama_kelas` AS `nama_kelas`,`v_guru`.`NIP` AS `NIP`,`v_guru`.`nama` AS `nama`,`v_guru`.`alamat` AS `alamat`,`v_guru`.`no_hp` AS `no_hp` from (`kelas` join `v_guru` on((`kelas`.`id_guru` = `v_guru`.`id_guru`))) ;
 
 --
 -- Indexes for dumped tables
@@ -636,7 +666,7 @@ ALTER TABLE `kelas`
 -- AUTO_INCREMENT for table `nilai`
 --
 ALTER TABLE `nilai`
-  MODIFY `id_nilai` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_nilai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `siswa`
 --
