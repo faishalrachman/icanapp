@@ -30,7 +30,6 @@
         {
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.metroDaftarGuru = new MetroFramework.Controls.MetroTile();
-            this.metroProfile = new MetroFramework.Controls.MetroTile();
             this.metroBerita = new MetroFramework.Controls.MetroTile();
             this.metroPelajaran = new MetroFramework.Controls.MetroTile();
             this.metroGuru = new MetroFramework.Controls.MetroTile();
@@ -43,7 +42,6 @@
             // metroPanel1
             // 
             this.metroPanel1.Controls.Add(this.metroDaftarGuru);
-            this.metroPanel1.Controls.Add(this.metroProfile);
             this.metroPanel1.Controls.Add(this.metroBerita);
             this.metroPanel1.Controls.Add(this.metroPelajaran);
             this.metroPanel1.Controls.Add(this.metroGuru);
@@ -54,7 +52,7 @@
             this.metroPanel1.HorizontalScrollbarSize = 10;
             this.metroPanel1.Location = new System.Drawing.Point(11, 63);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(716, 400);
+            this.metroPanel1.Size = new System.Drawing.Size(716, 268);
             this.metroPanel1.TabIndex = 0;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
@@ -64,9 +62,9 @@
             // metroDaftarGuru
             // 
             this.metroDaftarGuru.ActiveControl = null;
-            this.metroDaftarGuru.Location = new System.Drawing.Point(13, 256);
+            this.metroDaftarGuru.Location = new System.Drawing.Point(507, 153);
             this.metroDaftarGuru.Name = "metroDaftarGuru";
-            this.metroDaftarGuru.Size = new System.Drawing.Size(296, 94);
+            this.metroDaftarGuru.Size = new System.Drawing.Size(179, 94);
             this.metroDaftarGuru.Style = MetroFramework.MetroColorStyle.Green;
             this.metroDaftarGuru.TabIndex = 10;
             this.metroDaftarGuru.Text = "Daftar Guru";
@@ -74,19 +72,6 @@
             this.metroDaftarGuru.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.metroDaftarGuru.UseSelectable = true;
             this.metroDaftarGuru.Click += new System.EventHandler(this.metroDaftarGuru_Click);
-            // 
-            // metroProfile
-            // 
-            this.metroProfile.ActiveControl = null;
-            this.metroProfile.Location = new System.Drawing.Point(507, 150);
-            this.metroProfile.Name = "metroProfile";
-            this.metroProfile.Size = new System.Drawing.Size(178, 99);
-            this.metroProfile.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroProfile.TabIndex = 7;
-            this.metroProfile.Text = "Presensi";
-            this.metroProfile.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroProfile.UseSelectable = true;
-            this.metroProfile.Click += new System.EventHandler(this.metroProfile_Click);
             // 
             // metroBerita
             // 
@@ -119,7 +104,7 @@
             this.metroGuru.ActiveControl = null;
             this.metroGuru.Location = new System.Drawing.Point(335, 148);
             this.metroGuru.Name = "metroGuru";
-            this.metroGuru.Size = new System.Drawing.Size(167, 99);
+            this.metroGuru.Size = new System.Drawing.Size(166, 99);
             this.metroGuru.Style = MetroFramework.MetroColorStyle.Pink;
             this.metroGuru.TabIndex = 4;
             this.metroGuru.Text = "Wali Kelasku";
@@ -169,7 +154,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(741, 486);
+            this.ClientSize = new System.Drawing.Size(741, 344);
             this.Controls.Add(this.txnamaSiswa);
             this.Controls.Add(this.metroPanel1);
             this.Name = "MainDashboardSiswa";
@@ -189,7 +174,6 @@
         private MetroFramework.Controls.MetroTile metroNilai;
         private MetroFramework.Controls.MetroTile metroGuru;
         private MetroFramework.Controls.MetroLabel txnamaSiswa;
-        private MetroFramework.Controls.MetroTile metroProfile;
         private MetroFramework.Controls.MetroTile metroBerita;
         private MetroFramework.Controls.MetroTile metroPelajaran;
         private MetroFramework.Controls.MetroTile metroDaftarGuru;

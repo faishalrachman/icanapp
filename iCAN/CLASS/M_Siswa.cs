@@ -74,18 +74,18 @@ namespace iCAN.CLASS
             db.reader = db.callQuery("SELECT * FROM v_siswa where id_user = "+idUser);
             if (db.reader.Read())
             {
-                myNIS = db.reader.GetString(0);
-                IdUser = Convert.ToInt32(db.reader.GetString(1));
-                string jk = db.reader.GetString(3);
+                myNIS = db.reader.GetString("NIS");
+                IdUser = Convert.ToInt32(db.reader.GetString("id_user"));
+                string jk = db.reader.GetString("jenis_kelamin");
                 if (jk == "True")
                     jenis_kelamin = 1;
                 else
                     jenis_kelamin = 0;
-                nama_kelas = db.reader.GetString(4);
-                this.tempat_lahir = db.reader.GetString(5);
-                tanggal_lahir = db.reader.GetString(6);
-                agama = db.reader.GetString(7);
-                alamat = db.reader.GetString(8);
+                nama_kelas = db.reader.GetString("nama_kelas");
+                this.tempat_lahir = db.reader.GetString("tempat_lahir");
+                tanggal_lahir = db.reader.GetString("tanggal_lahir");
+                agama = db.reader.GetString("agama");
+                alamat = db.reader.GetString("alamat");
                 idKelas = db.reader.GetString("id_kelas");
                 db.databaseConnection.Close();
             }

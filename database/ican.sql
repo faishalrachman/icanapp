@@ -3,8 +3,8 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 05, 2017 at 03:46 AM
--- Server version: 10.1.19-MariaDB
+-- Generation Time: 05 Mei 2017 pada 05.02
+-- Versi Server: 10.1.19-MariaDB
 -- PHP Version: 5.6.24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -23,7 +23,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `absensi`
+-- Struktur dari tabel `absensi`
 --
 
 CREATE TABLE `absensi` (
@@ -36,7 +36,7 @@ CREATE TABLE `absensi` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `berita`
+-- Struktur dari tabel `berita`
 --
 
 CREATE TABLE `berita` (
@@ -46,7 +46,7 @@ CREATE TABLE `berita` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `berita`
+-- Dumping data untuk tabel `berita`
 --
 
 INSERT INTO `berita` (`id_berita`, `judul`, `isi`) VALUES
@@ -55,7 +55,7 @@ INSERT INTO `berita` (`id_berita`, `judul`, `isi`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `guru`
+-- Struktur dari tabel `guru`
 --
 
 CREATE TABLE `guru` (
@@ -67,7 +67,7 @@ CREATE TABLE `guru` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `guru`
+-- Dumping data untuk tabel `guru`
 --
 
 INSERT INTO `guru` (`id_guru`, `id_user`, `NIP`, `alamat`, `no_hp`) VALUES
@@ -85,7 +85,7 @@ INSERT INTO `guru` (`id_guru`, `id_user`, `NIP`, `alamat`, `no_hp`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `jadwal`
+-- Struktur dari tabel `jadwal`
 --
 
 CREATE TABLE `jadwal` (
@@ -96,7 +96,7 @@ CREATE TABLE `jadwal` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `jadwal`
+-- Dumping data untuk tabel `jadwal`
 --
 
 INSERT INTO `jadwal` (`id_jadwal`, `jam`, `hari`, `ruangan`) VALUES
@@ -114,7 +114,7 @@ INSERT INTO `jadwal` (`id_jadwal`, `jam`, `hari`, `ruangan`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kelas`
+-- Struktur dari tabel `kelas`
 --
 
 CREATE TABLE `kelas` (
@@ -124,35 +124,25 @@ CREATE TABLE `kelas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `kelas`
+-- Dumping data untuk tabel `kelas`
 --
 
 INSERT INTO `kelas` (`id_kelas`, `id_guru`, `nama_kelas`) VALUES
-(1, 50, 'X-IPA 1'),
-(2, 51, 'X-IPS 1'),
-(3, 52, 'X-BAHASA 1'),
-(4, 53, 'XI-IPA 1'),
-(5, 54, 'XI-IPS 4'),
-(6, 55, 'XI-BAHASA 3'),
-(7, 56, 'XII-IPA 2'),
-(8, 57, 'XII-IPA 3'),
-(9, 58, 'XII-IPS 2'),
-(10, 59, 'XII-BAHASA 1'),
-(11, 8, 'XI-IPA 3'),
-(12, 1, 'XII-IPA 2'),
-(14, 4, 'XII-IPS 2'),
-(15, 7, 'XII-BAHASA 2'),
-(16, 5, 'XI-BAHASA 1'),
-(17, 6, 'X-BAHASA 2'),
-(18, 10, 'XII-IPA 3'),
-(19, 9, 'XII-IPS 2'),
-(20, 3, 'XI-IPA 1'),
-(21, 2, 'X-IPA 1');
+(1, 1, 'X-IPA 1'),
+(2, 2, 'X-IPS 1'),
+(3, 3, 'X-BAHASA 1'),
+(4, 4, 'XI-IPA 1'),
+(5, 5, 'XI-IPS 4'),
+(6, 6, 'XI-BAHASA 3'),
+(7, 7, 'XII-IPA 2'),
+(8, 8, 'XII-IPA 3'),
+(9, 9, 'XII-IPS 2'),
+(10, 10, 'XII-BAHASA 1');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mapel`
+-- Struktur dari tabel `mapel`
 --
 
 CREATE TABLE `mapel` (
@@ -164,7 +154,7 @@ CREATE TABLE `mapel` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `mapel`
+-- Dumping data untuk tabel `mapel`
 --
 
 INSERT INTO `mapel` (`kd_mapel`, `nama_mapel`, `id_guru`, `id_kelas`, `id_jadwal`) VALUES
@@ -191,7 +181,7 @@ INSERT INTO `mapel` (`kd_mapel`, `nama_mapel`, `id_guru`, `id_kelas`, `id_jadwal
 -- --------------------------------------------------------
 
 --
--- Table structure for table `nilai`
+-- Struktur dari tabel `nilai`
 --
 
 CREATE TABLE `nilai` (
@@ -202,10 +192,21 @@ CREATE TABLE `nilai` (
   `skor` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data untuk tabel `nilai`
+--
+
+INSERT INTO `nilai` (`id_nilai`, `kd_mapel`, `NIS`, `nama_nilai`, `skor`) VALUES
+(11, 'KIM-001', 1202160218, 'UJIAN STENGAH SERIUS', 50),
+(12, 'KIM-001', 1202160360, 'UJIAN STENGAH SERIUS', 70),
+(13, 'KIM-001', 1202164121, 'UJIAN STENGAH SERIUS', 80),
+(14, 'KIM-001', 1202164194, 'UJIAN STENGAH SERIUS', 99),
+(15, 'KIM-001', 1302150054, 'UJIAN STENGAH SERIUS', 1);
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `siswa`
+-- Struktur dari tabel `siswa`
 --
 
 CREATE TABLE `siswa` (
@@ -220,61 +221,63 @@ CREATE TABLE `siswa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `siswa`
+-- Dumping data untuk tabel `siswa`
 --
 
 INSERT INTO `siswa` (`NIS`, `id_user`, `jenis_kelamin`, `id_kelas`, `tempat_lahir`, `tanggal_lahir`, `agama`, `alamat`) VALUES
-(1202150003, 3, 1, 2, 'Bandung', '1997/1/13', 'Islam', 'Jalan Merpati'),
-(1202150257, 27, 0, 6, 'Depok', '1997/2/6', 'Islam', 'Jalan Merpati'),
-(1202160009, 4, 1, 3, 'jakarta', '1997/1/14', 'Islam', 'Jalan Adipati'),
-(1202160041, 28, 0, 7, 'Jakarta Pusat', '1997/2/7', 'Islam', 'Jalan Adipati'),
-(1202160057, 29, 0, 8, 'Bandung', '1997/2/8', 'Islam', 'Jalan Soekarno'),
-(1202160089, 30, 0, 9, 'bogor', '1997/2/9', 'Islam', 'Jalan Biru'),
-(1202160105, 5, 1, 4, 'Riau', '1997/1/15', 'Islam', 'Jalan Soekarno'),
-(1202160121, 31, 0, 10, 'Bandung', '1997/2/10', 'Islam', 'Jalan Ungu'),
-(1202160153, 6, 1, 5, 'Maluku', '1997/1/16', 'Islam', 'Jalan Biru'),
-(1202160178, 7, 1, 6, 'Makassar', '1997/1/17', 'Islam', 'Jalan Ungu'),
-(1202160186, 8, 1, 7, 'Yogyakarta', '1997/1/18', 'Islam', 'Jalan Sunda'),
-(1202160202, 9, 1, 8, 'Sleman', '1997/1/19', 'Islam', 'Jalan Merpati'),
-(1202160210, 10, 1, 9, 'Bandung', '1997/1/20', 'Islam', 'Jalan Adipati'),
-(1202160218, 32, 0, 1, 'Bandung', '1997/2/11', 'Islam', 'Jalan Sunda'),
-(1202160251, 11, 1, 10, 'Bandung', '1997/1/21', 'Islam', 'Jalan Soekarno'),
-(1202160268, 33, 0, 2, 'Depok', '1997/2/12', 'Islam', 'Jalan Merpati'),
-(1202160352, 13, 1, 2, 'Bandung', '1997/1/23', 'Kristen', 'Jalan Ungu'),
-(1202160360, 12, 1, 1, 'Bandung', '1997/1/22', 'Islam', 'Jalan Biru'),
-(1202160380, 14, 1, 3, 'Sleman', '1997/1/24', 'Kristen', 'Jalan Sunda'),
-(1202160398, 15, 1, 4, 'Jayapura', '1997/1/25', 'Kristen', 'Jalan Merpati'),
-(1202162097, 16, 1, 5, 'Lamongan', '1997/1/26', 'Kristen', 'Jalan Adipati'),
-(1202162137, 17, 1, 6, 'Lamongan', '1997/1/27', 'Kristen', 'Jalan Soekarno'),
-(1202162369, 18, 1, 7, 'bogor', '1997/1/28', 'Kristen', 'Jalan Biru'),
-(1202162389, 34, 0, 3, 'Jakarta Pusat', '1997/2/13', 'Islam', 'Jalan Adipati'),
-(1202163170, 35, 0, 4, 'Bandung', '1997/2/14', 'Islam', 'Jalan Soekarno'),
-(1202164001, 36, 0, 5, 'bogor', '1997/2/15', 'Islam', 'Jalan Biru'),
-(1202164017, 19, 1, 8, 'Bogor', '1997/1/29', 'Kristen', 'Jalan Ungu'),
-(1202164025, 20, 1, 9, 'Depok', '1997/1/30', 'Islam', 'Jalan Sunda'),
-(1202164033, 21, 1, 10, 'Depok', '1997/1/31', 'Islam', 'Jalan Merpati'),
-(1202164049, 37, 0, 6, 'Bandung', '1997/2/16', 'Islam', 'Jalan Ungu'),
-(1202164065, 38, 0, 7, 'Bandung', '1997/2/17', 'Islam', 'Jalan Sunda'),
-(1202164073, 39, 0, 8, 'Depok', '1997/2/18', 'Islam', 'Jalan Merpati'),
-(1202164081, 40, 0, 9, 'Jakarta Pusat', '1997/2/19', 'Islam', 'Jalan Adipati'),
-(1202164113, 41, 0, 10, 'Bandung', '1997/2/20', 'Islam', 'Jalan Soekarno'),
-(1202164121, 42, 0, 1, 'bogor', '1997/2/21', 'Islam', 'Jalan Biru'),
-(1202164161, 43, 0, 2, 'Bandung', '1997/2/22', 'Islam', 'Jalan Ungu'),
-(1202164194, 22, 1, 1, 'Jakarta Pusat', '1997/2/1', 'Islam', 'Jalan Adipati'),
-(1202164226, 44, 0, 3, 'Bandung', '1997/2/23', 'Islam', 'Jalan Sunda'),
-(1202164235, 23, 1, 2, 'Bandung', '1997/2/2', 'Islam', 'Jalan Soekarno'),
-(1202164260, 24, 1, 3, 'bogor', '1997/2/3', 'Islam', 'Jalan Biru'),
-(1202164276, 25, 1, 4, 'Bandung', '1997/2/4', 'Islam', 'Jalan Ungu'),
-(1202164301, 26, 1, 5, 'Bandung', '1997/2/5', 'Islam', 'Jalan Sunda'),
-(1202164309, 45, 0, 4, 'Depok', '1997/2/24', 'Islam', 'Jalan Merpati'),
-(1202164318, 46, 0, 5, 'Jakarta Pusat', '1997/2/25', 'Islam', 'Jalan Adipati'),
-(1202164328, 47, 0, 6, 'Bandung', '1997/2/26', 'Islam', 'Jalan Soekarno'),
-(1302150054, 2, 1, 1, 'Lamongan', '1997/1/12', 'Islam', 'Jalan Sunda');
+(1202150003, 3, 1, 2, 'Bandung', '13/01/1997', 'Islam', 'Jalan Merpati'),
+(1202150257, 27, 0, 6, 'Depok', '06/02/1997', 'Islam', 'Jalan Merpati'),
+(1202160009, 4, 1, 3, 'jakarta', '14/01/1997', 'Islam', 'Jalan Adipati'),
+(1202160041, 28, 0, 7, 'Jakarta Pusat', '07/02/1997', 'Islam', 'Jalan Adipati'),
+(1202160057, 29, 0, 8, 'Bandung', '08/02/1997', 'Islam', 'Jalan Soekarno'),
+(1202160089, 30, 0, 9, 'bogor', '09/02/1997', 'Islam', 'Jalan Biru'),
+(1202160105, 5, 1, 4, 'Riau', '15/01/1997', 'Islam', 'Jalan Soekarno'),
+(1202160121, 31, 0, 10, 'Bandung', '10/02/1997', 'Islam', 'Jalan Ungu'),
+(1202160153, 6, 1, 5, 'Maluku', '16/01/1997', 'Islam', 'Jalan Biru'),
+(1202160178, 7, 1, 6, 'Makassar', '17/01/1997', 'Islam', 'Jalan Ungu'),
+(1202160186, 8, 1, 7, 'Yogyakarta', '18/01/1997', 'Islam', 'Jalan Sunda'),
+(1202160202, 9, 1, 8, 'Sleman', '19/01/1997', 'Islam', 'Jalan Merpati'),
+(1202160210, 10, 1, 9, 'Bandung', '20/01/1997', 'Islam', 'Jalan Adipati'),
+(1202160218, 32, 0, 1, 'Bandung', '11/02/1997', 'Islam', 'Jalan Sunda'),
+(1202160251, 11, 1, 10, 'Bandung', '21/01/1997', 'Islam', 'Jalan Soekarno'),
+(1202160268, 33, 0, 2, 'Depok', '12/02/1997', 'Islam', 'Jalan Merpati'),
+(1202160352, 13, 1, 2, 'Bandung', '23/01/1997', 'Kristen', 'Jalan Ungu'),
+(1202160360, 12, 1, 1, 'Bandung', '22/01/1997', 'Islam', 'Jalan Biru'),
+(1202160380, 14, 1, 3, 'Sleman', '24/01/1997', 'Kristen', 'Jalan Sunda'),
+(1202160398, 15, 1, 4, 'Jayapura', '25/01/1997', 'Kristen', 'Jalan Merpati'),
+(1202162097, 16, 1, 5, 'Lamongan', '26/01/1997', 'Kristen', 'Jalan Adipati'),
+(1202162137, 17, 1, 6, 'Lamongan', '27/01/1997', 'Kristen', 'Jalan Soekarno'),
+(1202162369, 18, 1, 7, 'bogor', '28/01/1997', 'Kristen', 'Jalan Biru'),
+(1202162389, 34, 0, 3, 'Jakarta Pusat', '13/02/1997', 'Islam', 'Jalan Adipati'),
+(1202163170, 35, 0, 4, 'Bandung', '14/02/1997', 'Islam', 'Jalan Soekarno'),
+(1202164001, 36, 0, 5, 'bogor', '15/02/1997', 'Islam', 'Jalan Biru'),
+(1202164017, 19, 1, 8, 'Bogor', '29/01/1997', 'Kristen', 'Jalan Ungu'),
+(1202164025, 20, 1, 9, 'Depok', '30/01/1997', 'Islam', 'Jalan Sunda'),
+(1202164033, 21, 1, 10, 'Depok', '31/01/1997', 'Islam', 'Jalan Merpati'),
+(1202164049, 37, 0, 6, 'Bandung', '16/02/1997', 'Islam', 'Jalan Ungu'),
+(1202164065, 38, 0, 7, 'Bandung', '17/02/1997', 'Islam', 'Jalan Sunda'),
+(1202164073, 39, 0, 8, 'Depok', '18/02/1997', 'Islam', 'Jalan Merpati'),
+(1202164081, 40, 0, 9, 'Jakarta Pusat', '19/02/1997', 'Islam', 'Jalan Adipati'),
+(1202164113, 41, 0, 10, 'Bandung', '20/02/1997', 'Islam', 'Jalan Soekarno'),
+(1202164121, 42, 0, 1, 'bogor', '21/02/1997', 'Islam', 'Jalan Biru'),
+(1202164161, 43, 0, 2, 'Bandung', '22/02/1997', 'Islam', 'Jalan Ungu'),
+(1202164194, 22, 1, 1, 'Jakarta Pusat', '01/02/1997', 'Islam', 'Jalan Adipati'),
+(1202164226, 44, 0, 3, 'Bandung', '23/02/1997', 'Islam', 'Jalan Sunda'),
+(1202164235, 23, 1, 2, 'Bandung', '02/02/1997', 'Islam', 'Jalan Soekarno'),
+(1202164260, 24, 1, 3, 'bogor', '03/02/1997', 'Islam', 'Jalan Biru'),
+(1202164276, 25, 1, 4, 'Bandung', '04/02/1997', 'Islam', 'Jalan Ungu'),
+(1202164301, 26, 1, 5, 'Bandung', '05/02/1997', 'Islam', 'Jalan Sunda'),
+(1202164309, 45, 0, 4, 'Depok', '24/02/1997', 'Islam', 'Jalan Merpati'),
+(1202164318, 46, 0, 5, 'Jakarta Pusat', '25/02/1997', 'Islam', 'Jalan Adipati'),
+(1202164328, 47, 0, 6, 'Bandung', '26/02/1997', 'Islam', 'Jalan Soekarno'),
+(1302150054, 2, 1, 1, 'Lamongan', '12/01/1997', 'Islam', 'Jalan Sunda'),
+(1302150055, 62, 0, -1, 'Cikaso', '10/04/2017 00.00.00', 'Islam', 'Jalan Cikaso'),
+(1302150056, 63, 1, 3, 'jakardah', '06/04/2017 00.00.00', 'Konghuchu', 'ciamisganteng');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Struktur dari tabel `user`
 --
 
 CREATE TABLE `user` (
@@ -286,7 +289,7 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `user`
+-- Dumping data untuk tabel `user`
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `nama`, `role`) VALUES
@@ -347,7 +350,9 @@ INSERT INTO `user` (`id`, `username`, `password`, `nama`, `role`) VALUES
 (57, 'adi', 'adi', 'Adi Nugroho', 'guru'),
 (58, 'amin', 'amin', 'Amin Dian', 'guru'),
 (59, 'aulia', 'aulia', 'Aulia Akbar', 'guru'),
-(60, 'admin', 'admin', 'admin ganteng', 'admin');
+(60, 'admin', 'admin', 'admin ganteng', 'admin'),
+(61, 'ipatz', '', '1212', 'siswa'),
+(62, 'dummy', '', '', 'siswa');
 
 -- --------------------------------------------------------
 
@@ -504,7 +509,7 @@ CREATE TABLE `v_walikelas` (
 -- --------------------------------------------------------
 
 --
--- Structure for view `v_absensi`
+-- Struktur untuk view `v_absensi`
 --
 DROP TABLE IF EXISTS `v_absensi`;
 
@@ -513,7 +518,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 -- --------------------------------------------------------
 
 --
--- Structure for view `v_guru`
+-- Struktur untuk view `v_guru`
 --
 DROP TABLE IF EXISTS `v_guru`;
 
@@ -522,7 +527,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 -- --------------------------------------------------------
 
 --
--- Structure for view `v_jadwalmapel`
+-- Struktur untuk view `v_jadwalmapel`
 --
 DROP TABLE IF EXISTS `v_jadwalmapel`;
 
@@ -531,7 +536,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 -- --------------------------------------------------------
 
 --
--- Structure for view `v_kelas`
+-- Struktur untuk view `v_kelas`
 --
 DROP TABLE IF EXISTS `v_kelas`;
 
@@ -540,7 +545,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 -- --------------------------------------------------------
 
 --
--- Structure for view `v_mapel`
+-- Struktur untuk view `v_mapel`
 --
 DROP TABLE IF EXISTS `v_mapel`;
 
@@ -549,7 +554,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 -- --------------------------------------------------------
 
 --
--- Structure for view `v_nilai`
+-- Struktur untuk view `v_nilai`
 --
 DROP TABLE IF EXISTS `v_nilai`;
 
@@ -558,7 +563,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 -- --------------------------------------------------------
 
 --
--- Structure for view `v_siswa`
+-- Struktur untuk view `v_siswa`
 --
 DROP TABLE IF EXISTS `v_siswa`;
 
@@ -567,7 +572,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 -- --------------------------------------------------------
 
 --
--- Structure for view `v_walikelas`
+-- Struktur untuk view `v_walikelas`
 --
 DROP TABLE IF EXISTS `v_walikelas`;
 
@@ -661,22 +666,22 @@ ALTER TABLE `jadwal`
 -- AUTO_INCREMENT for table `kelas`
 --
 ALTER TABLE `kelas`
-  MODIFY `id_kelas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id_kelas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `nilai`
 --
 ALTER TABLE `nilai`
-  MODIFY `id_nilai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_nilai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT for table `siswa`
 --
 ALTER TABLE `siswa`
-  MODIFY `NIS` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1302150055;
+  MODIFY `NIS` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1302150057;
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -33,10 +33,10 @@ namespace iCAN.GUI.Admin
             db.reader = db.callQuery("SELECT * FROM v_siswa");
             while (db.reader.Read())
             {
-                ListViewItem item = new ListViewItem(db.reader.GetString(1));//id_user
-                item.SubItems.Add(db.reader.GetString(0));//nis
-                item.SubItems.Add(db.reader.GetString(2));//nama
-                item.SubItems.Add(db.reader.GetString(4));//kelas
+                ListViewItem item = new ListViewItem(db.reader.GetString("id_user"));//id_user
+                item.SubItems.Add(db.reader.GetString("NIS"));//nis
+                item.SubItems.Add(db.reader.GetString("nama"));//nama
+                item.SubItems.Add(db.reader.GetString("nama_kelas"));//kelas
                 tb_user.Items.Add(item);
             }
             db.databaseConnection.Close();

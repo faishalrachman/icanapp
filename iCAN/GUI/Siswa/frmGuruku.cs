@@ -25,8 +25,7 @@ namespace iCAN.GUI.Siswa
         private void Fetch()
         {
             Database db = new Database();
-<<<<<<< HEAD
-            db.reader = db.callQuery("Select * from v_walikelas where id_kelas = '" + siswa.IdKelas + "'");
+            db.reader = db.callQuery("Select * from v_walikelas where id_kelas = " + siswa.IdKelas);
             if (db.reader.Read())
             {
                 string NIP = db.reader.GetString("NIP");
@@ -39,10 +38,6 @@ namespace iCAN.GUI.Siswa
                 txAlamat.Text = alamat;
                 txNomorHP.Text = no_hp;
             }
-=======
-            db.reader = db.callQuery("Select * from guru ");
-            txAlamat.Text = db.reader.GetString("alamat");
->>>>>>> e97259a59ee2e7786031b49f9f1f6f1cced5142a
         }
 
         private void frmGuruku_Load(object sender, EventArgs e)
@@ -62,7 +57,7 @@ namespace iCAN.GUI.Siswa
 
         private void metroTextBox1_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void metroLabel2_Click(object sender, EventArgs e)

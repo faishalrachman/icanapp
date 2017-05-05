@@ -36,8 +36,8 @@ namespace iCAN.GUI.Guru
                 
                 
                 ListViewItem item = new ListViewItem(kd_mapel);//id_user
-                item.SubItems.Add(db.reader.GetString(nama_mapel));
-                item.SubItems.Add(db.reader.GetString(namaguru));//Nama Guru
+               item.SubItems.Add(nama_mapel);
+                item.SubItems.Add(namaguru);//Nama Guru
                 
                 listviewMapel.Items.Add(item);
 

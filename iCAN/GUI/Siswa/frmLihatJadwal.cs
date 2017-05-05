@@ -53,10 +53,5 @@ namespace iCAN.GUI.Siswa
         {
 
         }
-
-        private void lvjawalsiswa_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -60,7 +60,7 @@ namespace iCAN.GUI.Admin
                 int idKelas = -1;
                 Database db = new Database();
                 string query = "SELECT id_kelas from kelas where nama_kelas = '" + cbKelas.Text + "';";
-                MessageBox.Show(query);
+                
                 db.reader = db.callQuery(query);
 
                 if (db.reader.Read())
@@ -74,25 +74,20 @@ namespace iCAN.GUI.Admin
                     jk = 1;
                 }
                 query = "INSERT INTO user(username,password,nama, role) VALUES('" + username + "','" + password + "','" + nama + "','siswa');";
-                MessageBox.Show(query);
+                //
                 bool i = db.CallnonQuery(query);
                 if (i)
                 {
                     query = "SELECT * FROM user where username = '" + username + "';";
-                MessageBox.Show(query);
+               // 
                     db.reader = db.callQuery(query);
                     if (db.reader.Read())
                     {
                          idUser =  Convert.ToInt32(db.reader.GetString(0));
-                        MessageBox.Show("Insert User success, id = " + idUser);
+                   //     MessageBox.Show("Insert User success, id = " + idUser);
                         db.databaseConnection.Close();
                         query = "INSERT INTO siswa (`id_user`, `jenis_kelamin`, `id_kelas`, `tempat_lahir`, `tanggal_lahir`, `agama`, `alamat`) VALUES ('" + idUser + "', '" + jk + "', '" + idKelas + "', '" + tempat + "', '" + tanggal + "', '" + agama + "', '" + alamat + "');";
                         i = db.CallnonQuery(query);
-                        MessageBox.Show(query);
-                        if (i)
-                        {
-                            MessageBox.Show("Insert Siswa success, id = " + idUser);
-                        }
                     }
                 }
                 else
